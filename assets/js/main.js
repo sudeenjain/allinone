@@ -466,33 +466,162 @@ function initQuotationBuilder() {
 }
 
 // Show Product Specification Modal
-function showProductSpecs(productId) {
-  if (typeof CATALOG_DATA === 'undefined') return;
-  const product = CATALOG_DATA.find(p => p.id === productId);
-  if (!product) return;
+function showProductSpecs(productIdentifier) {
+  if (typeof CATALOG_DATA === 'undefined' || !CATALOG_DATA.length) {
+    console.error('CATALOG_DATA is not loaded');
+    return;
+  }
+
+  // Find product by id (number or string) or by model string (e.g. 'CAL-015')
+  const product = CATALOG_DATA.find(p => 
+    p.id === productIdentifier || 
+    p.id === Number(productIdentifier) || 
+    (p.model && p.model.toLowerCase() === String(productIdentifier).toLowerCase())
+  );
+
+  if (!product) {
+    console.warn('Product not found for identifier:', productIdentifier);
+    return;
+  }
 
   const modal = document.getElementById('product-specs-modal');
   if (!modal) return;
 
-  document.getElementById('specs-modal-model').innerText = product.model;
-  document.getElementById('specs-modal-name').innerText = product.name;
-  document.getElementById('specs-modal-price').innerText = `₹${product.price.toLocaleString('en-IN')}`;
-  document.getElementById('specs-modal-category').innerText = product.category;
-  document.getElementById('specs-modal-image').src = product.image;
+  // Determine correct image path relative to current page location
+  const isSubfolder = window.location.pathname.includes('/laboratory-instruments/') ||
+                      window.location.pathname.includes('/government-projects/') ||
+                      window.location.pathname.includes('/valued-clients/') ||
+                      window.location.pathname.includes('/certification/') ||
+                      window.location.pathname.includes('/calibration/') ||
+                      window.location.pathname.includes('/third-party-inspection/') ||
+                      window.location.pathname.includes('/contact/');
 
-  const specsList = document.getElementById('specs-modal-list');
-  specsList.innerHTML = product.specs.map(s => `
-    <li class="flex items-center gap-3 py-2 border-b border-white/5">
-      <span class="text-cyan-400 font-bold">›</span>
-      <span class="text-slate-300">${s}</span>
-    </li>
-  `).join('');
+  let imgPath = product.image || 'assets/instruments/instrument_004_p7.jpeg';
+  if (isSubfolder && !imgPath.startsWith('../') && !imgPath.startsWith('http')) {
+    imgPath = '../' + imgPath;
+  } else if (!isSubfolder && imgPath.startsWith('../')) {
+    imgPath = imgPath.replace(/^\.\.\//, '');
+  }
 
+  // Fill Header Elements
+  const modelEl = document.getElementById('specs-modal-model');
+  if (modelEl) modelEl.textContent = product.model;
+
+  const nameEl = document.getElementById('specs-modal-name');
+  if (nameEl) nameEl.textContent = product.name;
+
+  const catEl = document.getElementById('specs-modal-category');
+  if (catEl) catEl.textContent = product.category;
+
+  const pageEl = document.getElementById('specs-modal-page');
+  if (pageEl) {
+    pageEl.textContent = product.pages && product.pages[0] ? `Catalog Page ${String(product.pages[0]).padStart(2, '0')} • PDF Ref` : 'Caltronics Official Ref';
+  }
+
+  // Price & Image
+  const priceEl = document.getElementById('specs-modal-price');
+  if (priceEl) priceEl.textContent = `₹${product.price.toLocaleString('en-IN')}`;
+
+  const imgEl = document.getElementById('specs-modal-image');
+  if (imgEl) {
+    imgEl.src = imgPath;
+    imgEl.alt = `${product.model} - ${product.name}`;
+    imgEl.onerror = function() {
+      this.onerror = null;
+      this.src = isSubfolder ? '../assets/instruments/instrument_004_p7.jpeg' : 'assets/instruments/instrument_004_p7.jpeg';
+    };
+  }
+
+  const descEl = document.getElementById('specs-modal-desc');
+  if (descEl) descEl.textContent = product.description || '';
+
+  // Render Salient Features
+  const featuresList = document.getElementById('specs-modal-features');
+  const featuresCont = document.getElementById('specs-features-container');
+  if (featuresList) {
+    if (product.features && product.features.length) {
+      featuresList.innerHTML = product.features.map(f => `
+        <li class="flex items-start gap-2 p-2 rounded-lg bg-blue-50/50 border border-blue-100/60">
+          <span class="text-blue-600 font-bold text-sm leading-none mt-0.5">✓</span>
+          <span class="text-slate-800 text-xs font-medium leading-relaxed">${f}</span>
+        </li>
+      `).join('');
+      if (featuresCont) featuresCont.classList.remove('hidden');
+    } else if (featuresCont) {
+      featuresCont.classList.add('hidden');
+    }
+  }
+
+  // Render Technical Specifications
+  const specsGrid = document.getElementById('specs-modal-specs-grid');
+  const specsCont = document.getElementById('specs-table-container');
+  const legacySpecsList = document.getElementById('specs-modal-list');
+  
+  if (specsGrid) {
+    if (product.specs && product.specs.length) {
+      specsGrid.innerHTML = product.specs.map(s => {
+        const colonIdx = s.indexOf(':');
+        if (colonIdx > 0) {
+          const key = s.substring(0, colonIdx).trim();
+          const val = s.substring(colonIdx + 1).trim();
+          return `
+            <div class="specs-item-card">
+              <span class="text-[10px] font-bold text-blue-700 uppercase tracking-wider block mb-0.5">${key}</span>
+              <span class="text-xs font-semibold text-slate-900 leading-snug">${val}</span>
+            </div>
+          `;
+        } else {
+          return `
+            <div class="specs-item-card">
+              <span class="text-xs font-semibold text-slate-900 leading-snug">${s}</span>
+            </div>
+          `;
+        }
+      }).join('');
+      if (specsCont) specsCont.classList.remove('hidden');
+    } else if (specsCont) {
+      specsCont.classList.add('hidden');
+    }
+  }
+
+  // Fallback for legacy specs list element
+  if (legacySpecsList) {
+    legacySpecsList.innerHTML = (product.specs || []).map(s => `
+      <li class="flex items-start gap-2.5 py-1.5 border-b border-slate-100 text-slate-800 text-xs">
+        <span class="text-blue-600 font-bold">›</span>
+        <span class="font-medium text-slate-800">${s}</span>
+      </li>
+    `).join('');
+  }
+
+  // Render Standard Accessories
+  const accList = document.getElementById('specs-modal-accessories');
+  const accCont = document.getElementById('specs-accessories-container');
+  if (accList) {
+    if (product.accessories && product.accessories.length) {
+      accList.innerHTML = product.accessories.map(a => `
+        <span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-emerald-50 border border-emerald-200 text-emerald-800 text-[11px] font-semibold">
+          <span class="w-1.5 h-1.5 rounded-full bg-emerald-600"></span> ${a}
+        </span>
+      `).join('');
+      if (accCont) accCont.classList.remove('hidden');
+    } else if (accCont) {
+      accCont.classList.add('hidden');
+    }
+  }
+
+  // Quotation button wiring
   const quoteBtn = document.getElementById('specs-modal-quote-btn');
   if (quoteBtn) {
     quoteBtn.setAttribute('data-model-name', `${product.model} - ${product.name}`);
   }
 
+  // Reset modal scroll to top and show
+  const modalContent = modal.querySelector('.modal-content');
+  if (modalContent) modalContent.scrollTop = 0;
+
   modal.classList.add('active');
   document.body.style.overflow = 'hidden';
 }
+
+window.showProductSpecs = showProductSpecs;

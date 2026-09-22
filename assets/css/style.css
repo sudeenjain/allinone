@@ -1329,6 +1329,30 @@ h1, h2, h3, h4, h5, h6 {
   transition: var(--transition-smooth);
 }
 
+.modal-content.modal-specs-wide {
+  max-width: 860px;
+  width: 95%;
+  max-height: 88vh;
+  padding: clamp(1.25rem, 2.8vw, 2.25rem);
+}
+
+.specs-item-card {
+  padding: 0.65rem 0.85rem;
+  border-radius: 10px;
+  background: #f8fbff;
+  border: 1px solid rgba(0, 119, 255, 0.12);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  transition: var(--transition-fast);
+}
+
+.specs-item-card:hover {
+  background: #ffffff;
+  border-color: rgba(0, 119, 255, 0.3);
+  box-shadow: 0 4px 14px rgba(0, 119, 255, 0.08);
+}
+
 .modal-overlay.active .modal-content {
   transform: scale(1) translateY(0);
 }
