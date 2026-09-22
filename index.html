@@ -80,7 +80,7 @@
               <i data-lucide="landmark" class="w-4 h-4 text-blue-600"></i> Government Projects
             </a>
             <a href="valued-clients/index.html" class="nav-dropdown-item">
-              <i data-lucide="users" class="w-4 h-4 text-blue-600"></i> Valued Clients Logos
+              <i data-lucide="users" class="w-4 h-4 text-blue-600"></i> Valued Clients (246+)
             </a>
             <a href="calibration/index.html" class="nav-dropdown-item">
               <i data-lucide="compass" class="w-4 h-4 text-blue-600"></i> Calibration Services
@@ -371,14 +371,14 @@
           </a>
         </div>
 
-        <!-- Division 4: Valued Clients Logos -->
+        <!-- Division 4: Valued Clients -->
         <div class="glass-panel division-card reveal reveal-delay-4 shimmer-card">
           <div>
             <div class="division-icon-wrap">
               <i data-lucide="users" class="w-7 h-7"></i>
             </div>
             <span class="text-xs font-bold text-blue-600 uppercase tracking-wider block mb-1">Division 04</span>
-            <h3 class="text-2xl font-bold text-slate-900 mb-3">Valued Clients Logos</h3>
+            <h3 class="text-2xl font-bold text-slate-900 mb-3">Valued Clients</h3>
             <p class="text-slate-600 text-sm leading-relaxed mb-6 text-justify">
               A verified roster of 246+ corporate enterprises and manufacturing leaders who rely on All In One Technology for equipment, testing, and continuous quality assurance across 13 industrial sectors.
             </p>
@@ -965,7 +965,7 @@
             <li><a href="certification/index.html" class="hover:text-blue-400 transition-colors">Certification (BIS / ISI Mark)</a></li>
             <li><a href="laboratory-instruments/index.html" class="hover:text-blue-400 transition-colors">Laboratory Instruments (Caltronics)</a></li>
             <li><a href="government-projects/index.html" class="hover:text-blue-400 transition-colors">Government Projects (Soil Health)</a></li>
-            <li><a href="valued-clients/index.html" class="hover:text-blue-400 transition-colors">Valued Clients Logos (246+)</a></li>
+            <li><a href="valued-clients/index.html" class="hover:text-blue-400 transition-colors">Valued Clients (246+)</a></li>
             <li><a href="calibration/index.html" class="hover:text-blue-400 transition-colors">Calibration Services</a></li>
             <li><a href="third-party-inspection/index.html" class="hover:text-blue-400 transition-colors">Third Party Inspection Work</a></li>
           </ul>
@@ -1133,6 +1133,65 @@
           <button type="submit" class="btn hero-btn text-xs px-6">Submit Quotation Request</button>
         </div>
       </form>
+    </div>
+  </div>
+
+  <!-- Client Profile & Direct Website Modal -->
+  <div id="client-profile-modal" class="modal-overlay">
+    <div class="modal-content modal-specs-wide">
+      <div class="flex items-start justify-between border-b border-slate-100 pb-4 mb-6">
+        <div>
+          <span class="text-xs font-bold text-blue-600 uppercase tracking-wider flex items-center gap-1.5">
+            <i data-lucide="shield-check" class="w-4 h-4 text-emerald-600"></i> VERIFIED CORPORATE CLIENT PARTNER
+          </span>
+          <h3 id="client-modal-name" class="text-2xl font-extrabold text-slate-900 mt-1">Company Name</h3>
+        </div>
+        <button data-modal-close class="w-8 h-8 rounded-full bg-slate-100 hover:bg-slate-200 text-slate-500 hover:text-slate-800 flex items-center justify-center font-bold transition-colors">✕</button>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
+        <div class="flex flex-col items-center justify-center p-6 bg-slate-50 rounded-2xl border border-slate-200/80 shadow-inner">
+          <img id="client-modal-logo" src="" alt="Client Logo" class="max-h-36 max-w-full object-contain filter drop-shadow-sm mb-3">
+          <span class="text-[11px] font-bold text-slate-500 uppercase tracking-wider text-center">Verified Enterprise Logo</span>
+        </div>
+
+        <div class="md:col-span-2 space-y-4">
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+            <div class="bg-blue-50/50 p-3 rounded-xl border border-blue-100">
+              <span class="text-[11px] font-bold text-slate-500 uppercase block mb-0.5">Industry Sector</span>
+              <span id="client-modal-industry" class="text-sm font-bold text-blue-700">Sector</span>
+            </div>
+            <div class="bg-emerald-50/50 p-3 rounded-xl border border-emerald-100">
+              <span class="text-[11px] font-bold text-slate-500 uppercase block mb-0.5">Industrial Hub / Location</span>
+              <span id="client-modal-location" class="text-sm font-bold text-emerald-700">Location</span>
+            </div>
+          </div>
+
+          <div class="bg-indigo-50/50 p-3 rounded-xl border border-indigo-100">
+            <span class="text-[11px] font-bold text-slate-500 uppercase block mb-0.5">Compliance & Standards</span>
+            <span id="client-modal-cert" class="text-sm font-bold text-indigo-700">Standards</span>
+          </div>
+
+          <div class="bg-slate-50 p-4 rounded-xl border border-slate-200/80">
+            <span class="text-[11px] font-bold text-slate-500 uppercase block mb-1">Collaboration Scope with ALL IN ONE TECHNOLOGY</span>
+            <p id="client-modal-partnership" class="text-xs text-slate-700 leading-relaxed text-justify">
+              Supplied Caltronics laboratory instruments, quality compliance testing setups, and ongoing metrological calibration services by ALL IN ONE TECHNOLOGY.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="flex flex-wrap items-center justify-between gap-3 pt-4 border-t border-slate-100">
+        <button type="button" data-modal-close class="btn hero-btn-outline text-xs py-2.5 px-5">Close</button>
+        <div class="flex flex-wrap gap-2.5">
+          <a id="client-modal-web-btn" href="#" target="_blank" rel="noopener noreferrer" class="btn hero-btn text-xs py-2.5 px-5 flex items-center gap-1.5">
+            <i data-lucide="globe" class="w-4 h-4"></i> Visit Company Profile / Website <i data-lucide="external-link" class="w-3.5 h-3.5"></i>
+          </a>
+          <button id="client-modal-quote-btn" data-modal-open="quotation-modal" class="btn btn-emerald text-xs py-2.5 px-5 flex items-center gap-1.5">
+            <i data-lucide="file-check" class="w-4 h-4"></i> Request Similar Setup
+          </button>
+        </div>
+      </div>
     </div>
   </div>
 

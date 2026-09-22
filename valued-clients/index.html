@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Valued Clients Logos | 246+ Industrial Enterprises | ALL IN ONE TECHNOLOGY</title>
+  <title>Valued Clients | 246+ Corporate Partners | ALL IN ONE TECHNOLOGY</title>
   <meta name="description" content="Authentic client roster of 246+ industrial enterprises across Ceramics, Polymers, Packaging, Food, Chemicals, and Construction partnering with All In One Technology.">
   <link rel="icon" href="../assets/images/caltronics_app_icon.png" type="image/png">
 
@@ -76,10 +76,10 @@
   <section class="py-16 relative">
     <div class="container mx-auto text-center max-w-4xl px-4">
       <div class="badge-clients mb-4">
-        <i data-lucide="users" class="w-4 h-4"></i> Division 04 • Our Valued Customers
+        <i data-lucide="users" class="w-4 h-4"></i> Division 04 • Our Valued Corporate Clients
       </div>
       <h1 class="text-3xl sm:text-5xl font-extrabold text-[#082032] mb-6 tracking-tight">
-        Valued Clients Logos (246+ Enterprises)
+        Our Valued Clients (246+ Enterprises)
       </h1>
       <p class="hero-text max-w-3xl mx-auto mb-6">
         Every client logo featured below represents an authentic commercial collaboration extracted from our comprehensive 13-page client roster in <em>Updated customer-list.pdf</em>. Our partners span Morbi ceramic leaders, major polymer extruders, packaged drinking water plants, chemical manufacturers, and construction material giants across India.
@@ -175,6 +175,65 @@
     </div>
   </div>
 
+  <!-- Client Profile & Direct Website Modal -->
+  <div id="client-profile-modal" class="modal-overlay">
+    <div class="modal-content modal-specs-wide">
+      <div class="flex items-start justify-between border-b border-slate-100 pb-4 mb-6">
+        <div>
+          <span class="text-xs font-bold text-blue-600 uppercase tracking-wider flex items-center gap-1.5">
+            <i data-lucide="shield-check" class="w-4 h-4 text-emerald-600"></i> VERIFIED CORPORATE CLIENT PARTNER
+          </span>
+          <h3 id="client-modal-name" class="text-2xl font-extrabold text-slate-900 mt-1">Company Name</h3>
+        </div>
+        <button data-modal-close class="w-8 h-8 rounded-full bg-slate-100 hover:bg-slate-200 text-slate-500 hover:text-slate-800 flex items-center justify-center font-bold transition-colors">✕</button>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
+        <div class="flex flex-col items-center justify-center p-6 bg-slate-50 rounded-2xl border border-slate-200/80 shadow-inner">
+          <img id="client-modal-logo" src="" alt="Client Logo" class="max-h-36 max-w-full object-contain filter drop-shadow-sm mb-3">
+          <span class="text-[11px] font-bold text-slate-500 uppercase tracking-wider text-center">Verified Enterprise Logo</span>
+        </div>
+
+        <div class="md:col-span-2 space-y-4">
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+            <div class="bg-blue-50/50 p-3 rounded-xl border border-blue-100">
+              <span class="text-[11px] font-bold text-slate-500 uppercase block mb-0.5">Industry Sector</span>
+              <span id="client-modal-industry" class="text-sm font-bold text-blue-700">Sector</span>
+            </div>
+            <div class="bg-emerald-50/50 p-3 rounded-xl border border-emerald-100">
+              <span class="text-[11px] font-bold text-slate-500 uppercase block mb-0.5">Industrial Hub / Location</span>
+              <span id="client-modal-location" class="text-sm font-bold text-emerald-700">Location</span>
+            </div>
+          </div>
+
+          <div class="bg-indigo-50/50 p-3 rounded-xl border border-indigo-100">
+            <span class="text-[11px] font-bold text-slate-500 uppercase block mb-0.5">Compliance & Standards</span>
+            <span id="client-modal-cert" class="text-sm font-bold text-indigo-700">Standards</span>
+          </div>
+
+          <div class="bg-slate-50 p-4 rounded-xl border border-slate-200/80">
+            <span class="text-[11px] font-bold text-slate-500 uppercase block mb-1">Collaboration Scope with ALL IN ONE TECHNOLOGY</span>
+            <p id="client-modal-partnership" class="text-xs text-slate-700 leading-relaxed text-justify">
+              Supplied Caltronics laboratory instruments, quality compliance testing setups, and ongoing metrological calibration services by ALL IN ONE TECHNOLOGY.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="flex flex-wrap items-center justify-between gap-3 pt-4 border-t border-slate-100">
+        <button type="button" data-modal-close class="btn hero-btn-outline text-xs py-2.5 px-5">Close</button>
+        <div class="flex flex-wrap gap-2.5">
+          <a id="client-modal-web-btn" href="#" target="_blank" rel="noopener noreferrer" class="btn hero-btn text-xs py-2.5 px-5 flex items-center gap-1.5">
+            <i data-lucide="globe" class="w-4 h-4"></i> Visit Company Profile / Website <i data-lucide="external-link" class="w-3.5 h-3.5"></i>
+          </a>
+          <button id="client-modal-quote-btn" data-modal-open="quotation-modal" class="btn btn-emerald text-xs py-2.5 px-5 flex items-center gap-1.5">
+            <i data-lucide="file-check" class="w-4 h-4"></i> Request Similar Setup
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <script src="../assets/js/company-data.js"></script>
   <script src="../assets/js/clients-data.js"></script>
   <script src="../assets/js/main.js"></script>
@@ -209,16 +268,20 @@
       grid.innerHTML = filtered.map(item => {
         const logoPath = item.logo.startsWith('../') ? item.logo : '../' + item.logo;
         return `
-        <div class="client-grid-card">
-          <div class="w-full h-24 flex items-center justify-center p-2 rounded-xl bg-slate-50/60 border border-slate-100">
-            <img src="${logoPath}" alt="${item.name}" class="max-h-full max-w-full object-contain filter grayscale hover:grayscale-0 transition-all duration-300" loading="lazy" onerror="this.onerror=null; this.src='../assets/clients/client_logo_001.jpeg';">
+        <div class="client-grid-card cursor-pointer group hover:border-blue-300 transition-all shadow-sm hover:shadow-md" onclick="showClientDetails(${item.id})">
+          <div class="w-full h-24 flex items-center justify-center p-2 rounded-xl bg-slate-50/60 border border-slate-100 group-hover:bg-blue-50/30 transition-colors relative">
+            <img src="${logoPath}" alt="${item.name}" class="max-h-full max-w-full object-contain filter grayscale group-hover:grayscale-0 transition-all duration-300" loading="lazy" onerror="this.onerror=null; this.src='../assets/clients/client_logo_001.jpeg';">
+            <span class="absolute bottom-1.5 right-1.5 opacity-0 group-hover:opacity-100 transition-opacity text-[9px] font-bold text-blue-600 bg-white/95 px-1.5 py-0.5 rounded shadow-xs border border-blue-100">Details ↗</span>
           </div>
           <div class="w-full mt-2 pt-2 border-t border-slate-100 text-left">
-            <h5 class="text-xs font-bold text-[#082032] line-clamp-1" title="${item.name}">${item.name}</h5>
+            <h5 class="text-xs font-bold text-[#082032] line-clamp-1 group-hover:text-blue-600 transition-colors" title="${item.name}">${item.name}</h5>
             <span class="text-[10px] text-blue-600 font-semibold block truncate">${item.industry}</span>
           </div>
         </div>
       `}).join('');
+
+      initModals();
+      if (typeof lucide !== 'undefined') lucide.createIcons();
     }
 
     // Event listeners
@@ -244,6 +307,15 @@
     }
 
     renderClients();
+
+    // Check if URL has ?client=ID
+    const urlParams = new URLSearchParams(window.location.search);
+    const clientIdParam = urlParams.get('client');
+    if (clientIdParam) {
+      setTimeout(() => {
+        showClientDetails(clientIdParam);
+      }, 400);
+    }
   </script>
 </body>
 </html>

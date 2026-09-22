@@ -414,7 +414,7 @@ function initClientMarquee() {
 
   function createLogoCards(items) {
     return items.map(c => `
-      <div class="client-logo-card" title="${c.name} - ${c.industry}">
+      <div class="client-logo-card cursor-pointer group" onclick="showClientDetails(${c.id})" title="${c.name} - ${c.industry} (Click for Corporate Profile)">
         <img src="${c.logo}" alt="${c.name}" loading="lazy" onerror="this.onerror=null; this.src='assets/clients/client_logo_001.jpeg';">
       </div>
     `).join('');
@@ -624,4 +624,80 @@ function showProductSpecs(productIdentifier) {
   document.body.style.overflow = 'hidden';
 }
 
+// Show Client Company Details Modal
+function showClientDetails(clientId) {
+  if (typeof CLIENTS_DATA === 'undefined' || !CLIENTS_DATA.length) {
+    console.error('CLIENTS_DATA is not loaded');
+    return;
+  }
+
+  const client = CLIENTS_DATA.find(c => c.id === Number(clientId));
+  if (!client) {
+    console.warn('Client not found:', clientId);
+    return;
+  }
+
+  const modal = document.getElementById('client-profile-modal');
+  if (!modal) {
+    // If modal is not on this page, redirect to valued-clients with anchor/query
+    window.location.href = `valued-clients/index.html?client=${client.id}`;
+    return;
+  }
+
+  const isSubpage = window.location.pathname.includes('/valued-clients/') || 
+                    window.location.pathname.includes('/laboratory-instruments/') ||
+                    window.location.pathname.includes('/certification/') ||
+                    window.location.pathname.includes('/calibration/') ||
+                    window.location.pathname.includes('/government-projects/') ||
+                    window.location.pathname.includes('/third-party-inspection/') ||
+                    window.location.pathname.includes('/contact/');
+
+  const logoPrefix = isSubpage ? '../' : '';
+  const cleanLogo = client.logo.replace(/^\.\.\//, '');
+  const finalLogo = logoPrefix + cleanLogo;
+
+  // Populate modal fields
+  const logoEl = document.getElementById('client-modal-logo');
+  if (logoEl) {
+    logoEl.src = finalLogo;
+    logoEl.alt = client.name;
+  }
+
+  const nameEl = document.getElementById('client-modal-name');
+  if (nameEl) nameEl.textContent = client.name;
+
+  const indEl = document.getElementById('client-modal-industry');
+  if (indEl) indEl.textContent = client.industry;
+
+  const locEl = document.getElementById('client-modal-location');
+  if (locEl) locEl.textContent = client.location || 'Gujarat, India';
+
+  const certEl = document.getElementById('client-modal-cert');
+  if (certEl) certEl.textContent = client.cert || 'ISO / BIS Standards Verified';
+
+  const partEl = document.getElementById('client-modal-partnership');
+  if (partEl) {
+    partEl.textContent = client.partnership || 'Supplied Caltronics laboratory instruments, quality compliance testing setups, and ongoing metrological calibration services by ALL IN ONE TECHNOLOGY.';
+  }
+
+  const webBtn = document.getElementById('client-modal-web-btn');
+  if (webBtn) {
+    webBtn.href = client.websiteUrl || `https://www.google.com/search?q=${encodeURIComponent(client.name + ' Morbi Gujarat')}`;
+    webBtn.setAttribute('target', '_blank');
+    webBtn.setAttribute('rel', 'noopener noreferrer');
+  }
+
+  // Hook into quotation modal
+  const quoteBtn = document.getElementById('client-modal-quote-btn');
+  if (quoteBtn) {
+    quoteBtn.setAttribute('data-model-name', `${client.name} (${client.industry})`);
+  }
+
+  if (typeof lucide !== 'undefined') lucide.createIcons();
+
+  modal.classList.add('active');
+  document.body.style.overflow = 'hidden';
+}
+
 window.showProductSpecs = showProductSpecs;
+window.showClientDetails = showClientDetails;

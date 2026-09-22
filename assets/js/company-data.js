@@ -91,7 +91,7 @@ const COMPANY_DATA = {
     },
     {
       id: "valued-clients",
-      name: "Valued Clients Logos",
+      name: "Valued Clients",
       tagline: "Trusted by 246+ Industrial Leaders",
       shortDesc: "Authentic partnership with 246+ enterprises across ceramics, polymers, packaging, food & beverage, chemicals, and textiles.",
       link: "valued-clients/",
