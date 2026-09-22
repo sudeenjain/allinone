@@ -8,7 +8,27 @@ document.addEventListener('DOMContentLoaded', () => {
   initModals();
   initClientMarquee();
   initQuotationBuilder();
+  checkResponsiveOverflow();
+  window.addEventListener('resize', checkResponsiveOverflow, { passive: true });
 });
+
+function checkResponsiveOverflow() {
+  const winWidth = window.innerWidth;
+  const scrollWidth = document.documentElement.scrollWidth;
+  if (scrollWidth > winWidth) {
+    const culprits = [];
+    document.querySelectorAll('*').forEach(el => {
+      const r = el.getBoundingClientRect();
+      if (r.right > winWidth + 1) {
+        const cls = (el.className && typeof el.className === 'string') ? el.className.split(' ').slice(0, 3).join('.') : '';
+        culprits.push(`${el.tagName}.${cls} (r:${Math.round(r.right)}px, w:${Math.round(r.width)}px)`);
+      }
+    });
+    console.warn(`[RESPONSIVE_OVERFLOW] win=${winWidth}, scroll=${scrollWidth}, culprits=${culprits.slice(0, 10).join(' | ')}`);
+  } else {
+    console.log(`[RESPONSIVE_CLEAN] win=${winWidth}, scroll=${scrollWidth}`);
+  }
+}
 
 // 1. Scroll Progress Indicator
 function initScrollProgress() {
@@ -24,7 +44,7 @@ function initScrollProgress() {
 
 // 2. Sticky Header with Scroll Morph
 function initStickyHeader() {
-  const header = document.querySelector('.main-header');
+  const header = document.querySelector('.custom-navbar, .main-header');
   if (!header) return;
 
   window.addEventListener('scroll', () => {
@@ -99,18 +119,83 @@ function animateCounter(el) {
   requestAnimationFrame(updateCount);
 }
 
-// 5. Mobile Menu Toggle
+// 5. Mobile Menu Toggle & Drawer Management
 function initMobileMenu() {
   const toggleBtn = document.querySelector('.mobile-toggle');
   const navMenu = document.querySelector('.nav-menu');
   if (!toggleBtn || !navMenu) return;
 
-  toggleBtn.addEventListener('click', () => {
-    navMenu.classList.toggle('mobile-open');
+  // Create or select backdrop overlay
+  let backdrop = document.querySelector('.mobile-nav-backdrop');
+  if (!backdrop) {
+    backdrop = document.createElement('div');
+    backdrop.className = 'mobile-nav-backdrop';
+    document.body.appendChild(backdrop);
+  }
+
+  function closeMenu() {
+    navMenu.classList.remove('mobile-open');
+    backdrop.classList.remove('active');
+    toggleBtn.setAttribute('aria-expanded', 'false');
+    toggleBtn.innerHTML = '☰';
+    document.body.style.overflow = '';
+  }
+
+  function openMenu() {
+    navMenu.classList.add('mobile-open');
+    backdrop.classList.add('active');
+    toggleBtn.setAttribute('aria-expanded', 'true');
+    toggleBtn.innerHTML = '✕';
+    document.body.style.overflow = 'hidden';
+  }
+
+  toggleBtn.addEventListener('click', (e) => {
+    e.stopPropagation();
     const isOpen = navMenu.classList.contains('mobile-open');
-    toggleBtn.setAttribute('aria-expanded', isOpen);
-    toggleBtn.innerHTML = isOpen ? '✕' : '☰';
+    if (isOpen) {
+      closeMenu();
+    } else {
+      openMenu();
+    }
   });
+
+  backdrop.addEventListener('click', closeMenu);
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+      closeMenu();
+    }
+  });
+
+  // Handle dropdown accordions inside mobile menu
+  const dropdowns = navMenu.querySelectorAll('.nav-dropdown');
+  dropdowns.forEach(dd => {
+    const trigger = dd.querySelector('.nav-link, .nav-dropdown-toggle');
+    if (trigger) {
+      trigger.addEventListener('click', (e) => {
+        if (window.innerWidth <= 1150) {
+          e.preventDefault();
+          dd.classList.toggle('dropdown-open');
+        }
+      });
+    }
+  });
+
+  // Close menu when clicking nav links that are not dropdown triggers
+  navMenu.querySelectorAll('a:not(.nav-dropdown > a)').forEach(link => {
+    link.addEventListener('click', () => {
+      if (window.innerWidth <= 1150) {
+        closeMenu();
+      }
+    });
+  });
+
+  // Close menu when resizing to desktop
+  window.addEventListener('resize', () => {
+    if (window.innerWidth > 1150 && navMenu.classList.contains('mobile-open')) {
+      closeMenu();
+    }
+  }, { passive: true });
 }
 
 // 6. Modal Windows Management
@@ -155,6 +240,17 @@ function initModals() {
         document.body.style.overflow = '';
       }
     });
+  });
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+      modalOverlays.forEach(overlay => {
+        if (overlay.classList.contains('active')) {
+          overlay.classList.remove('active');
+          document.body.style.overflow = '';
+        }
+      });
+    }
   });
 }
 

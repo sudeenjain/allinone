@@ -101,3 +101,11 @@
   font-size: 0.75rem;
   font-weight: 600;
 }
+
+/* Responsive Enhancements for Certification */
+@media (max-width: 640px) {
+  .cert-service-card, .cert-step-card {
+    padding: 1.25rem;
+    border-radius: 16px;
+  }
+}

@@ -69,3 +69,15 @@
   transform: translateX(4px);
 }
 
+/* Responsive Enhancements for Contact & Offices */
+@media (max-width: 640px) {
+  .location-card {
+    padding: 1.25rem;
+    border-radius: 16px;
+  }
+  .contact-detail-row {
+    padding: 0.75rem;
+    font-size: 0.78rem;
+  }
+}
+

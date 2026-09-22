@@ -108,3 +108,21 @@
   border-color: rgba(5, 150, 105, 0.3);
   transform: translateY(-2px);
 }
+
+/* Responsive Enhancements for Government Projects */
+@media (max-width: 640px) {
+  .gov-flagship-card {
+    padding: 1.25rem;
+    border-left-width: 5px;
+    border-radius: 16px;
+  }
+  .gov-dept-card {
+    padding: 1.25rem;
+  }
+  .gov-stat-box {
+    padding: 1rem;
+  }
+  .gov-stat-box .text-4xl {
+    font-size: 2rem;
+  }
+}

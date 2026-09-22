@@ -96,3 +96,19 @@
   color: #059669;
   font-weight: 600;
 }
+
+/* Responsive Enhancements for Calibration */
+@media (max-width: 640px) {
+  .calibration-card {
+    padding: 1.25rem;
+    border-radius: 16px;
+  }
+  .calibration-scope-item {
+    padding: 1rem;
+  }
+  .metrology-seal {
+    padding: 0.65rem 1rem;
+    font-size: 0.82rem;
+    flex-wrap: wrap;
+  }
+}

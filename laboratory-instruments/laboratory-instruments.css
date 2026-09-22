@@ -85,3 +85,26 @@
 .cat-pill:hover {
   transform: translateY(-2px);
 }
+
+/* Responsive Enhancements for Laboratory Instruments */
+@media (max-width: 640px) {
+  .instrument-card {
+    padding: 1.15rem;
+  }
+  .model-tag {
+    top: 0.75rem;
+    left: 0.75rem;
+    font-size: 0.65rem;
+    padding: 0.2rem 0.5rem;
+  }
+  .cat-pill {
+    padding: 0.4rem 0.85rem;
+    font-size: 0.75rem;
+  }
+}
+
+@media (min-width: 1920px) {
+  #catalog-grid {
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+  }
+}

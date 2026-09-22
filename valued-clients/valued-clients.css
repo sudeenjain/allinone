@@ -69,3 +69,28 @@
   transform: translateY(-2px);
 }
 
+/* Responsive Enhancements for Valued Clients */
+@media (max-width: 640px) {
+  .client-grid-card {
+    height: 11rem;
+    padding: 0.75rem;
+    border-radius: 14px;
+  }
+  .client-grid-card h5 {
+    font-size: 0.78rem;
+  }
+  .client-grid-card span {
+    font-size: 0.68rem;
+  }
+  .client-pill {
+    padding: 0.4rem 0.85rem;
+    font-size: 0.75rem;
+  }
+}
+
+@media (min-width: 1920px) {
+  #clients-grid {
+    grid-template-columns: repeat(8, minmax(0, 1fr));
+  }
+}
+

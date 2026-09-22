@@ -86,3 +86,14 @@
   text-align: justify;
   line-height: 1.6;
 }
+
+/* Responsive Enhancements for Third Party Inspection */
+@media (max-width: 640px) {
+  .audit-card {
+    padding: 1.25rem;
+    border-radius: 16px;
+  }
+  .workflow-stage-box {
+    padding: 1.15rem;
+  }
+}
