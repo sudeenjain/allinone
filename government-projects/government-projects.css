@@ -1,0 +1,110 @@
+/* =========================================================
+   GOVERNMENT PROJECTS DIVISION STYLESHEET (abhimo.com Style)
+   All In One Technology - Turn-Key Laboratories & Soil Health
+   ========================================================= */
+
+:root {
+  --gov-primary: #059669;
+  --gov-secondary: #10b981;
+  --gov-accent: #0284c7;
+  --gov-amber: #d97706;
+  --gov-glow: rgba(5, 150, 105, 0.15);
+  --gov-card-bg: #ffffff;
+}
+
+/* Division Pill Badge (Abhimo style) */
+.badge-government {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.45rem 1.1rem;
+  border-radius: 9999px;
+  background: rgba(5, 150, 105, 0.08);
+  border: 1px solid rgba(5, 150, 105, 0.22);
+  color: #047857;
+  font-size: 0.82rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
+}
+
+/* Flagship Panel Highlight (Abhimo Glass Panel) */
+.gov-flagship-card {
+  background: var(--gov-card-bg);
+  border: 1px solid rgba(5, 150, 105, 0.2);
+  border-left: 8px solid var(--gov-primary);
+  border-radius: 20px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 15px 35px rgba(5, 150, 105, 0.08);
+}
+
+.gov-flagship-card h3 {
+  color: #082032;
+  font-weight: 700;
+}
+
+.gov-flagship-card p {
+  color: #475569;
+  text-align: justify;
+  line-height: 1.8;
+}
+
+/* Department Card */
+.gov-dept-card {
+  background: var(--gov-card-bg);
+  border: 1px solid rgba(0, 119, 255, 0.12);
+  border-radius: 18px;
+  padding: 1.75rem;
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.03);
+}
+
+.gov-dept-card:hover {
+  transform: translateY(-5px);
+  border-color: rgba(5, 150, 105, 0.4);
+  box-shadow: 0 18px 36px rgba(5, 150, 105, 0.12);
+}
+
+.gov-dept-card h4 {
+  color: #082032;
+  font-weight: 700;
+}
+
+.gov-dept-card p {
+  color: #475569;
+  text-align: justify;
+  line-height: 1.7;
+}
+
+/* Gujarat Gov Partnership Ribbon */
+.gov-ribbon {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: rgba(5, 150, 105, 0.08);
+  border: 1px solid rgba(5, 150, 105, 0.22);
+  border-radius: 8px;
+  padding: 0.35rem 0.85rem;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #047857;
+}
+
+/* Metric Counter Box */
+.gov-stat-box {
+  background: var(--gov-card-bg);
+  border: 1px solid rgba(0, 119, 255, 0.12);
+  border-radius: 14px;
+  padding: 1.25rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.02);
+}
+
+.gov-stat-box:hover {
+  background: rgba(5, 150, 105, 0.04);
+  border-color: rgba(5, 150, 105, 0.3);
+  transform: translateY(-2px);
+}

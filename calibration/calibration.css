@@ -1,0 +1,98 @@
+/* =========================================================
+   CALIBRATION DIVISION STYLESHEET (abhimo.com Style)
+   All In One Technology - Traceable Metrology & Testing
+   ========================================================= */
+
+:root {
+  --calibration-primary: #7c3aed;
+  --calibration-secondary: #6366f1;
+  --calibration-glow: rgba(124, 58, 237, 0.18);
+  --calibration-bg-card: rgba(255, 255, 255, 0.88);
+}
+
+/* Division Pill Badge (Abhimo style) */
+.badge-calibration {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.45rem 1.1rem;
+  border-radius: 9999px;
+  background: rgba(124, 58, 237, 0.08);
+  border: 1px solid rgba(124, 58, 237, 0.22);
+  color: #6d28d9;
+  font-size: 0.82rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
+}
+
+/* Calibration Highlight Panel (Frosted Abhimo Glass) */
+.calibration-card {
+  background: var(--calibration-bg-card);
+  -webkit-backdrop-filter: blur(16px);
+  backdrop-filter: blur(16px);
+  border: 1px solid rgba(124, 58, 237, 0.14);
+  border-radius: 20px;
+  padding: 2.25rem;
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 15px 35px rgba(124, 58, 237, 0.06);
+}
+
+.calibration-card:hover {
+  border-color: rgba(124, 58, 237, 0.4);
+  transform: translateY(-5px);
+  box-shadow: 0 22px 45px rgba(124, 58, 237, 0.14);
+}
+
+.calibration-card h3 {
+  color: #082032;
+  font-weight: 700;
+}
+
+.calibration-card p {
+  color: #475569;
+  text-align: justify;
+  line-height: 1.8;
+}
+
+/* Calibration Scope Grid Item */
+.calibration-scope-item {
+  background: rgba(255, 255, 255, 0.85);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(124, 58, 237, 0.12);
+  border-radius: 14px;
+  padding: 1.35rem;
+  transition: all 0.3s ease;
+  color: #475569;
+  line-height: 1.7;
+}
+
+.calibration-scope-item strong {
+  font-size: 0.95rem;
+  margin-bottom: 0.4rem;
+}
+
+.calibration-scope-item:hover {
+  background: #ffffff;
+  border-color: rgba(124, 58, 237, 0.35);
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(124, 58, 237, 0.08);
+}
+
+/* Metrology Traceability Seal */
+.metrology-seal {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.85rem 1.5rem;
+  background: rgba(16, 185, 129, 0.08);
+  border: 1px solid rgba(16, 185, 129, 0.25);
+  border-radius: 14px;
+  color: #059669;
+  font-weight: 600;
+}

@@ -1,0 +1,103 @@
+/* =========================================================
+   CERTIFICATION DIVISION STYLESHEET (abhimo.com Style)
+   All In One Technology - BIS / ISI Standards & Compliance
+   ========================================================= */
+
+:root {
+  --cert-primary: #0284c7;
+  --cert-cyan: #0284c7;
+  --cert-emerald: #059669;
+  --cert-glow: rgba(2, 132, 199, 0.16);
+  --cert-card-bg: rgba(255, 255, 255, 0.9);
+}
+
+/* Division Pill Badge (Abhimo style) */
+.badge-certification {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.45rem 1.1rem;
+  border-radius: 9999px;
+  background: rgba(2, 132, 199, 0.08);
+  border: 1px solid rgba(2, 132, 199, 0.22);
+  color: #0369a1;
+  font-size: 0.82rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
+}
+
+/* Service Card Enhancement (Frosted Abhimo Glass) */
+.cert-service-card {
+  background: var(--cert-card-bg);
+  -webkit-backdrop-filter: blur(16px);
+  backdrop-filter: blur(16px);
+  border: 1px solid rgba(2, 132, 199, 0.14);
+  border-radius: 20px;
+  padding: 2.25rem;
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 15px 35px rgba(2, 132, 199, 0.06);
+}
+
+.cert-service-card:hover {
+  transform: translateY(-5px);
+  border-color: rgba(2, 132, 199, 0.4);
+  box-shadow: 0 22px 45px rgba(2, 132, 199, 0.14);
+}
+
+.cert-service-card h3 {
+  color: #082032;
+  font-weight: 700;
+}
+
+.cert-service-card p {
+  color: #475569;
+  text-align: justify;
+  line-height: 1.8;
+}
+
+/* Step Card in Lifecycle (Abhimo Glass Box) */
+.cert-step-card {
+  background: rgba(255, 255, 255, 0.9);
+  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(2, 132, 199, 0.12);
+  border-radius: 18px;
+  padding: 1.75rem;
+  transition: all 0.3s ease;
+  position: relative;
+  box-shadow: 0 10px 25px rgba(2, 132, 199, 0.05);
+}
+
+.cert-step-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(2, 132, 199, 0.35);
+  box-shadow: 0 16px 32px rgba(2, 132, 199, 0.12);
+}
+
+.cert-step-card h4 {
+  color: #082032;
+}
+
+.cert-step-card p {
+  color: #64748b;
+  text-align: justify;
+  line-height: 1.6;
+}
+
+/* BIS Standard Badge */
+.standard-badge {
+  display: inline-block;
+  padding: 0.3rem 0.75rem;
+  border-radius: 8px;
+  background: rgba(2, 132, 199, 0.08);
+  border: 1px solid rgba(2, 132, 199, 0.2);
+  color: #0284c7;
+  font-family: var(--font-mono, monospace);
+  font-size: 0.75rem;
+  font-weight: 600;
+}

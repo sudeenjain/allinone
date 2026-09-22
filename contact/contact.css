@@ -1,0 +1,71 @@
+/* =========================================================
+   CONTACT & REGIONAL OFFICES STYLESHEET (abhimo.com Style)
+   All In One Technology - Morbi, Rajkot, Ahmedabad
+   ========================================================= */
+
+:root {
+  --contact-primary: #0284c7;
+  --contact-secondary: #0369a1;
+  --contact-accent: #059669;
+  --contact-glow: rgba(2, 132, 199, 0.15);
+  --contact-card-bg: #ffffff;
+}
+
+/* Location Branch Card (Abhimo Frosted Card) */
+.location-card {
+  background: var(--contact-card-bg);
+  border: 1px solid rgba(0, 119, 255, 0.12);
+  border-radius: 20px;
+  padding: 2rem;
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 119, 255, 0.04);
+}
+
+.location-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 22px 45px rgba(2, 132, 199, 0.14);
+  border-color: rgba(2, 132, 199, 0.4);
+}
+
+.location-card h3 {
+  color: #082032;
+  font-weight: 700;
+}
+
+.location-card p {
+  color: #475569;
+  line-height: 1.7;
+}
+
+/* Branch Location Tag (Abhimo Pill) */
+.branch-tag {
+  display: inline-block;
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  padding: 0.3rem 0.75rem;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+/* Contact Detail Row */
+.contact-detail-row {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  padding: 0.9rem 1rem;
+  border-radius: 14px;
+  background: #f8fbff;
+  border: 1px solid rgba(0, 119, 255, 0.08);
+  transition: all 0.25s ease;
+}
+
+.contact-detail-row:hover {
+  background: #eef6fc;
+  border-color: rgba(2, 132, 199, 0.3);
+  transform: translateX(4px);
+}
+

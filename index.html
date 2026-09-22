@@ -1,0 +1,803 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ALL IN ONE TECHNOLOGY | A House of Machinery, Laboratory & Testing</title>
+  <meta name="description" content="All In One Technology - Established 2004. A House of Machinery, Laboratory & Testing. Manufacturer of Caltronics precision instruments, BIS/ISI Certification consulting, Traceable Calibration, and Gujarat Government Soil Health Card partner.">
+  <link rel="icon" href="assets/images/caltronics_app_icon.png" type="image/png">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <!-- abhimo.com Inspired Core Design System -->
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="antialiased selection:bg-blue-600 selection:text-white">
+  <!-- Scroll Progress Indicator -->
+  <div id="scroll-progress"></div>
+
+  <!-- Background Ambient Glow Circles (abhimo.com) -->
+  <div class="bg-circle circle1"></div>
+  <div class="bg-circle circle2"></div>
+  <div class="bg-circle circle3"></div>
+
+  <!-- Top Bar -->
+  <div class="top-bar">
+    <div class="container top-bar-inner">
+      <div class="top-bar-left">
+        <span class="badge-pulse">Established 2004 • 20+ Years Excellence</span>
+        <span class="text-slate-500 font-medium">GSTIN: <strong class="text-blue-600 font-mono">24AHRPD0104C1Z6</strong></span>
+      </div>
+      <div class="top-bar-right">
+        <a href="tel:+919825538719" class="hover:text-blue-600 flex items-center gap-1.5 transition-colors font-medium">
+          <i data-lucide="phone" class="w-3.5 h-3.5 text-blue-600"></i>
+          <span>+91 98255 38719 / 98255 83846</span>
+        </a>
+        <a href="mailto:morbi@allinonetech.co.in" class="hover:text-blue-600 flex items-center gap-1.5 transition-colors hidden sm:flex font-medium">
+          <i data-lucide="mail" class="w-3.5 h-3.5 text-blue-600"></i>
+          <span>morbi@allinonetech.co.in</span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main Navigation Header (custom-navbar) -->
+  <header class="custom-navbar">
+    <div class="container header-container">
+      <a href="index.html" class="logo-brand group">
+        <div class="brand-logo-badge">
+          <img src="assets/images/caltronics_logo.png" alt="CALTRONICS ® AN ISO 9001 CERTIFIED">
+        </div>
+        <div class="logo-texts">
+          <h1 class="group-hover:text-blue-600 transition-colors">ALL IN ONE TECHNOLOGY</h1>
+          <span>A House of Machinery, Laboratory & Testing</span>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation Menu -->
+      <nav class="nav-menu">
+        <a href="index.html" class="nav-link active">Home</a>
+
+        <!-- Divisions Dropdown -->
+        <div class="nav-dropdown">
+          <a href="#divisions" class="nav-link flex items-center gap-1">
+            Our Divisions <i data-lucide="chevron-down" class="w-4 h-4"></i>
+          </a>
+          <div class="nav-dropdown-menu">
+            <a href="certification/" class="nav-dropdown-item">
+              <i data-lucide="award" class="w-4 h-4 text-blue-600"></i> Certification (BIS / ISI)
+            </a>
+            <a href="laboratory-instruments/" class="nav-dropdown-item">
+              <i data-lucide="microscope" class="w-4 h-4 text-blue-600"></i> Laboratory Instruments
+            </a>
+            <a href="government-projects/" class="nav-dropdown-item">
+              <i data-lucide="landmark" class="w-4 h-4 text-blue-600"></i> Government Projects
+            </a>
+            <a href="valued-clients/" class="nav-dropdown-item">
+              <i data-lucide="users" class="w-4 h-4 text-blue-600"></i> Valued Clients Logos
+            </a>
+            <a href="calibration/" class="nav-dropdown-item">
+              <i data-lucide="compass" class="w-4 h-4 text-blue-600"></i> Calibration Services
+            </a>
+            <a href="third-party-inspection/" class="nav-dropdown-item">
+              <i data-lucide="clipboard-check" class="w-4 h-4 text-blue-600"></i> Third Party Inspection
+            </a>
+          </div>
+        </div>
+
+        <a href="laboratory-instruments/" class="nav-link">Instruments Catalog</a>
+        <a href="government-projects/" class="nav-link">Govt Projects</a>
+        <a href="valued-clients/" class="nav-link">Clients (246+)</a>
+        <a href="contact/" class="nav-link">Offices & Contact</a>
+
+        <button data-modal-open="quotation-modal" class="btn hero-btn text-xs py-2.5 px-5">
+          <i data-lucide="file-text" class="w-4 h-4"></i> Request Quote
+        </button>
+      </nav>
+      <button class="mobile-toggle">☰</button>
+    </div>
+  </header>
+
+  <!-- =========================================================
+       HERO SECTION (2-Column abhimo.com Signature Layout)
+       ========================================================= -->
+  <section class="hero-section" id="home">
+    <div class="container">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        
+        <!-- Left Column: abhimo.com Title & Justified Lead Text -->
+        <div class="lg:col-span-7">
+          <span class="hero-badge">
+            <i data-lucide="shield-check" class="w-4 h-4"></i> Premier Machinery, Laboratory & Testing Enterprise • Est. 2004
+          </span>
+
+          <h3 class="hero-subtitle"><b>Welcome To</b></h3>
+
+          <h1 class="hero-title">
+            ALL IN ONE TECHNOLOGY <br>
+            <span class="text-gradient">Private Limited</span>
+          </h1>
+
+          <p class="hero-text">
+            ALL IN ONE TECHNOLOGY is a premier laboratory engineering and statutory compliance enterprise headquartered in Morbi with regional offices in Rajkot and Ahmedabad. We specialize in precision Caltronics laboratory instruments manufacturing, Bureau of Indian Standards (BIS / ISI) certification consulting, traceable metrological calibration, and government turn-key testing projects.
+          </p>
+          <p class="hero-text -mt-4">
+            Trusted by the Gujarat Government to operate 10 soil testing laboratories and partner to over 246+ corporate leaders across India, we build long-lasting industrial partnerships founded on metrological accuracy, statutory compliance, and engineering excellence.
+          </p>
+
+          <div class="flex flex-wrap gap-4 mt-6">
+            <a href="laboratory-instruments/" class="btn hero-btn">
+              <i data-lucide="microscope" class="w-4 h-4"></i> Explore Instruments
+            </a>
+            <a href="certification/" class="btn hero-btn-outline">
+              <i data-lucide="award" class="w-4 h-4"></i> BIS / ISI Certification
+            </a>
+            <button data-modal-open="quotation-modal" class="btn btn-emerald">
+              <i data-lucide="mail-check" class="w-4 h-4"></i> Instant Quotation
+            </button>
+          </div>
+        </div>
+
+        <!-- Right Column: abhimo.com Floating Showcase Card -->
+        <div class="lg:col-span-5">
+          <div class="hero-visual-card floating">
+            <div class="relative rounded-2xl overflow-hidden bg-slate-50 border border-slate-200/80 p-4">
+              <img src="assets/instruments/instrument_004_p7.jpeg" alt="Caltronics Precision Spectrophotometer" class="hero-showcase-img">
+              <div class="absolute bottom-6 left-6 right-6 p-4 rounded-xl bg-white/95 backdrop-blur-md border border-blue-100 shadow-xl">
+                <div class="flex items-center justify-between">
+                  <div>
+                    <span class="text-[11px] font-bold text-blue-600 uppercase tracking-wider block">CALTRONICS HIGH-TECH</span>
+                    <h5 class="text-sm font-bold text-slate-900 mt-0.5">Double Beam Spectrophotometer</h5>
+                  </div>
+                  <span class="badge-pulse">ISO 9001:2015</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================
+       STATS COUNTER SECTION (abhimo.com .stats-box Layout)
+       ========================================================= -->
+  <section class="py-12 relative z-10">
+    <div class="container">
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        
+        <div class="stats-box">
+          <h2 class="counter text-gradient" data-counter-target="20">0</h2><span>+</span>
+          <p>Years of Excellence</p>
+          <div class="stat-sub">Established in 2004</div>
+        </div>
+
+        <div class="stats-box">
+          <h2 class="counter text-gradient" data-counter-target="81">0</h2><span>+</span>
+          <p>Instrument Models</p>
+          <div class="stat-sub">Caltronics Catalog Scope</div>
+        </div>
+
+        <div class="stats-box">
+          <h2 class="counter text-gradient" data-counter-target="500000" data-counter-suffix="+">0</h2>
+          <p>Soil Health Cards Issued</p>
+          <div class="stat-sub">10 Gujarat Govt Labs</div>
+        </div>
+
+        <div class="stats-box">
+          <h2 class="counter text-gradient" data-counter-target="246">0</h2><span>+</span>
+          <p>Verified Corporate Clients</p>
+          <div class="stat-sub">Across 13 Industrial Sectors</div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================
+       THE 6 CORE DIVISIONS OF WORK (abhimo.com Service Cards)
+       ========================================================= -->
+  <section id="divisions" class="py-20 relative">
+    <div class="container">
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <span class="hero-badge">Comprehensive Industrial Scope</span>
+        <h2 class="section-title mt-2">Our Six Core Divisions of Work</h2>
+        <p class="section-subtitle">
+          Operating as a unified machinery, laboratory setup, calibration, and statutory compliance conglomerate across India and international markets.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        
+        <!-- Division 1: Certification -->
+        <div class="glass-panel division-card">
+          <div>
+            <div class="division-icon-wrap">
+              <i data-lucide="award" class="w-7 h-7"></i>
+            </div>
+            <span class="text-xs font-bold text-blue-600 uppercase tracking-wider block mb-1">Division 01</span>
+            <h3 class="text-2xl font-bold text-slate-900 mb-3">Certification</h3>
+            <p class="text-slate-600 text-sm leading-relaxed mb-6 text-justify">
+              End-to-end consulting for obtaining ISI certification from the Bureau of Indian Standards (BIS) in India. Includes complete lab layout design, regulatory compliance verification, safety protocols, and waste management setups.
+            </p>
+            <ul class="text-xs text-slate-700 space-y-2 mb-6 border-t border-slate-100 pt-4">
+              <li class="flex items-center gap-2"><i data-lucide="check-circle" class="w-4 h-4 text-blue-600"></i> BIS / ISI Mark Certification Consulting</li>
+              <li class="flex items-center gap-2"><i data-lucide="check-circle" class="w-4 h-4 text-blue-600"></i> Laboratory Setup & Regulatory Layouts</li>
+              <li class="flex items-center gap-2"><i data-lucide="check-circle" class="w-4 h-4 text-blue-600"></i> Testing Staff Proficiency Training</li>
+            </ul>
+          </div>
+          <a href="certification/" class="inline-flex items-center gap-2 text-blue-600 hover:text-blue-800 font-semibold text-sm group transition-all">
+            Explore Certification Services <i data-lucide="arrow-right" class="w-4 h-4 group-hover:translate-x-1 transition-transform"></i>
+          </a>
+        </div>
+
+        <!-- Division 2: Laboratory Instruments -->
+        <div class="glass-panel division-card">
+          <div>
+            <div class="division-icon-wrap">
+              <i data-lucide="microscope" class="w-7 h-7"></i>
+            </div>
+            <span class="text-xs font-bold text-blue-600 uppercase tracking-wider block mb-1">Division 02</span>
+            <h3 class="text-2xl font-bold text-slate-900 mb-3">Laboratory Instruments</h3>
+            <p class="text-slate-600 text-sm leading-relaxed mb-6 text-justify">
+              Manufacturer and supplier of Caltronics high-tech precision instruments with independent IP rights. Over 80 models including UV-Vis Spectrophotometers, FT-IR, AAS, Flame Photometers, and HPLC systems.
+            </p>
+            <ul class="text-xs text-slate-700 space-y-2 mb-6 border-t border-slate-100 pt-4">
+              <li class="flex items-center gap-2"><i data-lucide="check-circle" class="w-4 h-4 text-blue-600"></i> UV-VIS Spectrophotometers (CAL-001 to 011)</li>
+              <li class="flex items-center gap-2"><i data-lucide="check-circle" class="w-4 h-4 text-blue-600"></i> FT-IR & Atomic Absorption Systems</li>
+              <li class="flex items-center gap-2"><i data-lucide="check-circle" class="w-4 h-4 text-blue-600"></i> Microprocessor pH, TDS & Salinity Meters</li>
+            </ul>
+          </div>
+          <a href="laboratory-instruments/" class="inline-flex items-center gap-2 text-blue-600 hover:text-blue-800 font-semibold text-sm group transition-all">
+            Browse 81+ Instrument Models <i data-lucide="arrow-right" class="w-4 h-4 group-hover:translate-x-1 transition-transform"></i>
+          </a>
+        </div>
+
+        <!-- Division 3: Government Projects -->
+        <div class="glass-panel division-card">
+          <div>
+            <div class="division-icon-wrap">
+              <i data-lucide="landmark" class="w-7 h-7"></i>
+            </div>
+            <span class="text-xs font-bold text-blue-600 uppercase tracking-wider block mb-1">Division 03</span>
+            <h3 class="text-2xl font-bold text-slate-900 mb-3">Government Projects</h3>
+            <p class="text-slate-600 text-sm leading-relaxed mb-6 text-justify">
+              Trusted state partner: Operating 10 laboratories for the Gujarat Government under the Hon'ble Prime Minister's Soil Health Card scheme. Over 5,00,000 soil samples tested and 5,00,000 Soil Health Cards issued.
+            </p>
+            <ul class="text-xs text-slate-700 space-y-2 mb-6 border-t border-slate-100 pt-4">
+              <li class="flex items-center gap-2"><i data-lucide="check-circle" class="w-4 h-4 text-blue-600"></i> 10 State Soil Testing Labs Operated</li>
+              <li class="flex items-center gap-2"><i data-lucide="check-circle" class="w-4 h-4 text-blue-600"></i> 5,00,000+ Soil Health Cards Issued</li>
+              <li class="flex items-center gap-2"><i data-lucide="check-circle" class="w-4 h-4 text-blue-600"></i> GeM Verified Govt Supplier</li>
+            </ul>
+          </div>
+          <a href="government-projects/" class="inline-flex items-center gap-2 text-blue-600 hover:text-blue-800 font-semibold text-sm group transition-all">
+            View Government Case Study <i data-lucide="arrow-right" class="w-4 h-4 group-hover:translate-x-1 transition-transform"></i>
+          </a>
+        </div>
+
+        <!-- Division 4: Valued Clients Logos -->
+        <div class="glass-panel division-card">
+          <div>
+            <div class="division-icon-wrap">
+              <i data-lucide="users" class="w-7 h-7"></i>
+            </div>
+            <span class="text-xs font-bold text-blue-600 uppercase tracking-wider block mb-1">Division 04</span>
+            <h3 class="text-2xl font-bold text-slate-900 mb-3">Valued Clients Logos</h3>
+            <p class="text-slate-600 text-sm leading-relaxed mb-6 text-justify">
+              A verified roster of 246+ corporate enterprises and manufacturing leaders who rely on All In One Technology for equipment, testing, and continuous quality assurance across 13 industrial sectors.
+            </p>
+            <ul class="text-xs text-slate-700 space-y-2 mb-6 border-t border-slate-100 pt-4">
+              <li class="flex items-center gap-2"><i data-lucide="check-circle" class="w-4 h-4 text-blue-600"></i> 246 Genuine Extracted Client Logos</li>
+              <li class="flex items-center gap-2"><i data-lucide="check-circle" class="w-4 h-4 text-blue-600"></i> Ceramics, Polymers & Packaging Leaders</li>
+              <li class="flex items-center gap-2"><i data-lucide="check-circle" class="w-4 h-4 text-blue-600"></i> Food, Water Plants & Petrochemicals</li>
+            </ul>
+          </div>
+          <a href="valued-clients/" class="inline-flex items-center gap-2 text-blue-600 hover:text-blue-800 font-semibold text-sm group transition-all">
+            Explore 246+ Client Directory <i data-lucide="arrow-right" class="w-4 h-4 group-hover:translate-x-1 transition-transform"></i>
+          </a>
+        </div>
+
+        <!-- Division 5: Calibration -->
+        <div class="glass-panel division-card">
+          <div>
+            <div class="division-icon-wrap">
+              <i data-lucide="compass" class="w-7 h-7"></i>
+            </div>
+            <span class="text-xs font-bold text-blue-600 uppercase tracking-wider block mb-1">Division 05</span>
+            <h3 class="text-2xl font-bold text-slate-900 mb-3">Calibration Services</h3>
+            <p class="text-slate-600 text-sm leading-relaxed mb-6 text-justify">
+              Accurate testing results depend directly on instrument precision. Professional calibration services performed by certified technicians using state-of-the-art reference equipment with formal calibration certificates.
+            </p>
+            <ul class="text-xs text-slate-700 space-y-2 mb-6 border-t border-slate-100 pt-4">
+              <li class="flex items-center gap-2"><i data-lucide="check-circle" class="w-4 h-4 text-blue-600"></i> Traceable Metrological Standards</li>
+              <li class="flex items-center gap-2"><i data-lucide="check-circle" class="w-4 h-4 text-blue-600"></i> Comprehensive Calibration Reports</li>
+              <li class="flex items-center gap-2"><i data-lucide="check-circle" class="w-4 h-4 text-blue-600"></i> Preventive Maintenance Protocols</li>
+            </ul>
+          </div>
+          <a href="calibration/" class="inline-flex items-center gap-2 text-blue-600 hover:text-blue-800 font-semibold text-sm group transition-all">
+            Book Calibration Services <i data-lucide="arrow-right" class="w-4 h-4 group-hover:translate-x-1 transition-transform"></i>
+          </a>
+        </div>
+
+        <!-- Division 6: Third Party Inspection Work -->
+        <div class="glass-panel division-card">
+          <div>
+            <div class="division-icon-wrap">
+              <i data-lucide="clipboard-check" class="w-7 h-7"></i>
+            </div>
+            <span class="text-xs font-bold text-blue-600 uppercase tracking-wider block mb-1">Division 06</span>
+            <h3 class="text-2xl font-bold text-slate-900 mb-3">Third Party Inspection</h3>
+            <p class="text-slate-600 text-sm leading-relaxed mb-6 text-justify">
+              Turn-key project expertise and independent third-party audits. Modeled after Shamkris Global Inspection protocols: rigorous sampling, testing of all product types, and complete compliance documentation.
+            </p>
+            <ul class="text-xs text-slate-700 space-y-2 mb-6 border-t border-slate-100 pt-4">
+              <li class="flex items-center gap-2"><i data-lucide="check-circle" class="w-4 h-4 text-blue-600"></i> Turn-Key Project Commissioning</li>
+              <li class="flex items-center gap-2"><i data-lucide="check-circle" class="w-4 h-4 text-blue-600"></i> Multi-Product ISI Standards Testing</li>
+              <li class="flex items-center gap-2"><i data-lucide="check-circle" class="w-4 h-4 text-blue-600"></i> Subsidy Project Advisory in India</li>
+            </ul>
+          </div>
+          <a href="third-party-inspection/" class="inline-flex items-center gap-2 text-blue-600 hover:text-blue-800 font-semibold text-sm group transition-all">
+            Inspect Workflow & Services <i data-lucide="arrow-right" class="w-4 h-4 group-hover:translate-x-1 transition-transform"></i>
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================
+       TIMELINE SECTION (Shamkris Protocol)
+       ========================================================= -->
+  <section class="py-20 bg-white border-y border-blue-50 relative">
+    <div class="container">
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <span class="hero-badge">Inspection Workflow Reference</span>
+        <h2 class="section-title mt-2">Integrated Inspection & Certification Workflow</h2>
+        <p class="section-subtitle">
+          A seamless 5-stage methodology ensuring highest testing accuracy, statutory compliance, and international conformity.
+        </p>
+      </div>
+
+      <div class="timeline-track max-w-4xl mx-auto">
+        <div class="timeline-line"></div>
+
+        <!-- Stage 1 -->
+        <div class="timeline-node">
+          <div class="timeline-dot"></div>
+          <div class="ml-14 md:ml-0 md:w-1/2 md:pr-12 md:text-right">
+            <div class="glass-panel p-6">
+              <span class="text-xs font-bold text-blue-600 uppercase tracking-widest block mb-1">Stage 01</span>
+              <h4 class="text-lg font-bold text-slate-900 mb-2">Requirements & Gap Analysis</h4>
+              <p class="text-sm text-slate-600 leading-relaxed text-justify">
+                Comprehensive evaluation of testing standards, ISI certification prerequisites, space allocation, and instrument lists.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Stage 2 -->
+        <div class="timeline-node">
+          <div class="timeline-dot"></div>
+          <div class="ml-14 md:ml-auto md:w-1/2 md:pl-12">
+            <div class="glass-panel p-6">
+              <span class="text-xs font-bold text-blue-600 uppercase tracking-widest block mb-1">Stage 02</span>
+              <h4 class="text-lg font-bold text-slate-900 mb-2">Turn-Key Laboratory Setup</h4>
+              <p class="text-sm text-slate-600 leading-relaxed text-justify">
+                Delivery and precision installation of Caltronics equipment, reagent benches, ventilation, and regulatory safety setups.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Stage 3 -->
+        <div class="timeline-node">
+          <div class="timeline-dot"></div>
+          <div class="ml-14 md:ml-0 md:w-1/2 md:pr-12 md:text-right">
+            <div class="glass-panel p-6">
+              <span class="text-xs font-bold text-blue-600 uppercase tracking-widest block mb-1">Stage 03</span>
+              <h4 class="text-lg font-bold text-slate-900 mb-2">Testing & Personnel Training</h4>
+              <p class="text-sm text-slate-600 leading-relaxed text-justify">
+                Rigorous hands-on training for client lab technicians on operating protocols, ISI standard testing methods, and data recording.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Stage 4 -->
+        <div class="timeline-node">
+          <div class="timeline-dot"></div>
+          <div class="ml-14 md:ml-auto md:w-1/2 md:pl-12">
+            <div class="glass-panel p-6">
+              <span class="text-xs font-bold text-blue-600 uppercase tracking-widest block mb-1">Stage 04</span>
+              <h4 class="text-lg font-bold text-slate-900 mb-2">Metrological Calibration & Verification</h4>
+              <p class="text-sm text-slate-600 leading-relaxed text-justify">
+                Precision instrument calibration using traceable reference standards, generating official calibration certificates and audit trails.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Stage 5 -->
+        <div class="timeline-node">
+          <div class="timeline-dot"></div>
+          <div class="ml-14 md:ml-0 md:w-1/2 md:pr-12 md:text-right">
+            <div class="glass-panel p-6">
+              <span class="text-xs font-bold text-blue-600 uppercase tracking-widest block mb-1">Stage 05</span>
+              <h4 class="text-lg font-bold text-slate-900 mb-2">Third-Party Inspection & Certification Grant</h4>
+              <p class="text-sm text-slate-600 leading-relaxed text-justify">
+                Formal BIS audit coordination, third-party inspection report issuance, and grant of ISI mark / ISO conformity.
+              </p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================
+       FEATURED INSTRUMENTS PREVIEW (Verified Working Images)
+       ========================================================= -->
+  <section class="py-20 relative">
+    <div class="container">
+      <div class="flex flex-col md:flex-row md:items-end justify-between mb-12">
+        <div>
+          <span class="hero-badge">Caltronics High-Tech Enterprise</span>
+          <h2 class="section-title text-left mt-2">Featured Laboratory Instruments</h2>
+          <p class="text-slate-600 text-base max-w-2xl">
+            Real photos and technical parameters extracted directly from the official Caltronics product catalog.
+          </p>
+        </div>
+        <a href="laboratory-instruments/" class="btn hero-btn-outline mt-4 md:mt-0 flex items-center gap-2">
+          View Complete Catalog (81+ Models) <i data-lucide="chevron-right" class="w-4 h-4"></i>
+        </a>
+      </div>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        
+        <!-- Product 1: CAL-001 (verified: instrument_004_p7.jpeg) -->
+        <div class="glass-panel p-4 flex flex-col justify-between">
+          <div>
+            <div class="relative h-48 rounded-xl bg-slate-50 overflow-hidden mb-4 border border-slate-200/80 flex items-center justify-center p-3">
+              <img src="assets/instruments/instrument_004_p7.jpeg" alt="Double Beam UV-VIS Spectrophotometer CAL-001" class="max-h-full object-contain hover:scale-105 transition-transform duration-300">
+              <span class="absolute top-2 left-2 bg-blue-600 text-white text-[10px] font-bold px-2 py-0.5 rounded">CAL-001</span>
+            </div>
+            <span class="text-[11px] font-semibold text-blue-600 uppercase tracking-wider block">Spectrophotometry</span>
+            <h4 class="text-base font-bold text-slate-900 mt-1 mb-1 line-clamp-1">Double Beam UV-VIS Spectrophotometer</h4>
+            <div class="text-xs text-slate-500 mb-3">Wavelength: 190 - 1100 nm • 320x240 LCD</div>
+            <div class="text-lg font-extrabold text-blue-700 mb-4">₹3,78,000</div>
+          </div>
+          <button onclick="showProductSpecs(1)" class="w-full btn hero-btn-outline text-xs py-2">
+            View Technical Specs
+          </button>
+        </div>
+
+        <!-- Product 2: CAL-012 (verified: instrument_012_p15.jpeg) -->
+        <div class="glass-panel p-4 flex flex-col justify-between">
+          <div>
+            <div class="relative h-48 rounded-xl bg-slate-50 overflow-hidden mb-4 border border-slate-200/80 flex items-center justify-center p-3">
+              <img src="assets/instruments/instrument_012_p15.jpeg" alt="FT-IR Spectrometer CAL-012" class="max-h-full object-contain hover:scale-105 transition-transform duration-300">
+              <span class="absolute top-2 left-2 bg-purple-600 text-white text-[10px] font-bold px-2 py-0.5 rounded">CAL-012</span>
+            </div>
+            <span class="text-[11px] font-semibold text-purple-600 uppercase tracking-wider block">Spectrophotometry</span>
+            <h4 class="text-base font-bold text-slate-900 mt-1 mb-1 line-clamp-1">FT-IR Spectrometer</h4>
+            <div class="text-xs text-slate-500 mb-3">Thin Standard Film • High Spectral Accuracy</div>
+            <div class="text-lg font-extrabold text-purple-700 mb-4">₹22,68,000</div>
+          </div>
+          <button onclick="showProductSpecs(12)" class="w-full btn hero-btn-outline text-xs py-2">
+            View Technical Specs
+          </button>
+        </div>
+
+        <!-- Product 3: CAL-015 (verified: instrument_015_p17.jpeg) -->
+        <div class="glass-panel p-4 flex flex-col justify-between">
+          <div>
+            <div class="relative h-48 rounded-xl bg-slate-50 overflow-hidden mb-4 border border-slate-200/80 flex items-center justify-center p-3">
+              <img src="assets/instruments/instrument_015_p17.jpeg" alt="Microprocessor Flame Photometer CAL-015" class="max-h-full object-contain hover:scale-105 transition-transform duration-300">
+              <span class="absolute top-2 left-2 bg-emerald-600 text-white text-[10px] font-bold px-2 py-0.5 rounded">CAL-015</span>
+            </div>
+            <span class="text-[11px] font-semibold text-emerald-600 uppercase tracking-wider block">Flame Photometry</span>
+            <h4 class="text-base font-bold text-slate-900 mt-1 mb-1 line-clamp-1">Microprocessor Flame Photometer</h4>
+            <div class="text-xs text-slate-500 mb-3">Auto Gas Cutoff • Na, K, Li, Ca Filters</div>
+            <div class="text-lg font-extrabold text-emerald-700 mb-4">₹90,300</div>
+          </div>
+          <button onclick="showProductSpecs(15)" class="w-full btn hero-btn-outline text-xs py-2">
+            View Technical Specs
+          </button>
+        </div>
+
+        <!-- Product 4: CAL-080 (verified: instrument_070_p46.jpeg) -->
+        <div class="glass-panel p-4 flex flex-col justify-between">
+          <div>
+            <div class="relative h-48 rounded-xl bg-slate-50 overflow-hidden mb-4 border border-slate-200/80 flex items-center justify-center p-3">
+              <img src="assets/instruments/instrument_070_p46.jpeg" alt="HPLC System CAL-080" class="max-h-full object-contain hover:scale-105 transition-transform duration-300">
+              <span class="absolute top-2 left-2 bg-amber-600 text-white text-[10px] font-bold px-2 py-0.5 rounded">CAL-080</span>
+            </div>
+            <span class="text-[11px] font-semibold text-amber-600 uppercase tracking-wider block">Chromatography</span>
+            <h4 class="text-base font-bold text-slate-900 mt-1 mb-1 line-clamp-1">HPLC System (Chromatography)</h4>
+            <div class="text-xs text-slate-500 mb-3">Flow: 0.001 - 9.999 ml/min • Analytical Grade</div>
+            <div class="text-lg font-extrabold text-amber-700 mb-4">₹8,50,000</div>
+          </div>
+          <button onclick="showProductSpecs(45)" class="w-full btn hero-btn-outline text-xs py-2">
+            View Technical Specs
+          </button>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================
+       FLAGSHIP GOVERNMENT PROJECT FEATURE
+       ========================================================= -->
+  <section class="py-20 bg-white border-y border-blue-50 relative overflow-hidden">
+    <div class="container">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+        
+        <div class="lg:col-span-7">
+          <span class="hero-badge">
+            <i data-lucide="shield" class="w-4 h-4"></i> Official Government Partner
+          </span>
+          <h2 class="text-3xl sm:text-4xl font-extrabold text-slate-900 mb-4 leading-tight">
+            Gujarat Government Soil Health Card Scheme: <br>
+            <span class="text-blue-600">10 State Laboratories Operated</span>
+          </h2>
+          <p class="text-slate-600 text-base leading-relaxed mb-6 text-justify">
+            Under the national vision launched by <strong>Hon'ble Prime Minister Shri Narendra Modi</strong>, All In One Technology has been privileged to operate 10 comprehensive soil testing laboratories for the Gujarat Government.
+          </p>
+
+          <div class="grid grid-cols-2 gap-4 mb-8">
+            <div class="glass-panel p-4 border-l-4 border-l-emerald-500">
+              <div class="text-3xl font-extrabold text-emerald-700">5,00,000+</div>
+              <div class="text-xs text-slate-600 mt-1">Soil Samples Tested across various government-fixed parameters</div>
+            </div>
+            <div class="glass-panel p-4 border-l-4 border-l-blue-500">
+              <div class="text-3xl font-extrabold text-blue-700">5,00,000+</div>
+              <div class="text-xs text-slate-600 mt-1">Soil Health Cards printed and issued directly to farmers</div>
+            </div>
+          </div>
+
+          <a href="government-projects/" class="btn hero-btn">
+            Read Complete Government Case Study <i data-lucide="arrow-right" class="w-4 h-4"></i>
+          </a>
+        </div>
+
+        <div class="lg:col-span-5">
+          <div class="glass-panel p-6 bg-gradient-to-br from-blue-50/60 to-emerald-50/60 border border-blue-100">
+            <h4 class="text-lg font-bold text-slate-900 mb-4 flex items-center gap-2">
+              <i data-lucide="check-circle" class="w-5 h-5 text-emerald-600"></i> Turn-Key Deliverables
+            </h4>
+            <ul class="text-xs text-slate-700 space-y-3">
+              <li class="flex items-start gap-2.5">
+                <span class="text-blue-600 font-bold">✓</span>
+                <span>Full Analytical Equipment Setup (Flame Photometers, Spectrophotometers, Water Quality Workstations).</span>
+              </li>
+              <li class="flex items-start gap-2.5">
+                <span class="text-blue-600 font-bold">✓</span>
+                <span>Full Chemist & Operator Staffing & Daily Testing Workflows.</span>
+              </li>
+              <li class="flex items-start gap-2.5">
+                <span class="text-blue-600 font-bold">✓</span>
+                <span>Zero Measurement Error Drift via Periodic Reference Calibration.</span>
+              </li>
+              <li class="flex items-start gap-2.5">
+                <span class="text-blue-600 font-bold">✓</span>
+                <span>Direct Farmer Advisory on Balanced Micro-Nutrient Application.</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================
+       INFINITE VALUED CLIENTS MARQUEE (246+ Verified Logos)
+       ========================================================= -->
+  <section class="py-16 relative">
+    <div class="container text-center mb-8">
+      <span class="hero-badge">Authentic Corporate Ecosystem</span>
+      <h2 class="section-title mt-2">Trusted by 246+ Corporate Leaders</h2>
+      <p class="section-subtitle">
+        Extracted directly from our 13-page client roster across Ceramics, Packaging, Polymers, Food & Beverages, Chemicals, and Construction.
+      </p>
+    </div>
+
+    <!-- Row 1 Marquee -->
+    <div class="marquee-container mb-4">
+      <div id="marquee-track-1" class="marquee-track">
+        <!-- Dynamically injected via main.js from CLIENTS_DATA -->
+      </div>
+    </div>
+
+    <!-- Row 2 Marquee -->
+    <div class="marquee-container">
+      <div id="marquee-track-2" class="marquee-track marquee-reverse">
+        <!-- Dynamically injected via main.js from CLIENTS_DATA -->
+      </div>
+    </div>
+
+    <div class="text-center mt-8">
+      <a href="valued-clients/" class="btn hero-btn-outline">
+        View All 246+ Corporate Client Logos <i data-lucide="arrow-right" class="w-4 h-4"></i>
+      </a>
+    </div>
+  </section>
+
+  <!-- =========================================================
+       FOOTER (Corporate High-End Look)
+       ========================================================= -->
+  <footer class="footer-corporate">
+    <div class="container mx-auto">
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 mb-12">
+        
+        <div>
+          <div class="logo-brand mb-4">
+            <div class="brand-logo-badge">
+              <img src="assets/images/caltronics_logo.png" alt="CALTRONICS ® AN ISO 9001 CERTIFIED">
+            </div>
+            <div class="logo-texts">
+              <h2 class="text-base font-bold text-white">ALL IN ONE TECHNOLOGY</h2>
+              <span class="text-xs text-blue-400">A House of Machinery & Testing</span>
+            </div>
+          </div>
+          <p class="text-slate-400 text-xs leading-relaxed mb-4 text-justify">
+            Established in 2004. An ISO, GeM & NSIC certified organization. Operating Gujarat Government testing labs, manufacturing Caltronics precision instruments, and supporting BIS/ISI certification across India.
+          </p>
+          <div class="text-xs text-slate-300">
+            <strong>GSTIN:</strong> <span class="text-blue-400 font-mono">24AHRPD0104C1Z6</span>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="text-sm font-bold text-white uppercase tracking-wider mb-4 border-b border-white/10 pb-2">Our Divisions</h4>
+          <ul class="text-xs space-y-2 text-slate-400">
+            <li><a href="certification/" class="hover:text-blue-400 transition-colors">Certification (BIS / ISI Mark)</a></li>
+            <li><a href="laboratory-instruments/" class="hover:text-blue-400 transition-colors">Laboratory Instruments (Caltronics)</a></li>
+            <li><a href="government-projects/" class="hover:text-blue-400 transition-colors">Government Projects (Soil Health)</a></li>
+            <li><a href="valued-clients/" class="hover:text-blue-400 transition-colors">Valued Clients Logos (246+)</a></li>
+            <li><a href="calibration/" class="hover:text-blue-400 transition-colors">Calibration Services</a></li>
+            <li><a href="third-party-inspection/" class="hover:text-blue-400 transition-colors">Third Party Inspection Work</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="text-sm font-bold text-white uppercase tracking-wider mb-4 border-b border-white/10 pb-2">Registered Locations</h4>
+          <div class="space-y-3 text-xs text-slate-400">
+            <div>
+              <strong class="text-slate-200 block">Registered Office (Morbi):</strong>
+              ALL IN ONE TECHNOLOGY, Guest House Road, Nagar Plot - 1, Opp. Radio Center, Morbi - 363641, Gujarat
+            </div>
+            <div>
+              <strong class="text-slate-200 block">Manufacturing Unit:</strong>
+              Plot No. 8, Shree Hari Estate, Village: Timbdi, Morbi - 363642, Gujarat
+            </div>
+            <div>
+              <strong class="text-slate-200 block">Rajkot Branch Office:</strong>
+              "Vitt Bhavan", 2nd Floor, 216/217, Gondal Rd, Opp. Gurukul Road, Rajkot - 360002
+            </div>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="text-sm font-bold text-white uppercase tracking-wider mb-4 border-b border-white/10 pb-2">Ahmedabad & Contacts</h4>
+          <div class="text-xs text-slate-400 space-y-3 mb-4">
+            <div>
+              <strong class="text-slate-200 block">Ahmedabad Branch Office:</strong>
+              Hubtown A-Building, 7th Floor Office No.-720, Gita Mandir, Ahmedabad - 380022
+            </div>
+            <div>
+              <strong class="text-slate-200 block">Contact Numbers:</strong>
+              <div class="text-blue-400 mt-1 font-mono">
+                +91 98255 38719<br>
+                +91 98255 83846<br>
+                +91 99780 76030
+              </div>
+              <div class="text-slate-400 mt-1">Tel: 02822 - 232211</div>
+            </div>
+            <div>
+              <strong class="text-slate-200 block">Email:</strong>
+              <a href="mailto:morbi@allinonetech.co.in" class="text-blue-400 hover:underline">morbi@allinonetech.co.in</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="border-t border-white/10 pt-6 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-500">
+        <div>© 2004 - 2026 ALL IN ONE TECHNOLOGY. All Rights Reserved.</div>
+        <div class="mt-2 sm:mt-0 flex gap-4">
+          <span>A House of Machinery, Laboratory & Testing</span>
+          <span>•</span>
+          <span>Caltronics High-Tech Enterprise</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Product Technical Specifications Modal -->
+  <div id="product-specs-modal" class="modal-overlay">
+    <div class="modal-content">
+      <div class="flex items-start justify-between border-b border-slate-100 pb-4 mb-6">
+        <div>
+          <span id="specs-modal-model" class="text-xs font-bold text-blue-600 uppercase tracking-widest px-2.5 py-0.5 rounded bg-blue-50 border border-blue-200">MODEL</span>
+          <h3 id="specs-modal-name" class="text-2xl font-bold text-slate-900 mt-2">Product Name</h3>
+          <span id="specs-modal-category" class="text-xs text-slate-500">Category</span>
+        </div>
+        <button data-modal-close class="w-8 h-8 rounded-full bg-slate-100 hover:bg-slate-200 text-slate-500 flex items-center justify-center transition-colors">✕</button>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+        <div class="rounded-xl bg-slate-50 border border-slate-200 p-4 flex items-center justify-center h-64">
+          <img id="specs-modal-image" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg'/%3E" alt="Instrument Preview" class="max-h-full object-contain">
+        </div>
+        <div>
+          <div class="text-xs text-slate-500 mb-1">Catalog List Price:</div>
+          <div id="specs-modal-price" class="text-2xl font-extrabold text-blue-700 mb-4">₹0</div>
+
+          <h5 class="text-sm font-bold text-slate-900 uppercase tracking-wider mb-2 border-b border-slate-100 pb-1">Salient Features & Specs</h5>
+          <ul id="specs-modal-list" class="text-xs text-slate-600 space-y-1.5"></ul>
+        </div>
+      </div>
+
+      <div class="flex items-center justify-end gap-3 border-t border-slate-100 pt-4">
+        <button data-modal-close class="btn hero-btn-outline text-xs">Close</button>
+        <button id="specs-modal-quote-btn" data-modal-open="quotation-modal" class="btn hero-btn text-xs">
+          Request Quotation for this Model
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Instant Quotation Modal -->
+  <div id="quotation-modal" class="modal-overlay">
+    <div class="modal-content">
+      <div class="flex items-start justify-between border-b border-slate-100 pb-4 mb-6">
+        <div>
+          <span class="text-xs font-bold text-blue-600 uppercase tracking-wider">OFFICIAL QUOTATION</span>
+          <h3 class="text-2xl font-bold text-slate-900 mt-1">Request Price Quotation</h3>
+        </div>
+        <button data-modal-close class="w-8 h-8 rounded-full bg-slate-100 hover:bg-slate-200 text-slate-500 flex items-center justify-center transition-colors">✕</button>
+      </div>
+      <form class="service-enquiry-form">
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4">
+          <div class="form-group"><label for="quote-name" class="form-label">Full Name *</label><input id="quote-name" name="name" type="text" class="form-input" required placeholder="e.g. Ramesh Patel"></div>
+          <div class="form-group"><label for="quote-company" class="form-label">Company / Institute *</label><input id="quote-company" name="company" type="text" class="form-input" required placeholder="e.g. Gujarat Ceramic Industries"></div>
+        </div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4">
+          <div class="form-group"><label for="quote-email" class="form-label">Email *</label><input id="quote-email" name="email" type="email" class="form-input" required placeholder="e.g. ramesh@company.com"></div>
+          <div class="form-group"><label for="quote-phone" class="form-label">Phone *</label><input id="quote-phone" name="phone" type="tel" class="form-input" required placeholder="+91 98XXX XXXXX"></div>
+        </div>
+        <div class="form-group mb-4">
+          <label for="enquiry-subject" class="form-label">Instrument Model / Division</label>
+          <input type="text" id="enquiry-subject" name="subject" class="form-input" placeholder="e.g. CAL-001 Double Beam Spectrophotometer">
+        </div>
+        <div class="form-group mb-6">
+          <label for="quote-details" class="form-label">Quantity & Details</label>
+          <textarea id="quote-details" name="details" class="form-textarea" rows="3" placeholder="Specify quantity, delivery location, or institutional requirements..."></textarea>
+        </div>
+        <div class="flex justify-end gap-3">
+          <button type="button" data-modal-close class="btn hero-btn-outline text-xs">Cancel</button>
+          <button type="submit" class="btn hero-btn text-xs px-6">Submit Quotation Request</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <script src="assets/js/company-data.js"></script>
+  <script src="assets/js/catalog-data.js"></script>
+  <script src="assets/js/clients-data.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script>
+    lucide.createIcons();
+  </script>
+</body>
+</html>

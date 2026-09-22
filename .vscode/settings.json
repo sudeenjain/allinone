@@ -1,0 +1,7 @@
+{
+  "css.lint.vendorPrefix": "ignore",
+  "css.lint.unknownProperties": "ignore",
+  "css.lint.emptyRules": "ignore",
+  "html.validate.scripts": false,
+  "html.validate.styles": false
+}

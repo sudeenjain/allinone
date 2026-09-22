@@ -1,0 +1,87 @@
+/* =========================================================
+   LABORATORY INSTRUMENTS STYLESHEET (abhimo.com Style)
+   All In One Technology - Caltronics Precision Instruments
+   ========================================================= */
+
+:root {
+  --inst-primary: #0284c7;
+  --inst-cyan: #00d2ff;
+  --inst-sky: #38bdf8;
+  --inst-glow: rgba(0, 210, 255, 0.16);
+  --inst-card-bg: #ffffff;
+}
+
+/* Division Pill Badge (Abhimo style) */
+.badge-instruments {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.45rem 1.1rem;
+  border-radius: 9999px;
+  background: rgba(2, 132, 199, 0.08);
+  border: 1px solid rgba(2, 132, 199, 0.22);
+  color: #0369a1;
+  font-size: 0.82rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
+}
+
+/* Product Card (Abhimo Crisp White Frosted Card) */
+.instrument-card {
+  background: var(--inst-card-bg);
+  border: 1px solid rgba(0, 119, 255, 0.12);
+  border-radius: 20px;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  position: relative;
+  box-shadow: 0 10px 30px rgba(0, 119, 255, 0.04);
+}
+
+.instrument-card:hover {
+  transform: translateY(-5px);
+  border-color: rgba(2, 132, 199, 0.4);
+  box-shadow: 0 22px 45px rgba(2, 132, 199, 0.14);
+}
+
+.instrument-card h4 {
+  color: #082032;
+  font-weight: 700;
+}
+
+.instrument-card p {
+  color: #475569;
+  text-align: justify;
+  line-height: 1.6;
+}
+
+/* Model Tag (Abhimo Gradient Pill) */
+.model-tag {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  background: linear-gradient(135deg, #00d2ff 0%, #3a7bd5 100%);
+  color: #ffffff;
+  font-size: 0.7rem;
+  font-weight: 700;
+  padding: 0.25rem 0.65rem;
+  border-radius: 8px;
+  font-family: var(--font-mono, monospace);
+  box-shadow: 0 4px 10px rgba(0, 119, 255, 0.25);
+  z-index: 5;
+}
+
+/* Category Filter Pill */
+.cat-pill {
+  transition: all 0.25s ease;
+  cursor: pointer;
+}
+
+.cat-pill:hover {
+  transform: translateY(-2px);
+}
