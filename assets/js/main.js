@@ -3,6 +3,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initScrollProgress();
   initStickyHeader();
   initScrollReveal();
+  initHeroCarousel();
   initCounters();
   initMobileMenu();
   initModals();
@@ -116,6 +117,111 @@ function initHero3DTilt() {
     card.style.transform = '';
     card.classList.add('floating');
   });
+}
+
+// 3.2 Hero Showcase Auto-Carousel Controller
+function initHeroCarousel() {
+  const frame = document.querySelector('.hero-carousel-frame');
+  if (!frame) return;
+
+  const slides = frame.querySelectorAll('.hero-slide');
+  const dots = frame.querySelectorAll('.hero-dot');
+  const prevBtn = frame.querySelector('.hero-carousel-prev');
+  const nextBtn = frame.querySelector('.hero-carousel-next');
+
+  if (!slides.length) return;
+
+  let currentIndex = 0;
+  let autoplayTimer = null;
+  const INTERVAL = 3500; // Auto-transition every 3.5 seconds
+
+  function showSlide(index) {
+    if (index < 0) index = slides.length - 1;
+    if (index >= slides.length) index = 0;
+
+    slides.forEach((slide, i) => {
+      slide.classList.toggle('active', i === index);
+    });
+
+    dots.forEach((dot, i) => {
+      dot.classList.toggle('active', i === index);
+    });
+
+    currentIndex = index;
+  }
+
+  function nextSlide() {
+    showSlide(currentIndex + 1);
+  }
+
+  function prevSlide() {
+    showSlide(currentIndex - 1);
+  }
+
+  function startAutoplay() {
+    stopAutoplay();
+    autoplayTimer = setInterval(nextSlide, INTERVAL);
+  }
+
+  function stopAutoplay() {
+    if (autoplayTimer) {
+      clearInterval(autoplayTimer);
+      autoplayTimer = null;
+    }
+  }
+
+  // Interactive Dot Clicks
+  dots.forEach(dot => {
+    dot.addEventListener('click', (e) => {
+      e.stopPropagation();
+      const slideIndex = parseInt(dot.getAttribute('data-slide'), 10);
+      showSlide(slideIndex);
+      startAutoplay();
+    });
+  });
+
+  // Next / Previous Buttons
+  if (nextBtn) {
+    nextBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      nextSlide();
+      startAutoplay();
+    });
+  }
+
+  if (prevBtn) {
+    prevBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      prevSlide();
+      startAutoplay();
+    });
+  }
+
+  // Pause on hover so users can inspect details
+  frame.addEventListener('mouseenter', stopAutoplay);
+  frame.addEventListener('mouseleave', startAutoplay);
+
+  // Touch Swipe for Mobile & Tablet
+  let touchStartX = 0;
+  let touchEndX = 0;
+
+  frame.addEventListener('touchstart', (e) => {
+    touchStartX = e.changedTouches[0].screenX;
+    stopAutoplay();
+  }, { passive: true });
+
+  frame.addEventListener('touchend', (e) => {
+    touchEndX = e.changedTouches[0].screenX;
+    const diff = touchStartX - touchEndX;
+    if (Math.abs(diff) > 40) {
+      if (diff > 0) nextSlide();
+      else prevSlide();
+    }
+    startAutoplay();
+  }, { passive: true });
+
+  // Start automatic rotation
+  startAutoplay();
 }
 
 // 4. Counter Animation for Numeric Metrics

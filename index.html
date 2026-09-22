@@ -144,20 +144,108 @@
           </div>
         </div>
 
-        <!-- Right Column: Multi-Axis Floating Showcase Card -->
+        <!-- Right Column: Multi-Axis Floating Showcase Card with Auto-Changing Photos -->
         <div class="hero-visual-col reveal-right reveal-delay-2">
-          <div class="hero-visual-card floating shimmer-card">
-            <div class="relative rounded-2xl overflow-hidden bg-slate-50 border border-slate-200/80 p-3 sm:p-4">
-              <img src="assets/instruments/instrument_004_p7.jpeg" alt="Caltronics Precision Spectrophotometer" class="hero-showcase-img">
-              <div class="absolute bottom-4 left-4 right-4 sm:bottom-6 sm:left-6 sm:right-6 p-3 sm:p-4 rounded-xl bg-white/95 backdrop-blur-md border border-blue-100 shadow-xl">
-                <div class="flex items-center justify-between">
-                  <div>
-                    <span class="text-[10px] sm:text-[11px] font-bold text-blue-600 uppercase tracking-wider block">CALTRONICS HIGH-TECH</span>
-                    <h5 class="text-xs sm:text-sm font-bold text-slate-900 mt-0.5">Double Beam Spectrophotometer</h5>
+          <div class="hero-visual-card floating shimmer-card" id="hero-carousel-card">
+            <div class="hero-carousel-frame">
+              
+              <!-- Slides Track -->
+              <div class="hero-carousel-track">
+                
+                <!-- Slide 1: CAL-001 UV-VIS Spectrophotometer -->
+                <div class="hero-slide active" data-index="0">
+                  <img src="assets/instruments/instrument_004_p7.jpeg" alt="Double Beam UV-VIS Spectrophotometer CAL-001" class="hero-showcase-img">
+                  <div class="hero-slide-badge-top">
+                    <span class="badge-model">CAL-001</span>
                   </div>
-                  <span class="badge-pulse text-[10px] sm:text-xs">ISO 9001:2015</span>
+                  <div class="hero-slide-overlay">
+                    <div class="hero-slide-info">
+                      <span class="hero-slide-cat">CALTRONICS HIGH-TECH • SPECTROPHOTOMETRY</span>
+                      <h5 class="hero-slide-title">Double Beam UV-VIS Spectrophotometer</h5>
+                    </div>
+                    <span class="badge-pulse text-[10px] sm:text-xs">ISO 9001:2015</span>
+                  </div>
                 </div>
+
+                <!-- Slide 2: CAL-012 FT-IR Spectrometer -->
+                <div class="hero-slide" data-index="1">
+                  <img src="assets/instruments/instrument_012_p15.jpeg" alt="FT-IR Spectrometer System CAL-012" class="hero-showcase-img">
+                  <div class="hero-slide-badge-top">
+                    <span class="badge-model">CAL-012</span>
+                  </div>
+                  <div class="hero-slide-overlay">
+                    <div class="hero-slide-info">
+                      <span class="hero-slide-cat">CALTRONICS PRECISION • INFRARED OPTICS</span>
+                      <h5 class="hero-slide-title">FT-IR Spectrometer Workstation</h5>
+                    </div>
+                    <span class="badge-pulse text-[10px] sm:text-xs">CE Certified</span>
+                  </div>
+                </div>
+
+                <!-- Slide 3: CAL-015 Microprocessor Flame Photometer -->
+                <div class="hero-slide" data-index="2">
+                  <img src="assets/instruments/instrument_015_p17.jpeg" alt="Microprocessor Flame Photometer CAL-015" class="hero-showcase-img">
+                  <div class="hero-slide-badge-top">
+                    <span class="badge-model">CAL-015</span>
+                  </div>
+                  <div class="hero-slide-overlay">
+                    <div class="hero-slide-info">
+                      <span class="hero-slide-cat">CALTRONICS METROLOGY • FLAME EMISSION</span>
+                      <h5 class="hero-slide-title">Microprocessor Flame Photometer</h5>
+                    </div>
+                    <span class="badge-pulse text-[10px] sm:text-xs">NABL Traceable</span>
+                  </div>
+                </div>
+
+                <!-- Slide 4: CAL-080 HPLC Chromatography System -->
+                <div class="hero-slide" data-index="3">
+                  <img src="assets/instruments/instrument_070_p46.jpeg" alt="HPLC Analytical Chromatography System CAL-080" class="hero-showcase-img">
+                  <div class="hero-slide-badge-top">
+                    <span class="badge-model">CAL-080</span>
+                  </div>
+                  <div class="hero-slide-overlay">
+                    <div class="hero-slide-info">
+                      <span class="hero-slide-cat">CALTRONICS ADVANCED • CHROMATOGRAPHY</span>
+                      <h5 class="hero-slide-title">HPLC Liquid Chromatography System</h5>
+                    </div>
+                    <span class="badge-pulse text-[10px] sm:text-xs">ISO 9001:2015</span>
+                  </div>
+                </div>
+
+                <!-- Slide 5: CAL-009 Scanning Spectrophotometer -->
+                <div class="hero-slide" data-index="4">
+                  <img src="assets/instruments/instrument_009_p12.png" alt="Scanning Spectrophotometer CAL-009" class="hero-showcase-img">
+                  <div class="hero-slide-badge-top">
+                    <span class="badge-model">CAL-009</span>
+                  </div>
+                  <div class="hero-slide-overlay">
+                    <div class="hero-slide-info">
+                      <span class="hero-slide-cat">CALTRONICS STATUTORY • SOIL & WATER</span>
+                      <h5 class="hero-slide-title">Scanning Spectrophotometer Unit</h5>
+                    </div>
+                    <span class="badge-pulse text-[10px] sm:text-xs">BIS Approved</span>
+                  </div>
+                </div>
+
               </div>
+
+              <!-- Carousel Navigation Buttons -->
+              <button class="hero-carousel-prev" aria-label="Previous Instrument Photo" title="Previous Instrument">
+                <i data-lucide="chevron-left" class="w-4 h-4"></i>
+              </button>
+              <button class="hero-carousel-next" aria-label="Next Instrument Photo" title="Next Instrument">
+                <i data-lucide="chevron-right" class="w-4 h-4"></i>
+              </button>
+
+              <!-- Progress Indicator Dots -->
+              <div class="hero-carousel-dots" role="tablist" aria-label="Instrument Carousel Navigation">
+                <button class="hero-dot active" data-slide="0" aria-label="Slide 1: UV-VIS Spectrophotometer"></button>
+                <button class="hero-dot" data-slide="1" aria-label="Slide 2: FT-IR Spectrometer"></button>
+                <button class="hero-dot" data-slide="2" aria-label="Slide 3: Flame Photometer"></button>
+                <button class="hero-dot" data-slide="3" aria-label="Slide 4: HPLC Chromatography"></button>
+                <button class="hero-dot" data-slide="4" aria-label="Slide 5: Scanning Spectrophotometer"></button>
+              </div>
+
             </div>
           </div>
         </div>
