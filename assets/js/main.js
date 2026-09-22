@@ -58,9 +58,10 @@ function initStickyHeader() {
 
 // 3. Scroll Reveal Animation via IntersectionObserver
 function initScrollReveal() {
-  const reveals = document.querySelectorAll('.reveal, .reveal-left, .reveal-right');
+  const reveals = document.querySelectorAll('.reveal, .reveal-left, .reveal-right, .reveal-scale');
   if (!reveals.length) return;
 
+  const isMobile = window.innerWidth <= 768;
   const observer = new IntersectionObserver((entries, obs) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
@@ -69,11 +70,52 @@ function initScrollReveal() {
       }
     });
   }, {
-    threshold: 0.15,
-    rootMargin: '0px 0px -40px 0px'
+    threshold: isMobile ? 0.05 : 0.12,
+    rootMargin: isMobile ? '0px 0px -10px 0px' : '0px 0px -40px 0px'
   });
 
-  reveals.forEach(el => observer.observe(el));
+  reveals.forEach(el => {
+    const rect = el.getBoundingClientRect();
+    if (rect.top < window.innerHeight && rect.bottom > 0) {
+      el.classList.add('active');
+    } else {
+      observer.observe(el);
+    }
+  });
+
+  initHero3DTilt();
+}
+
+// 3.1 Interactive 3D Cursor Tilt for Hero Showcase (Laptops & Desktops)
+function initHero3DTilt() {
+  const card = document.querySelector('.hero-visual-card');
+  if (!card || window.matchMedia('(hover: none)').matches) return;
+
+  let bounds;
+  function updateBounds() {
+    bounds = card.getBoundingClientRect();
+  }
+  updateBounds();
+  window.addEventListener('resize', updateBounds, { passive: true });
+
+  card.addEventListener('mousemove', (e) => {
+    if (!bounds) updateBounds();
+    const mouseX = e.clientX - bounds.left;
+    const mouseY = e.clientY - bounds.top;
+    const halfWidth = bounds.width / 2;
+    const halfHeight = bounds.height / 2;
+
+    const rotX = ((mouseY - halfHeight) / halfHeight) * -6;
+    const rotY = ((mouseX - halfWidth) / halfWidth) * 6;
+
+    card.classList.remove('floating');
+    card.style.transform = `perspective(1000px) rotateX(${rotX.toFixed(2)}deg) rotateY(${rotY.toFixed(2)}deg) translateY(-6px)`;
+  });
+
+  card.addEventListener('mouseleave', () => {
+    card.style.transform = '';
+    card.classList.add('floating');
+  });
 }
 
 // 4. Counter Animation for Numeric Metrics

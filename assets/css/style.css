@@ -106,10 +106,18 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .text-gradient {
-  background: var(--primary-gradient);
+  background: linear-gradient(135deg, #0077ff 0%, #00d2ff 35%, #005eff 70%, #0099ff 100%);
+  background-size: 250% auto;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   display: inline-block;
+  animation: gradientFlow 6s ease-in-out infinite;
+}
+
+@keyframes gradientFlow {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
 }
 
 .text-justify {
@@ -134,6 +142,7 @@ h1, h2, h3, h4, h5, h6 {
   z-index: -1;
   opacity: 0.35;
   pointer-events: none;
+  will-change: transform;
 }
 
 .circle1 {
@@ -142,6 +151,7 @@ h1, h2, h3, h4, h5, h6 {
   background: #00d2ff;
   top: -120px;
   left: -120px;
+  animation: orbDrift1 18s ease-in-out infinite alternate;
 }
 
 .circle2 {
@@ -150,6 +160,7 @@ h1, h2, h3, h4, h5, h6 {
   background: #3a7bd5;
   bottom: -150px;
   right: -150px;
+  animation: orbDrift2 22s ease-in-out infinite alternate;
 }
 
 .circle3 {
@@ -160,6 +171,19 @@ h1, h2, h3, h4, h5, h6 {
   left: 50%;
   transform: translate(-50%, -50%);
   opacity: 0.22;
+  animation: orbDrift1 25s ease-in-out infinite alternate-reverse;
+}
+
+@keyframes orbDrift1 {
+  0% { transform: translate(0, 0) scale(1); }
+  50% { transform: translate(45px, -35px) scale(1.08); }
+  100% { transform: translate(-30px, 40px) scale(0.95); }
+}
+
+@keyframes orbDrift2 {
+  0% { transform: translate(0, 0) scale(1); }
+  50% { transform: translate(-40px, 35px) scale(1.06); }
+  100% { transform: translate(35px, -45px) scale(0.96); }
 }
 
 /* Scroll Progress Indicator */
@@ -489,33 +513,65 @@ h1, h2, h3, h4, h5, h6 {
 /* =========================================================
    HERO SECTION (abhimo.com Standard)
    ========================================================= */
+/* =========================================================
+   HERO SECTION & NATIVE GRID ARCHITECTURE
+   Robust, Self-Contained Grid - Zero Tailwind Dependency
+   ========================================================= */
 .hero-section {
-  padding: clamp(40px, 7vw, 90px) 0 clamp(40px, 5vw, 70px);
+  padding: clamp(35px, 6vw, 85px) 0 clamp(40px, 5vw, 75px);
   position: relative;
+  overflow: hidden;
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1.18fr 0.82fr;
+  gap: clamp(1.75rem, 3.5vw, 3.5rem);
+  align-items: center;
+  position: relative;
+}
+
+.hero-content-col {
+  min-width: 0;
+  z-index: 2;
+}
+
+.hero-visual-col {
+  min-width: 0;
+  position: relative;
+  z-index: 2;
+  perspective: 1000px;
 }
 
 .hero-badge {
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-  padding: 0.4rem 1rem;
+  padding: 0.45rem 1.1rem;
   border-radius: 50px;
   background: rgba(0, 119, 255, 0.08);
   border: 1px solid rgba(0, 119, 255, 0.22);
   color: var(--primary-color);
-  font-size: clamp(0.7rem, 1.8vw, 0.85rem);
+  font-size: clamp(0.72rem, 1.4vw, 0.85rem);
   font-weight: 600;
   margin-bottom: 1.25rem;
-  box-shadow: 0 2px 10px rgba(0, 119, 255, 0.06);
+  box-shadow: 0 4px 15px rgba(0, 119, 255, 0.08);
   max-width: 100%;
   white-space: normal;
   line-height: 1.4;
   text-align: left;
+  transition: var(--transition-smooth);
+}
+
+.hero-badge:hover {
+  background: rgba(0, 119, 255, 0.14);
+  border-color: rgba(0, 119, 255, 0.4);
+  transform: translateY(-2px);
 }
 
 .hero-subtitle {
-  font-size: clamp(0.95rem, 2vw, 1.25rem);
-  font-weight: 600;
+  font-size: clamp(0.95rem, 1.8vw, 1.25rem);
+  font-weight: 700;
   color: var(--primary-color);
   text-transform: uppercase;
   letter-spacing: 0.08em;
@@ -523,46 +579,56 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .hero-title {
-  font-size: clamp(1.5rem, 5.5vw + 0.3rem, 3.6rem);
-  font-weight: 800;
+  font-size: clamp(1.75rem, 4.8vw + 0.2rem, 3.5rem);
+  font-weight: 900;
   color: var(--text-main);
   line-height: 1.15;
   margin-bottom: 1.25rem;
-  letter-spacing: -0.02em;
+  letter-spacing: -0.025em;
   word-break: break-word;
   overflow-wrap: break-word;
 }
 
 .hero-text {
-  font-size: clamp(0.92rem, 1.2vw + 0.4rem, 1.05rem);
+  font-size: clamp(0.92rem, 1.1vw + 0.35rem, 1.05rem);
   color: var(--text-body);
   line-height: 1.8;
   text-align: justify;
-  margin-bottom: 2rem;
+  margin-bottom: 1.5rem;
 }
 
-/* Floating Interactive Visual (abhimo.com Floating Carousel Card) */
-.floating {
-  animation: floating 4s ease-in-out infinite;
+.hero-btn-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 2rem;
+  align-items: center;
 }
 
-@keyframes floating {
-  0%, 100% {
-    transform: translateY(0px);
-  }
-  50% {
-    transform: translateY(-16px);
-  }
-}
-
+/* Multi-Axis Floating Showcase Card */
 .hero-visual-card {
   background: #ffffff;
-  border: 1px solid rgba(0, 119, 255, 0.15);
+  border: 1px solid rgba(0, 119, 255, 0.18);
   border-radius: var(--border-radius-lg);
-  padding: 1.5rem;
-  box-shadow: 0 25px 60px rgba(0, 119, 255, 0.14);
+  padding: clamp(1rem, 2vw, 1.5rem);
+  box-shadow: 0 25px 60px rgba(0, 119, 255, 0.14), 0 0 0 1px rgba(255, 255, 255, 0.9) inset;
   position: relative;
   overflow: hidden;
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: transform;
+}
+
+.hero-visual-card.floating {
+  animation: floatLevitate 5.5s ease-in-out infinite;
+}
+
+@keyframes floatLevitate {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-13px) rotate(0.4deg);
+  }
 }
 
 .hero-visual-card::before {
@@ -577,10 +643,169 @@ h1, h2, h3, h4, h5, h6 {
 
 .hero-showcase-img {
   width: 100%;
-  height: clamp(220px, 35vw, 380px);
+  height: clamp(230px, 32vw, 380px);
   object-fit: cover;
   border-radius: var(--border-radius-md);
   background: #f1f5f9;
+  transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.hero-visual-card:hover .hero-showcase-img {
+  transform: scale(1.03);
+}
+
+/* =========================================================
+   NATIVE SECTION GRIDS (Mobile, Tablet, Laptop, Desktop)
+   ========================================================= */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: clamp(1rem, 2vw, 1.5rem);
+}
+
+.divisions-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: clamp(1.25rem, 2.5vw, 2rem);
+}
+
+.featured-instruments-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: clamp(1rem, 2vw, 1.5rem);
+}
+
+.govt-feature-grid {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: clamp(1.75rem, 3.5vw, 3.5rem);
+  align-items: center;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1.4fr 0.9fr 0.9fr 1.1fr;
+  gap: clamp(1.5rem, 2.5vw, 2.75rem);
+}
+
+/* =========================================================
+   SCROLL REVEAL & MICRO-ANIMATION SUITE
+   ========================================================= */
+.reveal {
+  opacity: 0;
+  transform: translateY(28px);
+  transition: opacity 0.75s cubic-bezier(0.16, 1, 0.3, 1), transform 0.75s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+
+.reveal-left {
+  opacity: 0;
+  transform: translateX(-35px);
+  transition: opacity 0.75s cubic-bezier(0.16, 1, 0.3, 1), transform 0.75s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+
+.reveal-right {
+  opacity: 0;
+  transform: translateX(35px);
+  transition: opacity 0.75s cubic-bezier(0.16, 1, 0.3, 1), transform 0.75s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+
+.reveal-scale {
+  opacity: 0;
+  transform: scale(0.92);
+  transition: opacity 0.75s cubic-bezier(0.16, 1, 0.3, 1), transform 0.75s cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity, transform;
+}
+
+.reveal.active,
+.reveal-left.active,
+.reveal-right.active,
+.reveal-scale.active {
+  opacity: 1;
+  transform: translate(0) scale(1);
+}
+
+.reveal-delay-1 { transition-delay: 0.1s; }
+.reveal-delay-2 { transition-delay: 0.2s; }
+.reveal-delay-3 { transition-delay: 0.3s; }
+.reveal-delay-4 { transition-delay: 0.4s; }
+.reveal-delay-5 { transition-delay: 0.5s; }
+.reveal-delay-6 { transition-delay: 0.6s; }
+
+/* Interactive Shimmer Sweep */
+.shimmer-card {
+  position: relative;
+  overflow: hidden;
+}
+
+.shimmer-card::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 60%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+  transform: skewX(-20deg);
+  transition: none;
+  pointer-events: none;
+}
+
+.shimmer-card:hover::after {
+  animation: shimmerSweep 1.1s ease-in-out;
+}
+
+@keyframes shimmerSweep {
+  0% { left: -100%; }
+  100% { left: 200%; }
+}
+
+/* Pulsing Beacon */
+.pulse-beacon {
+  position: relative;
+}
+
+.pulse-beacon::after {
+  content: '';
+  position: absolute;
+  inset: -4px;
+  border-radius: inherit;
+  border: 2px solid var(--primary-color);
+  animation: beaconWave 2s cubic-bezier(0.25, 0.46, 0.45, 0.94) infinite;
+  opacity: 0;
+  pointer-events: none;
+}
+
+@keyframes beaconWave {
+  0% { transform: scale(0.95); opacity: 0.8; }
+  100% { transform: scale(1.35); opacity: 0; }
+}
+
+/* Touch & Click Feedback */
+.btn {
+  transform: translateZ(0);
+  will-change: transform;
+}
+
+.btn:active {
+  transform: scale(0.96) !important;
+}
+
+.division-card {
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.4s ease;
+  will-change: transform, box-shadow;
+}
+
+.division-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 45px rgba(0, 119, 255, 0.16);
+  border-color: rgba(0, 119, 255, 0.35);
+}
+
+.division-card:active {
+  transform: scale(0.98);
 }
 
 /* =========================================================
@@ -686,8 +911,6 @@ h1, h2, h3, h4, h5, h6 {
   text-align: center;
   max-width: 750px;
   margin: 0 auto 3rem;
-  line-height: 1.7;
-}
   line-height: 1.7;
 }
 
@@ -1126,6 +1349,80 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
+/* =========================================================
+   RESPONSIVE LAYOUT ENGINE (Laptop, Tablet, Mobile)
+   ========================================================= */
+
+/* Laptops & Standard Desktops (1025px - 1280px) */
+@media (max-width: 1280px) {
+  .hero-grid {
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 2rem;
+  }
+
+  .divisions-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.25rem;
+  }
+
+  .footer-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+  }
+}
+
+/* Compact Laptops & Large Tablets (992px - 1100px) */
+@media (max-width: 1100px) {
+  .divisions-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .featured-instruments-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .govt-feature-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+}
+
+/* Tablet Screens (768px - 991px) */
+@media (max-width: 991px) {
+  .hero-grid {
+    grid-template-columns: 1fr;
+    gap: 2.75rem;
+    text-align: left;
+  }
+
+  .hero-visual-col {
+    max-width: 580px;
+    margin: 0 auto;
+    width: 100%;
+  }
+
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.25rem;
+  }
+
+  .divisions-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .featured-instruments-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .govt-feature-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
 /* Mobile Screens (<= 640px) */
 @media (max-width: 640px) {
   .top-bar {
@@ -1149,19 +1446,48 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 0.74rem;
   }
 
+  .hero-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.75rem;
+  }
+
+  .divisions-grid {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+
+  .featured-instruments-grid {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+
+  .footer-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
   .marquee-container::before,
   .marquee-container::after {
     width: 45px;
   }
 
+  .hero-btn-group,
   .hero-section .flex.flex-wrap {
     flex-direction: column;
     align-items: stretch;
+    width: 100%;
   }
 
+  .hero-btn-group .btn,
   .hero-section .btn {
     width: 100%;
-    min-height: 44px;
+    min-height: 46px;
+    justify-content: center;
   }
 }
 
