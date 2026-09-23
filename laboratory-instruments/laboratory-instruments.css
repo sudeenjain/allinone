@@ -11,47 +11,75 @@
   --inst-card-bg: #ffffff;
 }
 
-/* Division Pill Badge (Abhimo style) */
+/* Division Pill Badge (Division 02: Professional Teal + Blue Glass) */
 .badge-instruments {
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-  padding: 0.45rem 1.1rem;
+  padding: 0.45rem 1.25rem;
   border-radius: 9999px;
-  background: rgba(2, 132, 199, 0.08);
-  border: 1px solid rgba(2, 132, 199, 0.22);
-  color: #0369a1;
+  background: rgba(6, 47, 58, 0.65);
+  border: 1px solid rgba(45, 212, 191, 0.45);
+  color: #CCFBF1;
   font-size: 0.82rem;
   font-weight: 600;
   letter-spacing: 0.04em;
   text-transform: uppercase;
-  -webkit-backdrop-filter: blur(8px);
-  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(12px);
+  box-shadow: 0 0 20px rgba(20, 184, 166, 0.25);
+  transition: all 0.3s ease;
+}
+
+.badge-instruments i,
+.badge-instruments svg {
+  color: #2DD4BF;
 }
 
 /* Product Card (Abhimo Crisp White Frosted Card) */
 .instrument-card {
   background: var(--inst-card-bg);
-  border: 1px solid rgba(0, 119, 255, 0.12);
-  border-radius: 20px;
-  padding: 1.5rem;
+  border: 1px solid rgba(0, 119, 255, 0.1);
+  border-radius: 22px;
+  padding: 1.15rem;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
   position: relative;
-  box-shadow: 0 10px 30px rgba(0, 119, 255, 0.04);
+  overflow: hidden;
+  box-shadow: 0 8px 24px rgba(15, 23, 42, 0.05);
 }
 
-.instrument-card:hover {
-  transform: translateY(-5px);
-  border-color: rgba(2, 132, 199, 0.4);
-  box-shadow: 0 22px 45px rgba(2, 132, 199, 0.14);
+/* Accent bar that reveals on hover/focus for a premium, tactile feel */
+.instrument-card::before {
+  content: '';
+  position: absolute;
+  inset: 0 0 auto 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--inst-primary), var(--inst-cyan));
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.instrument-card:hover,
+.instrument-card:focus-within {
+  transform: translateY(-6px);
+  border-color: rgba(2, 132, 199, 0.35);
+  box-shadow: 0 24px 48px -12px rgba(2, 132, 199, 0.2);
+}
+
+.instrument-card:hover::before,
+.instrument-card:focus-within::before {
+  transform: scaleX(1);
 }
 
 .instrument-card h4 {
   color: #082032;
   font-weight: 700;
+  line-height: 1.4;
+  min-height: 2.8em;
 }
 
 .instrument-card p {
@@ -60,19 +88,99 @@
   line-height: 1.6;
 }
 
+/* Image frame: soft gradient stage + consistent ratio across breakpoints */
+.instrument-image-frame {
+  position: relative;
+  aspect-ratio: 4 / 3.2;
+  border-radius: 14px;
+  overflow: hidden;
+  background: linear-gradient(155deg, #f1f7fc 0%, #eef4fb 55%, #eaf6fb 100%);
+  border: 1px solid rgba(2, 132, 199, 0.1);
+}
+
+.instrument-image-frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  padding: 0.85rem;
+}
+
+.instrument-category {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.instrument-category::before {
+  content: '';
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--inst-primary);
+  flex-shrink: 0;
+}
+
+.instrument-price-row {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.5rem;
+  margin: 0.4rem 0 0.85rem;
+}
+
+.instrument-price {
+  font-size: 1.05rem;
+  font-weight: 800;
+  color: var(--inst-primary);
+  letter-spacing: -0.01em;
+}
+
+.instrument-price-label {
+  font-size: 0.62rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #94a3b8;
+}
+
+/* Card action buttons */
+.instrument-actions {
+  display: flex;
+  gap: 0.6rem;
+  padding-top: 0.85rem;
+  border-top: 1px solid #f1f5f9;
+}
+
+.instrument-actions .btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.35rem;
+  border-radius: 10px;
+}
+
+.instrument-actions .btn svg {
+  width: 13px;
+  height: 13px;
+}
+
 /* Model Tag (Abhimo Gradient Pill) */
 .model-tag {
   position: absolute;
-  top: 1rem;
-  left: 1rem;
+  top: 0.65rem;
+  left: 0.65rem;
+  display: inline-flex;
+  align-items: center;
   background: linear-gradient(135deg, #00d2ff 0%, #3a7bd5 100%);
   color: #ffffff;
-  font-size: 0.7rem;
+  font-size: 0.68rem;
   font-weight: 700;
-  padding: 0.25rem 0.65rem;
-  border-radius: 8px;
+  padding: 0.28rem 0.6rem;
+  border-radius: 999px;
+  letter-spacing: 0.02em;
   font-family: var(--font-mono, monospace);
-  box-shadow: 0 4px 10px rgba(0, 119, 255, 0.25);
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  box-shadow: 0 6px 14px -2px rgba(0, 119, 255, 0.35);
   z-index: 5;
 }
 
@@ -86,25 +194,250 @@
   transform: translateY(-2px);
 }
 
+.cat-pill.active {
+  box-shadow: 0 8px 20px -6px rgba(2, 132, 199, 0.45);
+}
+
 /* Responsive Enhancements for Laboratory Instruments */
+#catalog-grid {
+  row-gap: 1.75rem;
+}
+
 @media (max-width: 640px) {
   .instrument-card {
-    padding: 1.15rem;
+    padding: 0.95rem;
+    border-radius: 18px;
   }
+
+  .instrument-image-frame {
+    border-radius: 12px;
+  }
+
+  .instrument-image-frame img {
+    padding: 0.6rem;
+  }
+
+  .instrument-card h4 {
+    font-size: 0.85rem;
+    min-height: 2.6em;
+  }
+
+  .instrument-price {
+    font-size: 0.95rem;
+  }
+
   .model-tag {
-    top: 0.75rem;
-    left: 0.75rem;
-    font-size: 0.65rem;
-    padding: 0.2rem 0.5rem;
+    top: 0.55rem;
+    left: 0.55rem;
+    font-size: 0.62rem;
+    padding: 0.22rem 0.5rem;
   }
+
   .cat-pill {
     padding: 0.4rem 0.85rem;
     font-size: 0.75rem;
+  }
+
+  .instrument-actions .btn {
+    font-size: 0.68rem;
+    padding-top: 0.55rem;
+    padding-bottom: 0.55rem;
+  }
+}
+
+/* Tablet tuning: a touch more breathing room between the 2-up grid */
+@media (min-width: 641px) and (max-width: 1024px) {
+  #catalog-grid {
+    gap: 1.25rem;
+  }
+
+  .instrument-card {
+    padding: 1.25rem;
   }
 }
 
 @media (min-width: 1920px) {
   #catalog-grid {
     grid-template-columns: repeat(5, minmax(0, 1fr));
+  }
+}
+
+/* =========================================================
+   HERO BACKGROUND VIDEO, OVERLAY & DIVISION 02 TREATMENT
+   ========================================================= */
+.hero-video-section {
+  position: relative;
+  overflow: hidden;
+  min-height: 460px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.hero-bg-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* Division 02 Overlay: light top-to-bottom veil only — keeps the video clearly
+   visible; legibility now comes from the glass content panel below, not from
+   drowning the footage in color. */
+.hero-video-section {
+  padding-top: 4.5rem;
+  padding-bottom: 4.5rem;
+}
+
+.hero-video-overlay {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(180deg,
+      rgba(3, 22, 28, 0.55) 0%,
+      rgba(3, 22, 28, 0.12) 22%,
+      rgba(3, 22, 28, 0.12) 78%,
+      rgba(3, 22, 28, 0.55) 100%);
+  z-index: 2;
+  pointer-events: none;
+}
+
+/* Glass content panel: sits over the video so text stays readable while the
+   footage remains sharp and unobscured around its edges. */
+.hero-content-panel {
+  background: rgba(5, 32, 40, 0.42);
+  border: 1px solid rgba(94, 234, 212, 0.22);
+  border-radius: 28px;
+  padding: 2.75rem 2.25rem;
+  -webkit-backdrop-filter: blur(16px) saturate(150%);
+  backdrop-filter: blur(16px) saturate(150%);
+  box-shadow: 0 30px 70px -20px rgba(0, 0, 0, 0.55), inset 0 1px 0 rgba(255, 255, 255, 0.07);
+}
+
+@media (max-width: 640px) {
+  .hero-video-section {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
+
+  .hero-content-panel {
+    padding: 1.75rem 1.25rem;
+    border-radius: 20px;
+  }
+}
+
+.hero-video-section .relative.z-10 {
+  position: relative;
+  z-index: 10;
+}
+
+/* Division 02 Typography: Pure White Heading & Light Teal-White Paragraph */
+.hero-video-section h1 {
+  color: #FFFFFF !important;
+  font-weight: 800;
+  text-shadow: 0 2px 18px rgba(0, 0, 0, 0.6), 0 1px 3px rgba(0, 0, 0, 0.7);
+}
+
+.hero-video-section .hero-text {
+  color: #E7FBF8 !important;
+  font-weight: 400;
+  line-height: 1.8;
+  text-shadow: 0 1px 8px rgba(0, 0, 0, 0.55);
+}
+
+/* Division 02 Three Feature Badges: Glassmorphism with Blue, Teal, Violet accents */
+.hero-video-section .flex.flex-wrap span:nth-child(1) {
+  background: rgba(14, 165, 233, 0.18) !important;
+  border: 1px solid rgba(56, 189, 248, 0.45) !important;
+  color: #E0F2FE !important;
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
+  box-shadow: 0 4px 15px rgba(14, 165, 233, 0.15);
+}
+
+.hero-video-section .flex.flex-wrap span:nth-child(1) i,
+.hero-video-section .flex.flex-wrap span:nth-child(1) svg {
+  color: #38BDF8 !important;
+}
+
+.hero-video-section .flex.flex-wrap span:nth-child(2) {
+  background: rgba(20, 184, 166, 0.18) !important;
+  border: 1px solid rgba(45, 212, 191, 0.45) !important;
+  color: #CCFBF1 !important;
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
+  box-shadow: 0 4px 15px rgba(20, 184, 166, 0.15);
+}
+
+.hero-video-section .flex.flex-wrap span:nth-child(2) i,
+.hero-video-section .flex.flex-wrap span:nth-child(2) svg {
+  color: #2DD4BF !important;
+}
+
+.hero-video-section .flex.flex-wrap span:nth-child(3) {
+  background: rgba(139, 92, 246, 0.18) !important;
+  border: 1px solid rgba(167, 139, 250, 0.45) !important;
+  color: #EDE9FE !important;
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
+  box-shadow: 0 4px 15px rgba(139, 92, 246, 0.15);
+}
+
+.hero-video-section .flex.flex-wrap span:nth-child(3) i,
+.hero-video-section .flex.flex-wrap span:nth-child(3) svg {
+  color: #A78BFA !important;
+}
+
+/* Screens under 768px wide: hide video entirely and show static background image */
+@media (max-width: 767.98px) {
+  .hero-bg-video {
+    display: none !important;
+  }
+
+  .hero-video-section {
+    background-image: url('../assets/videos/hero-instruments-poster.jpg');
+  }
+}
+
+/* =========================================================
+   SUBTLE PROFESSIONAL ENTRANCE ANIMATIONS
+   ========================================================= */
+@keyframes heroFadeSlideUp {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hero-video-section .badge-instruments {
+  animation: heroFadeSlideUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.hero-video-section h1 {
+  animation: heroFadeSlideUp 0.7s cubic-bezier(0.16, 1, 0.3, 1) 0.12s both;
+}
+
+.hero-video-section .hero-text {
+  animation: heroFadeSlideUp 0.7s cubic-bezier(0.16, 1, 0.3, 1) 0.22s both;
+}
+
+.hero-video-section .flex.flex-wrap {
+  animation: heroFadeSlideUp 0.7s cubic-bezier(0.16, 1, 0.3, 1) 0.32s both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-video-section * {
+    animation: none !important;
+    transition: none !important;
   }
 }

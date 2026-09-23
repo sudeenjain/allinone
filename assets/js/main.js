@@ -9,6 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initModals();
   initClientMarquee();
   initQuotationBuilder();
+  initOffices();
   checkResponsiveOverflow();
   window.addEventListener('resize', checkResponsiveOverflow, { passive: true });
 });
@@ -48,13 +49,16 @@ function initStickyHeader() {
   const header = document.querySelector('.custom-navbar, .main-header');
   if (!header) return;
 
-  window.addEventListener('scroll', () => {
-    if (window.scrollY > 40) {
+  const handleScroll = () => {
+    if (window.scrollY > 15) {
       header.classList.add('scrolled');
     } else {
       header.classList.remove('scrolled');
     }
-  }, { passive: true });
+  };
+
+  window.addEventListener('scroll', handleScroll, { passive: true });
+  handleScroll();
 }
 
 // 3. Scroll Reveal Animation via IntersectionObserver
@@ -329,9 +333,10 @@ function initMobileMenu() {
     }
   });
 
-  // Close menu when clicking nav links that are not dropdown triggers
-  navMenu.querySelectorAll('a:not(.nav-dropdown > a)').forEach(link => {
-    link.addEventListener('click', () => {
+  // Auto-close menu when tapping a regular navigation link or modal button
+  const directLinks = navMenu.querySelectorAll('a:not(.nav-dropdown > a), .nav-dropdown-item, button');
+  directLinks.forEach(item => {
+    item.addEventListener('click', () => {
       if (window.innerWidth <= 1150) {
         closeMenu();
       }
@@ -699,5 +704,88 @@ function showClientDetails(clientId) {
   document.body.style.overflow = 'hidden';
 }
 
+// Render Data-Driven Corporate Offices Section (Main Office & Registered Office)
+function initOffices() {
+  const containers = document.querySelectorAll('.offices-data-grid');
+  if (!containers.length || typeof COMPANY_DATA === 'undefined' || !COMPANY_DATA.offices) return;
+
+  const officeHtml = COMPANY_DATA.offices.map((office, idx) => {
+    const isRegistered = office.type.toLowerCase().includes('registered');
+    const badgeClass = isRegistered ? 'badge-registered' : 'badge-main';
+    const cardClass = isRegistered ? 'card-registered' : 'card-main';
+    const revealClass = idx === 0 ? 'reveal-left' : 'reveal-right';
+    const iconName = isRegistered ? 'shield-check' : 'building-2';
+
+    // Extensible map button only if a verified mapUrl exists
+    const mapActionHtml = office.mapUrl ? `
+      <a href="${office.mapUrl}" target="_blank" rel="noopener noreferrer" class="office-map-btn" aria-label="Open map location for ${office.type}">
+        <i data-lucide="map-pin" class="w-4 h-4"></i>
+        <span>View on Map</span>
+      </a>
+    ` : `
+      <div class="office-status-pill">
+        <span class="office-status-dot"></span>
+        <span>Corporate Verified Facility</span>
+      </div>
+    `;
+
+    return `
+      <article class="office-card ${cardClass}" id="${office.id}">
+        <div>
+          <div class="office-card-top">
+            <span class="office-badge ${badgeClass}">
+              <i data-lucide="${iconName}" class="w-3.5 h-3.5"></i>
+              ${office.type}
+            </span>
+            <div class="office-icon-wrapper" aria-hidden="true">
+              <span class="office-pin-pulse">
+                <i data-lucide="map-pin" class="w-5 h-5"></i>
+              </span>
+            </div>
+          </div>
+
+          <h3 class="office-title">${office.type}</h3>
+
+          <div class="office-address-lines">
+            <div class="line-1">${office.address1}</div>
+            <div class="line-2">${office.address2}</div>
+            <div class="city-state">${office.city}, ${office.state} - ${office.pin}</div>
+            <div class="country">${office.country}</div>
+          </div>
+
+          <div class="office-meta-list">
+            ${office.phone ? `
+              <div class="office-meta-item">
+                <i data-lucide="phone" class="w-4 h-4 text-blue-600 flex-shrink-0"></i>
+                <div><strong>Phone:</strong> <a href="tel:${office.phone.split('/')[0].trim()}">${office.phone}</a></div>
+              </div>
+            ` : ''}
+            ${office.email ? `
+              <div class="office-meta-item">
+                <i data-lucide="mail" class="w-4 h-4 text-blue-600 flex-shrink-0"></i>
+                <div><strong>Email:</strong> <a href="mailto:${office.email}">${office.email}</a></div>
+              </div>
+            ` : ''}
+          </div>
+        </div>
+
+        <div class="office-map-action">
+          ${mapActionHtml}
+          <span class="text-xs text-slate-400 font-mono">PIN: ${office.pin}</span>
+        </div>
+      </article>
+    `;
+  }).join('');
+
+  containers.forEach(container => {
+    container.innerHTML = officeHtml;
+  });
+
+  if (typeof lucide !== 'undefined' && typeof lucide.createIcons === 'function') {
+    lucide.createIcons();
+  }
+}
+
 window.showProductSpecs = showProductSpecs;
 window.showClientDetails = showClientDetails;
+window.initOffices = initOffices;

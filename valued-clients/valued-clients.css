@@ -9,22 +9,29 @@
   --client-card-bg: #ffffff;
 }
 
-/* Division Pill Badge (Abhimo style) */
+/* Division Pill Badge (Division 04: Professional Blue + Slate Glass) */
 .badge-clients {
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-  padding: 0.45rem 1.1rem;
+  padding: 0.45rem 1.25rem;
   border-radius: 9999px;
-  background: rgba(245, 158, 11, 0.08);
-  border: 1px solid rgba(245, 158, 11, 0.25);
-  color: #b45309;
+  background: rgba(15, 23, 42, 0.7);
+  border: 1px solid rgba(96, 165, 250, 0.45);
+  color: #DBEAFE;
   font-size: 0.82rem;
   font-weight: 600;
   letter-spacing: 0.04em;
   text-transform: uppercase;
-  -webkit-backdrop-filter: blur(8px);
-  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(12px);
+  box-shadow: 0 0 20px rgba(37, 99, 235, 0.25);
+  transition: all 0.3s ease;
+}
+
+.badge-clients i,
+.badge-clients svg {
+  color: #60A5FA;
 }
 
 /* Client Logo Card (Abhimo Crisp White Frosted Card) */
@@ -93,4 +100,123 @@
     grid-template-columns: repeat(8, minmax(0, 1fr));
   }
 }
+
+/* =========================================================
+   HERO BACKGROUND VIDEO, OVERLAY & DIVISION 04 TREATMENT
+   ========================================================= */
+.hero-video-section {
+  position: relative;
+  overflow: hidden;
+  min-height: 460px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.hero-bg-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* Division 04 Dark Slate Overlay: Strong behind text, lighter toward edges */
+.hero-video-overlay {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(ellipse at 50% 50%, rgba(15, 23, 42, 0.74) 0%, rgba(10, 15, 30, 0.88) 100%),
+              linear-gradient(180deg, rgba(15, 23, 42, 0.55) 0%, rgba(10, 15, 30, 0.85) 100%);
+  -webkit-backdrop-filter: blur(1.5px);
+  backdrop-filter: blur(1.5px);
+  z-index: 2;
+  pointer-events: none;
+}
+
+.hero-video-section .relative.z-10 {
+  position: relative;
+  z-index: 10;
+}
+
+/* Division 04 Typography: Pure White Heading & Light Gray/Blue Paragraph */
+.hero-video-section h1 {
+  color: #FFFFFF !important;
+  font-weight: 800;
+  text-shadow: 0 2px 14px rgba(0, 0, 0, 0.45);
+}
+
+.hero-video-section .hero-text {
+  color: #E2E8F0 !important;
+  font-weight: 400;
+  line-height: 1.8;
+  text-shadow: 0 1px 6px rgba(0, 0, 0, 0.4);
+}
+
+/* Division 04 Trust Badge: Verified White/Light Card with Dark Green Accent */
+.hero-video-section .inline-flex.items-center.gap-2 {
+  background: rgba(255, 255, 255, 0.95) !important;
+  border: 1px solid rgba(16, 185, 129, 0.3) !important;
+  color: #047857 !important;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
+  font-weight: 600;
+}
+.hero-video-section .inline-flex.items-center.gap-2 i,
+.hero-video-section .inline-flex.items-center.gap-2 svg {
+  color: #059669 !important;
+}
+
+/* Screens under 768px wide: hide video entirely and show static background image */
+@media (max-width: 767.98px) {
+  .hero-bg-video {
+    display: none !important;
+  }
+  .hero-video-section {
+    background-image: url('../assets/videos/hero-clients-poster.jpg');
+  }
+}
+
+/* =========================================================
+   SUBTLE PROFESSIONAL ENTRANCE ANIMATIONS
+   ========================================================= */
+@keyframes heroFadeSlideUp {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hero-video-section .badge-clients {
+  animation: heroFadeSlideUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.hero-video-section h1 {
+  animation: heroFadeSlideUp 0.7s cubic-bezier(0.16, 1, 0.3, 1) 0.12s both;
+}
+
+.hero-video-section .hero-text {
+  animation: heroFadeSlideUp 0.7s cubic-bezier(0.16, 1, 0.3, 1) 0.22s both;
+}
+
+.hero-video-section .inline-flex.items-center.gap-2 {
+  animation: heroFadeSlideUp 0.7s cubic-bezier(0.16, 1, 0.3, 1) 0.32s both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-video-section * {
+    animation: none !important;
+    transition: none !important;
+  }
+}
+
 

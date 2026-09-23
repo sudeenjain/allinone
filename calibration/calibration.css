@@ -10,22 +10,29 @@
   --calibration-bg-card: rgba(255, 255, 255, 0.88);
 }
 
-/* Division Pill Badge (Abhimo style) */
+/* Division Pill Badge (Division 05: Professional Violet + Blue Glass) */
 .badge-calibration {
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-  padding: 0.45rem 1.1rem;
+  padding: 0.45rem 1.25rem;
   border-radius: 9999px;
-  background: rgba(124, 58, 237, 0.08);
-  border: 1px solid rgba(124, 58, 237, 0.22);
-  color: #6d28d9;
+  background: rgba(30, 27, 75, 0.7);
+  border: 1px solid rgba(167, 139, 250, 0.45);
+  color: #EDE9FE;
   font-size: 0.82rem;
   font-weight: 600;
   letter-spacing: 0.04em;
   text-transform: uppercase;
-  -webkit-backdrop-filter: blur(8px);
-  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(12px);
+  box-shadow: 0 0 20px rgba(124, 58, 237, 0.25);
+  transition: all 0.3s ease;
+}
+
+.badge-calibration i,
+.badge-calibration svg {
+  color: #A78BFA;
 }
 
 /* Calibration Highlight Panel (Frosted Abhimo Glass) */
@@ -112,3 +119,137 @@
     flex-wrap: wrap;
   }
 }
+
+/* =========================================================
+   HERO BACKGROUND VIDEO, OVERLAY & DIVISION 05 TREATMENT
+   ========================================================= */
+.hero-video-section {
+  position: relative;
+  overflow: hidden;
+  min-height: 460px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.hero-bg-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* Division 05 Dark Violet Overlay: Strong behind text, lighter toward edges */
+.hero-video-overlay {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(ellipse at 50% 50%, rgba(30, 27, 75, 0.76) 0%, rgba(15, 12, 45, 0.88) 100%),
+              linear-gradient(180deg, rgba(30, 27, 75, 0.55) 0%, rgba(15, 12, 45, 0.85) 100%);
+  -webkit-backdrop-filter: blur(1.5px);
+  backdrop-filter: blur(1.5px);
+  z-index: 2;
+  pointer-events: none;
+}
+
+.hero-video-section .relative.z-10 {
+  position: relative;
+  z-index: 10;
+}
+
+/* Division 05 Typography: Pure White Heading & Light Lavender-White Paragraph */
+.hero-video-section h1 {
+  color: #FFFFFF !important;
+  font-weight: 800;
+  text-shadow: 0 2px 14px rgba(0, 0, 0, 0.45);
+}
+
+.hero-video-section .hero-text {
+  color: #EDE9FE !important;
+  font-weight: 400;
+  line-height: 1.8;
+  text-shadow: 0 1px 6px rgba(0, 0, 0, 0.4);
+}
+
+/* Division 05 Buttons: Primary Blue (#2563EB) & Secondary Crisp White */
+.hero-video-section .hero-btn {
+  background: #2563EB !important;
+  color: #FFFFFF !important;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  box-shadow: 0 8px 25px rgba(37, 99, 235, 0.4);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.hero-video-section .hero-btn:hover {
+  background: #1D4ED8 !important;
+  transform: translateY(-2px);
+  box-shadow: 0 12px 30px rgba(37, 99, 235, 0.55);
+}
+
+.hero-video-section .hero-btn-outline {
+  background: #FFFFFF !important;
+  color: #6D28D9 !important;
+  border: 1px solid rgba(255, 255, 255, 0.9);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.hero-video-section .hero-btn-outline:hover {
+  background: #F5F3FF !important;
+  color: #5B21B6 !important;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(255, 255, 255, 0.3);
+}
+
+/* Screens under 768px wide: hide video entirely and show static background image */
+@media (max-width: 767.98px) {
+  .hero-bg-video {
+    display: none !important;
+  }
+  .hero-video-section {
+    background-image: url('../assets/videos/hero-calibration-poster.jpg');
+  }
+}
+
+/* =========================================================
+   SUBTLE PROFESSIONAL ENTRANCE ANIMATIONS
+   ========================================================= */
+@keyframes heroFadeSlideUp {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hero-video-section .badge-calibration {
+  animation: heroFadeSlideUp 0.6s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.hero-video-section h1 {
+  animation: heroFadeSlideUp 0.7s cubic-bezier(0.16, 1, 0.3, 1) 0.12s both;
+}
+
+.hero-video-section .hero-text {
+  animation: heroFadeSlideUp 0.7s cubic-bezier(0.16, 1, 0.3, 1) 0.22s both;
+}
+
+.hero-video-section .flex.flex-wrap {
+  animation: heroFadeSlideUp 0.7s cubic-bezier(0.16, 1, 0.3, 1) 0.32s both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-video-section * {
+    animation: none !important;
+    transition: none !important;
+  }
+}
+

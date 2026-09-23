@@ -28,10 +28,50 @@ const COMPANY_DATA = {
     email: "morbi@allinonetech.co.in",
     website: "www.allinonetech.co.in"
   },
+  offices: [
+    {
+      id: "main-office",
+      type: "Main Office",
+      badgeColor: "blue",
+      address1: "Plot No.8, Royal Ind Estate",
+      address2: "8/A National Highway, Lalpar, Morvi",
+      city: "Rajkot",
+      state: "Gujarat",
+      pin: "363642",
+      country: "India",
+      phone: "+91 98255 38719 / 98255 83846",
+      email: "morbi@allinonetech.co.in",
+      mapUrl: null // Extensible slot for verified map URL (not invented)
+    },
+    {
+      id: "registered-office",
+      type: "Registered Office",
+      badgeColor: "emerald",
+      address1: "Plot No.8, Royal Ind Estate",
+      address2: "8/A National Highway, Lalpar, Morvi",
+      city: "Rajkot",
+      state: "Gujarat",
+      pin: "363642",
+      country: "India",
+      phone: "02822 - 232211 / +91 98255 38719",
+      email: "morbi@allinonetech.co.in",
+      mapUrl: null // Extensible slot for verified map URL (not invented)
+    }
+  ],
   locations: {
+    mainOffice: {
+      type: "Main Office",
+      address: "Plot No.8, Royal Ind Estate, 8/A National Highway, Lalpar, Morvi, Rajkot, Gujarat - 363642, India",
+      phone: "+91 98255 38719 / 98255 83846"
+    },
+    registeredOffice: {
+      type: "Registered Office",
+      address: "Plot No.8, Royal Ind Estate, 8/A National Highway, Lalpar, Morvi, Rajkot, Gujarat - 363642, India",
+      phone: "02822 - 232211 / +91 98255 38719"
+    },
     headOffice: {
       type: "Registered Office",
-      address: "ALL IN ONE TECHNOLOGY, Guest House Road, Nagar Plot - 1, Opp. Radio Center, Morbi - 363641, Gujarat, India",
+      address: "Plot No.8, Royal Ind Estate, 8/A National Highway, Lalpar, Morvi, Rajkot, Gujarat - 363642, India",
       phone: "02822 - 232211 / +91 98255 38719"
     },
     factory: {

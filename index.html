@@ -7,6 +7,25 @@
   <meta name="description" content="All In One Technology - Established 2004. A House of Machinery, Laboratory & Testing. Manufacturer of Caltronics precision instruments, BIS/ISI Certification consulting, Traceable Calibration, and Gujarat Government Soil Health Card partner.">
   <link rel="icon" href="assets/images/caltronics_app_icon.png" type="image/png">
 
+  <!-- Critical Hero Fallback & Pre-Tailwind Layout Stabilization -->
+  <style>
+    .hero-section {
+      min-height: 580px;
+      background-color: #062a43;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero-bg-video {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      pointer-events: none;
+    }
+  </style>
+
   <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
   <!-- Lucide Icons -->
@@ -108,8 +127,12 @@
   <!-- =========================================================
        HERO SECTION (Native 2-Column Responsive Layout)
        ========================================================= -->
-  <section class="hero-section" id="home">
-    <div class="container">
+  <section class="hero-section has-bg-video" id="home">
+    <video class="hero-bg-video" autoplay muted loop playsinline preload="auto" poster="assets/videos/hero-landing-poster.jpg">
+      <source src="assets/videos/hero-landing.mp4" type="video/mp4">
+    </video>
+    <div class="hero-video-overlay-landing"></div>
+    <div class="container relative z-10">
       <div class="hero-grid">
         
         <!-- Left Column: Title & Justified Lead Text -->
@@ -935,6 +958,117 @@
   </section>
 
   <!-- =========================================================
+       OUR OFFICES (Main Office & Registered Office Corporate Showcase)
+       ========================================================= -->
+  <section id="offices" class="py-20 relative bg-slate-50/70 border-t border-slate-200/80 offices-section">
+    <div class="container mx-auto px-4">
+      <div class="text-center max-w-2xl mx-auto mb-12">
+        <span class="hero-badge">Corporate Presence</span>
+        <h2 class="section-title mt-2">Our Offices</h2>
+        <p class="section-subtitle">
+          Official corporate administrative and registered headquarters records of ALL IN ONE TECHNOLOGY.
+        </p>
+      </div>
+
+      <div class="offices-grid offices-data-grid max-w-5xl mx-auto">
+        <!-- Main Office -->
+        <article class="office-card card-main" id="home-main-office">
+          <div>
+            <div class="office-card-top">
+              <span class="office-badge badge-main">
+                <i data-lucide="building-2" class="w-3.5 h-3.5"></i> Main Office
+              </span>
+              <div class="office-icon-wrapper" aria-hidden="true">
+                <span class="office-pin-pulse">
+                  <i data-lucide="map-pin" class="w-5 h-5"></i>
+                </span>
+              </div>
+            </div>
+
+            <h3 class="office-title">Main Office</h3>
+
+            <div class="office-address-lines">
+              <div class="line-1">Plot No.8, Royal Ind Estate</div>
+              <div class="line-2">8/A National Highway, Lalpar, Morvi</div>
+              <div class="city-state">Rajkot, Gujarat - 363642</div>
+              <div class="country">India</div>
+            </div>
+
+            <div class="office-meta-list">
+              <div class="office-meta-item">
+                <i data-lucide="phone" class="w-4 h-4 text-blue-600 flex-shrink-0"></i>
+                <div><strong>Phone:</strong> <a href="tel:+919825538719">+91 98255 38719 / 98255 83846</a></div>
+              </div>
+              <div class="office-meta-item">
+                <i data-lucide="mail" class="w-4 h-4 text-blue-600 flex-shrink-0"></i>
+                <div><strong>Email:</strong> <a href="mailto:morbi@allinonetech.co.in">morbi@allinonetech.co.in</a></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="office-map-action">
+            <div class="office-status-pill">
+              <span class="office-status-dot"></span>
+              <span>Corporate Verified Facility</span>
+            </div>
+            <span class="text-xs text-slate-400 font-mono">PIN: 363642</span>
+          </div>
+        </article>
+
+        <!-- Registered Office -->
+        <article class="office-card card-registered" id="home-registered-office">
+          <div>
+            <div class="office-card-top">
+              <span class="office-badge badge-registered">
+                <i data-lucide="shield-check" class="w-3.5 h-3.5"></i> Registered Office
+              </span>
+              <div class="office-icon-wrapper" aria-hidden="true">
+                <span class="office-pin-pulse">
+                  <i data-lucide="map-pin" class="w-5 h-5"></i>
+                </span>
+              </div>
+            </div>
+
+            <h3 class="office-title">Registered Office</h3>
+
+            <div class="office-address-lines">
+              <div class="line-1">Plot No.8, Royal Ind Estate</div>
+              <div class="line-2">8/A National Highway, Lalpar, Morvi</div>
+              <div class="city-state">Rajkot, Gujarat - 363642</div>
+              <div class="country">India</div>
+            </div>
+
+            <div class="office-meta-list">
+              <div class="office-meta-item">
+                <i data-lucide="phone" class="w-4 h-4 text-emerald-600 flex-shrink-0"></i>
+                <div><strong>Tel:</strong> <a href="tel:02822232211">02822 - 232211 / +91 98255 38719</a></div>
+              </div>
+              <div class="office-meta-item">
+                <i data-lucide="mail" class="w-4 h-4 text-emerald-600 flex-shrink-0"></i>
+                <div><strong>Email:</strong> <a href="mailto:morbi@allinonetech.co.in">morbi@allinonetech.co.in</a></div>
+              </div>
+            </div>
+          </div>
+
+          <div class="office-map-action">
+            <div class="office-status-pill">
+              <span class="office-status-dot"></span>
+              <span>Statutory Registered Office</span>
+            </div>
+            <span class="text-xs text-slate-400 font-mono">PIN: 363642</span>
+          </div>
+        </article>
+      </div>
+
+      <div class="text-center mt-10">
+        <a href="contact/index.html" class="btn hero-btn-outline text-xs">
+          View All Branch Locations & Manufacturing Facilities <i data-lucide="arrow-right" class="w-4 h-4"></i>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================
        FOOTER (Corporate High-End Look)
        ========================================================= -->
   <footer class="footer-corporate">
@@ -972,19 +1106,19 @@
         </div>
 
         <div>
-          <h4 class="text-sm font-bold text-white uppercase tracking-wider mb-4 border-b border-white/10 pb-2">Registered Locations</h4>
+          <h4 class="text-sm font-bold text-white uppercase tracking-wider mb-4 border-b border-white/10 pb-2">Our Offices</h4>
           <div class="space-y-3 text-xs text-slate-400">
             <div>
-              <strong class="text-slate-200 block">Registered Office (Morbi):</strong>
-              ALL IN ONE TECHNOLOGY, Guest House Road, Nagar Plot - 1, Opp. Radio Center, Morbi - 363641, Gujarat
+              <strong class="text-slate-200 block">Main Office:</strong>
+              Plot No.8, Royal Ind Estate, 8/A National Highway, Lalpar, Morvi, Rajkot, Gujarat - 363642
+            </div>
+            <div>
+              <strong class="text-slate-200 block">Registered Office:</strong>
+              Plot No.8, Royal Ind Estate, 8/A National Highway, Lalpar, Morvi, Rajkot, Gujarat - 363642
             </div>
             <div>
               <strong class="text-slate-200 block">Manufacturing Unit:</strong>
               Plot No. 8, Shree Hari Estate, Village: Timbdi, Morbi - 363642, Gujarat
-            </div>
-            <div>
-              <strong class="text-slate-200 block">Rajkot Branch Office:</strong>
-              "Vitt Bhavan", 2nd Floor, 216/217, Gondal Rd, Opp. Gurukul Road, Rajkot - 360002
             </div>
           </div>
         </div>
