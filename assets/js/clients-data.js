@@ -156,10 +156,10 @@ const CLIENTS_DATA = [
     "name": "Adani Wilmar Ltd.",
     "industry": "Food & Beverages",
     "location": "Ahmedabad, Gujarat",
-    "cert": "Fortune Brand \u2022 National Conglomerate",
+    "cert": "Fortune Brand • National Conglomerate",
     "partnership": "Laboratory testing equipment, Caltronics analytical instrumentation, and regular calibration compliance supplied by ALL IN ONE TECHNOLOGY.",
     "websiteUrl": "https://www.adaniwilmar.com",
-    "logo": "assets/clients/client_logo_016.png"
+    "logo": "assets/clients/client_logo_016.jpeg"
   },
   {
     "id": 17,
@@ -659,7 +659,7 @@ const CLIENTS_DATA = [
     "cert": "Packaged Drinking Water",
     "partnership": "Laboratory testing equipment, Caltronics analytical instrumentation, and regular calibration compliance supplied by ALL IN ONE TECHNOLOGY.",
     "websiteUrl": "https://www.google.com/search?q=Ghanshyam+Water+Purifiers+#66+Gujarat,+India",
-    "logo": "assets/clients/client_logo_066.png"
+    "logo": "assets/clients/client_logo_066.jpeg"
   },
   {
     "id": 67,
@@ -736,7 +736,7 @@ const CLIENTS_DATA = [
     "name": "Somany Ceramics Ltd.",
     "industry": "Ceramics & Tiles",
     "location": "Morbi / National",
-    "cert": "National Leader \u2022 ISO & BIS Certified",
+    "cert": "National Leader • ISO & BIS Certified",
     "partnership": "Laboratory testing equipment, Caltronics analytical instrumentation, and regular calibration compliance supplied by ALL IN ONE TECHNOLOGY.",
     "websiteUrl": "https://www.somanyceramics.com",
     "logo": "assets/clients/client_logo_074.jpeg"
@@ -889,7 +889,7 @@ const CLIENTS_DATA = [
     "cert": "ISO 9001:2015 & BIS Standards",
     "partnership": "Laboratory testing equipment, Caltronics analytical instrumentation, and regular calibration compliance supplied by ALL IN ONE TECHNOLOGY.",
     "websiteUrl": "https://www.google.com/search?q=Woad+Lechnologically+Deli+Ned+Morbi+Gujarat",
-    "logo": "assets/clients/client_logo_089.png"
+    "logo": "assets/clients/client_logo_089.jpeg"
   },
   {
     "id": 90,
@@ -899,7 +899,7 @@ const CLIENTS_DATA = [
     "cert": "Melamine Faced Panels",
     "partnership": "Laboratory testing equipment, Caltronics analytical instrumentation, and regular calibration compliance supplied by ALL IN ONE TECHNOLOGY.",
     "websiteUrl": "https://www.google.com/search?q=Classic+Woodlam+Decor+#90+Morbi,+Gujarat",
-    "logo": "assets/clients/client_logo_090.png"
+    "logo": "assets/clients/client_logo_090.jpeg"
   },
   {
     "id": 91,
@@ -919,7 +919,7 @@ const CLIENTS_DATA = [
     "cert": "Wall & Floor Tiles",
     "partnership": "Laboratory testing equipment, Caltronics analytical instrumentation, and regular calibration compliance supplied by ALL IN ONE TECHNOLOGY.",
     "websiteUrl": "https://www.google.com/search?q=Sonic+Tiles+Morbi",
-    "logo": "assets/clients/client_logo_092.png"
+    "logo": "assets/clients/client_logo_092.jpeg"
   },
   {
     "id": 93,
@@ -929,7 +929,7 @@ const CLIENTS_DATA = [
     "cert": "Switchgear Standards",
     "partnership": "Laboratory testing equipment, Caltronics analytical instrumentation, and regular calibration compliance supplied by ALL IN ONE TECHNOLOGY.",
     "websiteUrl": "https://www.google.com/search?q=Saurashtra+Electrical+Controls+#93+Rajkot,+Gujarat",
-    "logo": "assets/clients/client_logo_093.png"
+    "logo": "assets/clients/client_logo_093.jpeg"
   },
   {
     "id": 94,
@@ -959,7 +959,7 @@ const CLIENTS_DATA = [
     "cert": "State Agricultural University",
     "partnership": "Laboratory testing equipment, Caltronics analytical instrumentation, and regular calibration compliance supplied by ALL IN ONE TECHNOLOGY.",
     "websiteUrl": "https://www.jau.in",
-    "logo": "assets/clients/client_logo_096.png"
+    "logo": "assets/clients/client_logo_096.jpeg"
   },
   {
     "id": 97,
@@ -979,7 +979,7 @@ const CLIENTS_DATA = [
     "cert": "Surface Finishes",
     "partnership": "Laboratory testing equipment, Caltronics analytical instrumentation, and regular calibration compliance supplied by ALL IN ONE TECHNOLOGY.",
     "websiteUrl": "https://www.google.com/search?q=Real+Touch+Surfaces+Gujarat",
-    "logo": "assets/clients/client_logo_098.png"
+    "logo": "assets/clients/client_logo_098.jpeg"
   },
   {
     "id": 99,
@@ -999,7 +999,7 @@ const CLIENTS_DATA = [
     "cert": "Industrial Tooling",
     "partnership": "Laboratory testing equipment, Caltronics analytical instrumentation, and regular calibration compliance supplied by ALL IN ONE TECHNOLOGY.",
     "websiteUrl": "https://www.google.com/search?q=Gujarat+Techno+Tools+#100+Rajkot,+Gujarat",
-    "logo": "assets/clients/client_logo_100.png"
+    "logo": "assets/clients/client_logo_100.jpeg"
   },
   {
     "id": 101,
@@ -1019,7 +1019,7 @@ const CLIENTS_DATA = [
     "cert": "ISO 9001:2015",
     "partnership": "Laboratory testing equipment, Caltronics analytical instrumentation, and regular calibration compliance supplied by ALL IN ONE TECHNOLOGY.",
     "websiteUrl": "https://www.google.com/search?q=Rotolam+Elegance+Laminate",
-    "logo": "assets/clients/client_logo_102.png"
+    "logo": "assets/clients/client_logo_102.jpeg"
   },
   {
     "id": 103,
@@ -1039,17 +1039,17 @@ const CLIENTS_DATA = [
     "cert": "Govt. of Gujarat Enterprise",
     "partnership": "Laboratory testing equipment, Caltronics analytical instrumentation, and regular calibration compliance supplied by ALL IN ONE TECHNOLOGY.",
     "websiteUrl": "https://gmdcltd.com",
-    "logo": "assets/clients/client_logo_104.png"
+    "logo": "assets/clients/client_logo_104.jpeg"
   },
   {
     "id": 105,
     "name": "Gujarat Mineral Research & Development Society",
     "industry": "Government & Academic",
     "location": "Gandhinagar, Gujarat",
-    "cert": "Govt. of Gujarat \u2022 Industries & Mines Dept",
+    "cert": "Govt. of Gujarat • Industries & Mines Dept",
     "partnership": "Laboratory testing equipment, Caltronics analytical instrumentation, and regular calibration compliance supplied by ALL IN ONE TECHNOLOGY.",
     "websiteUrl": "https://geomining.gujarat.gov.in",
-    "logo": "assets/clients/client_logo_105.png"
+    "logo": "assets/clients/client_logo_105.jpeg"
   },
   {
     "id": 106,
@@ -1079,7 +1079,7 @@ const CLIENTS_DATA = [
     "cert": "Plywood Components",
     "partnership": "Laboratory testing equipment, Caltronics analytical instrumentation, and regular calibration compliance supplied by ALL IN ONE TECHNOLOGY.",
     "websiteUrl": "https://www.google.com/search?q=Wood+Pulp+Products+Gujarat",
-    "logo": "assets/clients/client_logo_108.png"
+    "logo": "assets/clients/client_logo_108.jpeg"
   },
   {
     "id": 109,
@@ -1099,7 +1099,7 @@ const CLIENTS_DATA = [
     "cert": "HDPE & Woven Sacks",
     "partnership": "Laboratory testing equipment, Caltronics analytical instrumentation, and regular calibration compliance supplied by ALL IN ONE TECHNOLOGY.",
     "websiteUrl": "https://www.google.com/search?q=Maruti+Polyplast+Industries+#110+Morbi,+Gujarat",
-    "logo": "assets/clients/client_logo_110.png"
+    "logo": "assets/clients/client_logo_110.jpeg"
   },
   {
     "id": 111,
@@ -1129,7 +1129,7 @@ const CLIENTS_DATA = [
     "cert": "Woodcraft Standards",
     "partnership": "Laboratory testing equipment, Caltronics analytical instrumentation, and regular calibration compliance supplied by ALL IN ONE TECHNOLOGY.",
     "websiteUrl": "https://www.google.com/search?q=Tatva+Woods+Gujarat",
-    "logo": "assets/clients/client_logo_113.png"
+    "logo": "assets/clients/client_logo_113.jpeg"
   },
   {
     "id": 114,
@@ -1149,7 +1149,7 @@ const CLIENTS_DATA = [
     "cert": "ISI Marine Grade Plywood",
     "partnership": "Laboratory testing equipment, Caltronics analytical instrumentation, and regular calibration compliance supplied by ALL IN ONE TECHNOLOGY.",
     "websiteUrl": "https://www.google.com/search?q=Penguin+Plywood+Morbi",
-    "logo": "assets/clients/client_logo_115.png"
+    "logo": "assets/clients/client_logo_115.jpeg"
   },
   {
     "id": 116,
@@ -1169,7 +1169,7 @@ const CLIENTS_DATA = [
     "cert": "Plastic Packaging",
     "partnership": "Laboratory testing equipment, Caltronics analytical instrumentation, and regular calibration compliance supplied by ALL IN ONE TECHNOLOGY.",
     "websiteUrl": "https://www.google.com/search?q=Patel+Polymers+&+Packaging+#117+Morbi,+Gujarat",
-    "logo": "assets/clients/client_logo_117.png"
+    "logo": "assets/clients/client_logo_117.jpeg"
   },
   {
     "id": 118,
@@ -1199,7 +1199,7 @@ const CLIENTS_DATA = [
     "cert": "Agricultural Pipes",
     "partnership": "Laboratory testing equipment, Caltronics analytical instrumentation, and regular calibration compliance supplied by ALL IN ONE TECHNOLOGY.",
     "websiteUrl": "https://www.google.com/search?q=Neptune+Pipes+Irrigation+Gujarat",
-    "logo": "assets/clients/client_logo_120.png"
+    "logo": "assets/clients/client_logo_120.jpeg"
   },
   {
     "id": 121,
@@ -1229,7 +1229,7 @@ const CLIENTS_DATA = [
     "cert": "RCC Hume Pipes",
     "partnership": "Laboratory testing equipment, Caltronics analytical instrumentation, and regular calibration compliance supplied by ALL IN ONE TECHNOLOGY.",
     "websiteUrl": "https://www.google.com/search?q=Balaji+Cement+Pipe+Morbi",
-    "logo": "assets/clients/client_logo_123.png"
+    "logo": "assets/clients/client_logo_123.jpeg"
   },
   {
     "id": 124,
@@ -1289,7 +1289,7 @@ const CLIENTS_DATA = [
     "cert": "Polymer Moulding",
     "partnership": "Laboratory testing equipment, Caltronics analytical instrumentation, and regular calibration compliance supplied by ALL IN ONE TECHNOLOGY.",
     "websiteUrl": "https://www.google.com/search?q=Perfect+Plastic+Industries+Morbi",
-    "logo": "assets/clients/client_logo_129.png"
+    "logo": "assets/clients/client_logo_129.jpeg"
   },
   {
     "id": 130,
@@ -1299,7 +1299,7 @@ const CLIENTS_DATA = [
     "cert": "Cement Spun Pipes",
     "partnership": "Laboratory testing equipment, Caltronics analytical instrumentation, and regular calibration compliance supplied by ALL IN ONE TECHNOLOGY.",
     "websiteUrl": "https://www.google.com/search?q=Jay+Ambe+RCC+Pipe+Works+#130+Morbi,+Gujarat",
-    "logo": "assets/clients/client_logo_130.png"
+    "logo": "assets/clients/client_logo_130.jpeg"
   },
   {
     "id": 131,
@@ -1309,7 +1309,7 @@ const CLIENTS_DATA = [
     "cert": "Polymer Extrusions",
     "partnership": "Laboratory testing equipment, Caltronics analytical instrumentation, and regular calibration compliance supplied by ALL IN ONE TECHNOLOGY.",
     "websiteUrl": "https://www.google.com/search?q=Shree+Ram+Polybags+#131+Morbi,+Gujarat",
-    "logo": "assets/clients/client_logo_131.png"
+    "logo": "assets/clients/client_logo_131.jpeg"
   },
   {
     "id": 132,
@@ -1329,7 +1329,7 @@ const CLIENTS_DATA = [
     "cert": "HDPE Woven Sacks Standards",
     "partnership": "Laboratory testing equipment, Caltronics analytical instrumentation, and regular calibration compliance supplied by ALL IN ONE TECHNOLOGY.",
     "websiteUrl": "https://www.google.com/search?q=Dayana+Polyplast+Pvt+Ltd+Morbi",
-    "logo": "assets/clients/client_logo_133.png"
+    "logo": "assets/clients/client_logo_133.jpeg"
   },
   {
     "id": 134,
@@ -1389,7 +1389,7 @@ const CLIENTS_DATA = [
     "cert": "ISI Plywood Standards",
     "partnership": "Laboratory testing equipment, Caltronics analytical instrumentation, and regular calibration compliance supplied by ALL IN ONE TECHNOLOGY.",
     "websiteUrl": "https://www.google.com/search?q=Radhe+Plywood+&+Boards+#139+Gujarat,+India",
-    "logo": "assets/clients/client_logo_139.png"
+    "logo": "assets/clients/client_logo_139.jpeg"
   },
   {
     "id": 140,
@@ -1409,7 +1409,7 @@ const CLIENTS_DATA = [
     "cert": "Polymer Standards",
     "partnership": "Laboratory testing equipment, Caltronics analytical instrumentation, and regular calibration compliance supplied by ALL IN ONE TECHNOLOGY.",
     "websiteUrl": "https://www.google.com/search?q=Shreeram+Polymers+Morbi",
-    "logo": "assets/clients/client_logo_141.png"
+    "logo": "assets/clients/client_logo_141.jpeg"
   },
   {
     "id": 142,
@@ -1419,7 +1419,7 @@ const CLIENTS_DATA = [
     "cert": "Precision Machinery",
     "partnership": "Laboratory testing equipment, Caltronics analytical instrumentation, and regular calibration compliance supplied by ALL IN ONE TECHNOLOGY.",
     "websiteUrl": "https://www.google.com/search?q=Shakti+Engineering+Works+#142+Rajkot,+Gujarat",
-    "logo": "assets/clients/client_logo_142.png"
+    "logo": "assets/clients/client_logo_142.jpeg"
   },
   {
     "id": 143,
@@ -1439,7 +1439,7 @@ const CLIENTS_DATA = [
     "cert": "ISI Electrical Cables",
     "partnership": "Laboratory testing equipment, Caltronics analytical instrumentation, and regular calibration compliance supplied by ALL IN ONE TECHNOLOGY.",
     "websiteUrl": "https://www.google.com/search?q=Powergrace+Cables+Rajkot",
-    "logo": "assets/clients/client_logo_144.png"
+    "logo": "assets/clients/client_logo_144.jpeg"
   },
   {
     "id": 145,
@@ -1449,7 +1449,7 @@ const CLIENTS_DATA = [
     "cert": "Plastic Packaging",
     "partnership": "Laboratory testing equipment, Caltronics analytical instrumentation, and regular calibration compliance supplied by ALL IN ONE TECHNOLOGY.",
     "websiteUrl": "https://www.google.com/search?q=Patel+Polymers+&+Packaging+#145+Morbi,+Gujarat",
-    "logo": "assets/clients/client_logo_145.png"
+    "logo": "assets/clients/client_logo_145.jpeg"
   },
   {
     "id": 146,
@@ -1469,7 +1469,7 @@ const CLIENTS_DATA = [
     "cert": "Pharma Quality Standards",
     "partnership": "Laboratory testing equipment, Caltronics analytical instrumentation, and regular calibration compliance supplied by ALL IN ONE TECHNOLOGY.",
     "websiteUrl": "https://www.google.com/search?q=Aaru+Life+Science+Ahmedabad",
-    "logo": "assets/clients/client_logo_147.png"
+    "logo": "assets/clients/client_logo_147.jpeg"
   },
   {
     "id": 148,
@@ -1489,7 +1489,7 @@ const CLIENTS_DATA = [
     "cert": "Valves & Castings Standards",
     "partnership": "Laboratory testing equipment, Caltronics analytical instrumentation, and regular calibration compliance supplied by ALL IN ONE TECHNOLOGY.",
     "websiteUrl": "https://www.google.com/search?q=Wellcast+Industries+Rajkot",
-    "logo": "assets/clients/client_logo_149.png"
+    "logo": "assets/clients/client_logo_149.jpeg"
   },
   {
     "id": 150,
@@ -1499,7 +1499,7 @@ const CLIENTS_DATA = [
     "cert": "Industrial Valve Standards",
     "partnership": "Laboratory testing equipment, Caltronics analytical instrumentation, and regular calibration compliance supplied by ALL IN ONE TECHNOLOGY.",
     "websiteUrl": "https://www.google.com/search?q=Durable+Industrial+Valves+Rajkot",
-    "logo": "assets/clients/client_logo_150.png"
+    "logo": "assets/clients/client_logo_150.jpeg"
   },
   {
     "id": 151,
@@ -1519,7 +1519,7 @@ const CLIENTS_DATA = [
     "cert": "Plumbing & Drainage Pipes",
     "partnership": "Laboratory testing equipment, Caltronics analytical instrumentation, and regular calibration compliance supplied by ALL IN ONE TECHNOLOGY.",
     "websiteUrl": "https://www.google.com/search?q=Aquapipe+Solutions+Gujarat",
-    "logo": "assets/clients/client_logo_152.png"
+    "logo": "assets/clients/client_logo_152.jpeg"
   },
   {
     "id": 153,
@@ -1529,7 +1529,7 @@ const CLIENTS_DATA = [
     "cert": "Commercial Flush Doors",
     "partnership": "Laboratory testing equipment, Caltronics analytical instrumentation, and regular calibration compliance supplied by ALL IN ONE TECHNOLOGY.",
     "websiteUrl": "https://www.google.com/search?q=Kohinoor+Plywood+LLP+#153+Gujarat,+India",
-    "logo": "assets/clients/client_logo_153.png"
+    "logo": "assets/clients/client_logo_153.jpeg"
   },
   {
     "id": 154,
@@ -1539,7 +1539,7 @@ const CLIENTS_DATA = [
     "cert": "Porcelain Tile Standards",
     "partnership": "Laboratory testing equipment, Caltronics analytical instrumentation, and regular calibration compliance supplied by ALL IN ONE TECHNOLOGY.",
     "websiteUrl": "https://www.google.com/search?q=Clayrock+Ceramics+Morbi",
-    "logo": "assets/clients/client_logo_154.png"
+    "logo": "assets/clients/client_logo_154.jpeg"
   },
   {
     "id": 155,
@@ -1549,7 +1549,7 @@ const CLIENTS_DATA = [
     "cert": "Industrial Solvents",
     "partnership": "Laboratory testing equipment, Caltronics analytical instrumentation, and regular calibration compliance supplied by ALL IN ONE TECHNOLOGY.",
     "websiteUrl": "https://www.google.com/search?q=Supreme+Chemical+Lab+#155+Morbi,+Gujarat",
-    "logo": "assets/clients/client_logo_155.png"
+    "logo": "assets/clients/client_logo_155.jpeg"
   },
   {
     "id": 156,
@@ -1569,7 +1569,7 @@ const CLIENTS_DATA = [
     "cert": "Wall Tiles Standards",
     "partnership": "Laboratory testing equipment, Caltronics analytical instrumentation, and regular calibration compliance supplied by ALL IN ONE TECHNOLOGY.",
     "websiteUrl": "https://www.google.com/search?q=Kenhok+Ceramics+Morbi",
-    "logo": "assets/clients/client_logo_157.png"
+    "logo": "assets/clients/client_logo_157.jpeg"
   },
   {
     "id": 158,
@@ -1599,7 +1599,7 @@ const CLIENTS_DATA = [
     "cert": "High Pressure Laminates",
     "partnership": "Laboratory testing equipment, Caltronics analytical instrumentation, and regular calibration compliance supplied by ALL IN ONE TECHNOLOGY.",
     "websiteUrl": "https://www.google.com/search?q=Om+Sai+Veneers+&+Laminates+#160+Morbi,+Gujarat",
-    "logo": "assets/clients/client_logo_160.png"
+    "logo": "assets/clients/client_logo_160.jpeg"
   },
   {
     "id": 161,
@@ -1629,7 +1629,7 @@ const CLIENTS_DATA = [
     "cert": "Industrial Packaging Solutions",
     "partnership": "Laboratory testing equipment, Caltronics analytical instrumentation, and regular calibration compliance supplied by ALL IN ONE TECHNOLOGY.",
     "websiteUrl": "https://www.google.com/search?q=Surgent+Poly+Pack+Morbi",
-    "logo": "assets/clients/client_logo_163.png"
+    "logo": "assets/clients/client_logo_163.jpeg"
   },
   {
     "id": 164,
@@ -1639,7 +1639,7 @@ const CLIENTS_DATA = [
     "cert": "Agro Food Processing",
     "partnership": "Laboratory testing equipment, Caltronics analytical instrumentation, and regular calibration compliance supplied by ALL IN ONE TECHNOLOGY.",
     "websiteUrl": "https://www.google.com/search?q=Navrang+Food+&+Spices+#164+Gujarat,+India",
-    "logo": "assets/clients/client_logo_164.png"
+    "logo": "assets/clients/client_logo_164.jpeg"
   },
   {
     "id": 165,
@@ -1649,7 +1649,7 @@ const CLIENTS_DATA = [
     "cert": "Quality Assurance",
     "partnership": "Laboratory testing equipment, Caltronics analytical instrumentation, and regular calibration compliance supplied by ALL IN ONE TECHNOLOGY.",
     "websiteUrl": "https://www.google.com/search?q=Entity+Ceramic+Morbi",
-    "logo": "assets/clients/client_logo_165.png"
+    "logo": "assets/clients/client_logo_165.jpeg"
   },
   {
     "id": 166,
@@ -1659,7 +1659,7 @@ const CLIENTS_DATA = [
     "cert": "HDPE & Woven Sacks",
     "partnership": "Laboratory testing equipment, Caltronics analytical instrumentation, and regular calibration compliance supplied by ALL IN ONE TECHNOLOGY.",
     "websiteUrl": "https://www.google.com/search?q=Maruti+Polyplast+Industries+#166+Morbi,+Gujarat",
-    "logo": "assets/clients/client_logo_166.png"
+    "logo": "assets/clients/client_logo_166.jpeg"
   },
   {
     "id": 167,
@@ -1669,7 +1669,7 @@ const CLIENTS_DATA = [
     "cert": "ISI Plywood Standards",
     "partnership": "Laboratory testing equipment, Caltronics analytical instrumentation, and regular calibration compliance supplied by ALL IN ONE TECHNOLOGY.",
     "websiteUrl": "https://www.google.com/search?q=Radhe+Plywood+&+Boards+#167+Gujarat,+India",
-    "logo": "assets/clients/client_logo_167.png"
+    "logo": "assets/clients/client_logo_167.jpeg"
   },
   {
     "id": 168,
@@ -1689,7 +1689,7 @@ const CLIENTS_DATA = [
     "cert": "Inorganic Pigments",
     "partnership": "Laboratory testing equipment, Caltronics analytical instrumentation, and regular calibration compliance supplied by ALL IN ONE TECHNOLOGY.",
     "websiteUrl": "https://www.google.com/search?q=Shivam+Chemicals+&+Colors+#169+Ahmedabad,+Gujarat",
-    "logo": "assets/clients/client_logo_169.png"
+    "logo": "assets/clients/client_logo_169.jpeg"
   },
   {
     "id": 170,
@@ -1699,7 +1699,7 @@ const CLIENTS_DATA = [
     "cert": "Precision Machinery",
     "partnership": "Laboratory testing equipment, Caltronics analytical instrumentation, and regular calibration compliance supplied by ALL IN ONE TECHNOLOGY.",
     "websiteUrl": "https://www.google.com/search?q=Shakti+Engineering+Works+#170+Rajkot,+Gujarat",
-    "logo": "assets/clients/client_logo_170.png"
+    "logo": "assets/clients/client_logo_170.jpeg"
   },
   {
     "id": 171,
@@ -1709,7 +1709,7 @@ const CLIENTS_DATA = [
     "cert": "Large Format Tile Standards",
     "partnership": "Laboratory testing equipment, Caltronics analytical instrumentation, and regular calibration compliance supplied by ALL IN ONE TECHNOLOGY.",
     "websiteUrl": "https://www.google.com/search?q=Antique+Vitrified+Tiles+Morbi",
-    "logo": "assets/clients/client_logo_171.png"
+    "logo": "assets/clients/client_logo_171.jpeg"
   },
   {
     "id": 172,
@@ -1729,7 +1729,7 @@ const CLIENTS_DATA = [
     "cert": "Edible Salt & Chemfood Standards",
     "partnership": "Laboratory testing equipment, Caltronics analytical instrumentation, and regular calibration compliance supplied by ALL IN ONE TECHNOLOGY.",
     "websiteUrl": "https://www.google.com/search?q=Koteshwar+Chemfood+Gandhidham",
-    "logo": "assets/clients/client_logo_173.png"
+    "logo": "assets/clients/client_logo_173.jpeg"
   },
   {
     "id": 174,
@@ -1769,7 +1769,7 @@ const CLIENTS_DATA = [
     "cert": "Switchgear Standards",
     "partnership": "Laboratory testing equipment, Caltronics analytical instrumentation, and regular calibration compliance supplied by ALL IN ONE TECHNOLOGY.",
     "websiteUrl": "https://www.google.com/search?q=Saurashtra+Electrical+Controls+#177+Rajkot,+Gujarat",
-    "logo": "assets/clients/client_logo_177.png"
+    "logo": "assets/clients/client_logo_177.jpeg"
   },
   {
     "id": 178,
@@ -1789,7 +1789,7 @@ const CLIENTS_DATA = [
     "cert": "RCC Hume Pipes",
     "partnership": "Laboratory testing equipment, Caltronics analytical instrumentation, and regular calibration compliance supplied by ALL IN ONE TECHNOLOGY.",
     "websiteUrl": "https://www.google.com/search?q=Vardhman+Hume+Pipe+Co.+#179+Gujarat,+India",
-    "logo": "assets/clients/client_logo_179.png"
+    "logo": "assets/clients/client_logo_179.jpeg"
   },
   {
     "id": 180,
@@ -1819,7 +1819,7 @@ const CLIENTS_DATA = [
     "cert": "Double Charge Vitrified",
     "partnership": "Laboratory testing equipment, Caltronics analytical instrumentation, and regular calibration compliance supplied by ALL IN ONE TECHNOLOGY.",
     "websiteUrl": "https://www.google.com/search?q=Crown+Ceramic+Industries+#182+Morbi,+Gujarat",
-    "logo": "assets/clients/client_logo_182.png"
+    "logo": "assets/clients/client_logo_182.jpeg"
   },
   {
     "id": 183,
@@ -1839,7 +1839,7 @@ const CLIENTS_DATA = [
     "cert": "Decorative Laminates",
     "partnership": "Laboratory testing equipment, Caltronics analytical instrumentation, and regular calibration compliance supplied by ALL IN ONE TECHNOLOGY.",
     "websiteUrl": "https://www.google.com/search?q=Om+Laminates+Gujarat",
-    "logo": "assets/clients/client_logo_184.png"
+    "logo": "assets/clients/client_logo_184.jpeg"
   },
   {
     "id": 185,
@@ -1859,7 +1859,7 @@ const CLIENTS_DATA = [
     "cert": "Industrial Chemicals",
     "partnership": "Laboratory testing equipment, Caltronics analytical instrumentation, and regular calibration compliance supplied by ALL IN ONE TECHNOLOGY.",
     "websiteUrl": "https://www.google.com/search?q=Griffon+Chemico+Industries+Morbi",
-    "logo": "assets/clients/client_logo_186.png"
+    "logo": "assets/clients/client_logo_186.jpeg"
   },
   {
     "id": 187,
@@ -1879,7 +1879,7 @@ const CLIENTS_DATA = [
     "cert": "Packaged Drinking Water",
     "partnership": "Laboratory testing equipment, Caltronics analytical instrumentation, and regular calibration compliance supplied by ALL IN ONE TECHNOLOGY.",
     "websiteUrl": "https://www.google.com/search?q=Spring+Water+Beverages+Gujarat",
-    "logo": "assets/clients/client_logo_188.png"
+    "logo": "assets/clients/client_logo_188.jpeg"
   },
   {
     "id": 189,
@@ -1899,7 +1899,7 @@ const CLIENTS_DATA = [
     "cert": "Ceramic Testing",
     "partnership": "Laboratory testing equipment, Caltronics analytical instrumentation, and regular calibration compliance supplied by ALL IN ONE TECHNOLOGY.",
     "websiteUrl": "https://www.google.com/search?q=Vitrified+Tiles+Bathware+Morbi",
-    "logo": "assets/clients/client_logo_190.png"
+    "logo": "assets/clients/client_logo_190.jpeg"
   },
   {
     "id": 191,
@@ -1929,7 +1929,7 @@ const CLIENTS_DATA = [
     "cert": "Pre-laminated Boards",
     "partnership": "Laboratory testing equipment, Caltronics analytical instrumentation, and regular calibration compliance supplied by ALL IN ONE TECHNOLOGY.",
     "websiteUrl": "https://www.google.com/search?q=Divine+Board+Private+Limited",
-    "logo": "assets/clients/client_logo_193.png"
+    "logo": "assets/clients/client_logo_193.jpeg"
   },
   {
     "id": 194,
@@ -1959,7 +1959,7 @@ const CLIENTS_DATA = [
     "cert": "Ceramic Wall Tiles",
     "partnership": "Laboratory testing equipment, Caltronics analytical instrumentation, and regular calibration compliance supplied by ALL IN ONE TECHNOLOGY.",
     "websiteUrl": "https://www.google.com/search?q=Ramay+Ceramics+Morbi",
-    "logo": "assets/clients/client_logo_196.png"
+    "logo": "assets/clients/client_logo_196.jpeg"
   },
   {
     "id": 197,
@@ -1999,7 +1999,7 @@ const CLIENTS_DATA = [
     "cert": "Engineered Wood",
     "partnership": "Laboratory testing equipment, Caltronics analytical instrumentation, and regular calibration compliance supplied by ALL IN ONE TECHNOLOGY.",
     "websiteUrl": "https://www.google.com/search?q=Saurashtra+Wood+Industries",
-    "logo": "assets/clients/client_logo_200.png"
+    "logo": "assets/clients/client_logo_200.jpeg"
   },
   {
     "id": 201,
@@ -2023,10 +2023,10 @@ const CLIENTS_DATA = [
   },
   {
     "id": 203,
-    "name": "Royal Touch\u00e9 Luxury Laminates",
+    "name": "Royal Touché Luxury Laminates",
     "industry": "Plywood & Building Materials",
     "location": "Morbi / National",
-    "cert": "National Luxury Brand \u2022 ISO Certified",
+    "cert": "National Luxury Brand • ISO Certified",
     "partnership": "Laboratory testing equipment, Caltronics analytical instrumentation, and regular calibration compliance supplied by ALL IN ONE TECHNOLOGY.",
     "websiteUrl": "https://royaltouche.com",
     "logo": "assets/clients/client_logo_203.jpeg"
@@ -2119,7 +2119,7 @@ const CLIENTS_DATA = [
     "cert": "Ceramic Sanitaryware",
     "partnership": "Laboratory testing equipment, Caltronics analytical instrumentation, and regular calibration compliance supplied by ALL IN ONE TECHNOLOGY.",
     "websiteUrl": "https://www.google.com/search?q=Dora+Sanitaryware+Morbi",
-    "logo": "assets/clients/client_logo_212.png"
+    "logo": "assets/clients/client_logo_212.jpeg"
   },
   {
     "id": 213,
@@ -2169,7 +2169,7 @@ const CLIENTS_DATA = [
     "cert": "Vitrified Porcelain Tiles",
     "partnership": "Laboratory testing equipment, Caltronics analytical instrumentation, and regular calibration compliance supplied by ALL IN ONE TECHNOLOGY.",
     "websiteUrl": "https://www.google.com/search?q=Sun+City+Vitrified+Tiles+#217+Morbi,+Gujarat",
-    "logo": "assets/clients/client_logo_217.png"
+    "logo": "assets/clients/client_logo_217.jpeg"
   },
   {
     "id": 218,
@@ -2199,7 +2199,7 @@ const CLIENTS_DATA = [
     "cert": "Agro Food Processing",
     "partnership": "Laboratory testing equipment, Caltronics analytical instrumentation, and regular calibration compliance supplied by ALL IN ONE TECHNOLOGY.",
     "websiteUrl": "https://www.google.com/search?q=Navrang+Food+&+Spices+#220+Gujarat,+India",
-    "logo": "assets/clients/client_logo_220.png"
+    "logo": "assets/clients/client_logo_220.jpeg"
   },
   {
     "id": 221,
@@ -2219,7 +2219,7 @@ const CLIENTS_DATA = [
     "cert": "Factory Automation",
     "partnership": "Laboratory testing equipment, Caltronics analytical instrumentation, and regular calibration compliance supplied by ALL IN ONE TECHNOLOGY.",
     "websiteUrl": "https://www.google.com/search?q=Milotech+Automation+Rajkot",
-    "logo": "assets/clients/client_logo_222.png"
+    "logo": "assets/clients/client_logo_222.jpeg"
   },
   {
     "id": 223,
@@ -2239,7 +2239,7 @@ const CLIENTS_DATA = [
     "cert": "Commercial Plywood",
     "partnership": "Laboratory testing equipment, Caltronics analytical instrumentation, and regular calibration compliance supplied by ALL IN ONE TECHNOLOGY.",
     "websiteUrl": "https://www.google.com/search?q=Shilpwood+Plywood+Gujarat",
-    "logo": "assets/clients/client_logo_224.png"
+    "logo": "assets/clients/client_logo_224.jpeg"
   },
   {
     "id": 225,
@@ -2249,7 +2249,7 @@ const CLIENTS_DATA = [
     "cert": "Inorganic Pigments",
     "partnership": "Laboratory testing equipment, Caltronics analytical instrumentation, and regular calibration compliance supplied by ALL IN ONE TECHNOLOGY.",
     "websiteUrl": "https://www.google.com/search?q=Shivam+Chemicals+&+Colors+#225+Ahmedabad,+Gujarat",
-    "logo": "assets/clients/client_logo_225.png"
+    "logo": "assets/clients/client_logo_225.jpeg"
   },
   {
     "id": 226,
@@ -2259,7 +2259,7 @@ const CLIENTS_DATA = [
     "cert": "Precision Machinery",
     "partnership": "Laboratory testing equipment, Caltronics analytical instrumentation, and regular calibration compliance supplied by ALL IN ONE TECHNOLOGY.",
     "websiteUrl": "https://www.google.com/search?q=Shakti+Engineering+Works+#226+Rajkot,+Gujarat",
-    "logo": "assets/clients/client_logo_226.png"
+    "logo": "assets/clients/client_logo_226.jpeg"
   },
   {
     "id": 227,
@@ -2269,14 +2269,14 @@ const CLIENTS_DATA = [
     "cert": "IS 14543 BIS Standards",
     "partnership": "Laboratory testing equipment, Caltronics analytical instrumentation, and regular calibration compliance supplied by ALL IN ONE TECHNOLOGY.",
     "websiteUrl": "https://www.google.com/search?q=Tirth+Pure+Beverages+#227+Morbi,+Gujarat",
-    "logo": "assets/clients/client_logo_227.png"
+    "logo": "assets/clients/client_logo_227.jpeg"
   },
   {
     "id": 228,
     "name": "Sherashiya (Pty) Ltd.",
     "industry": "Ceramics & Tiles",
     "location": "Gaborone, Botswana",
-    "cert": "International Corporate Client \u2022 African Market",
+    "cert": "International Corporate Client • African Market",
     "partnership": "Laboratory testing equipment, Caltronics analytical instrumentation, and regular calibration compliance supplied by ALL IN ONE TECHNOLOGY.",
     "websiteUrl": "https://www.google.com/search?q=Sherashiya+Pty+Ltd+Gaborone+Botswana",
     "logo": "assets/clients/client_logo_228.jpeg"
@@ -2289,7 +2289,7 @@ const CLIENTS_DATA = [
     "cert": "Plastic Packaging",
     "partnership": "Laboratory testing equipment, Caltronics analytical instrumentation, and regular calibration compliance supplied by ALL IN ONE TECHNOLOGY.",
     "websiteUrl": "https://www.google.com/search?q=Patel+Polymers+&+Packaging+#229+Morbi,+Gujarat",
-    "logo": "assets/clients/client_logo_229.png"
+    "logo": "assets/clients/client_logo_229.jpeg"
   },
   {
     "id": 230,
@@ -2329,7 +2329,7 @@ const CLIENTS_DATA = [
     "cert": "Precast Building Components",
     "partnership": "Laboratory testing equipment, Caltronics analytical instrumentation, and regular calibration compliance supplied by ALL IN ONE TECHNOLOGY.",
     "websiteUrl": "https://www.google.com/search?q=Cemseat+Concrete+Solutions",
-    "logo": "assets/clients/client_logo_233.png"
+    "logo": "assets/clients/client_logo_233.jpeg"
   },
   {
     "id": 234,
@@ -2346,7 +2346,7 @@ const CLIENTS_DATA = [
     "name": "Kajaria Eternity (Kajaria Ceramics)",
     "industry": "Ceramics & Tiles",
     "location": "Morbi / National",
-    "cert": "India's No. 1 Tile Brand \u2022 Global Footprint",
+    "cert": "India's No. 1 Tile Brand • Global Footprint",
     "partnership": "Laboratory testing equipment, Caltronics analytical instrumentation, and regular calibration compliance supplied by ALL IN ONE TECHNOLOGY.",
     "websiteUrl": "https://www.kajariaceramics.com",
     "logo": "assets/clients/client_logo_235.jpeg"
@@ -2359,7 +2359,7 @@ const CLIENTS_DATA = [
     "cert": "Corrugated & Poly Packaging",
     "partnership": "Laboratory testing equipment, Caltronics analytical instrumentation, and regular calibration compliance supplied by ALL IN ONE TECHNOLOGY.",
     "websiteUrl": "https://www.google.com/search?q=Swastik+Packaging+Solutions+#236+Morbi,+Gujarat",
-    "logo": "assets/clients/client_logo_236.png"
+    "logo": "assets/clients/client_logo_236.jpeg"
   },
   {
     "id": 237,
@@ -2379,7 +2379,7 @@ const CLIENTS_DATA = [
     "cert": "Double Charge Vitrified",
     "partnership": "Laboratory testing equipment, Caltronics analytical instrumentation, and regular calibration compliance supplied by ALL IN ONE TECHNOLOGY.",
     "websiteUrl": "https://www.google.com/search?q=Crown+Ceramic+Industries+#238+Morbi,+Gujarat",
-    "logo": "assets/clients/client_logo_238.png"
+    "logo": "assets/clients/client_logo_238.jpeg"
   },
   {
     "id": 239,
@@ -2462,5 +2462,3 @@ const CLIENTS_DATA = [
     "logo": "assets/clients/client_logo_246.jpeg"
   }
 ];
-
-if (typeof module !== 'undefined') module.exports = CLIENTS_DATA;
