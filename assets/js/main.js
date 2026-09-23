@@ -7,6 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initStickyHeader();
   initScrollReveal();
   initHeroCarousel();
+  initLandingMobileHeroVideo();
   initCounters();
   initMobileMenu();
   initModals();
@@ -801,3 +802,75 @@ function initOffices() {
 window.showProductSpecs = showProductSpecs;
 window.showClientDetails = showClientDetails;
 window.initOffices = initOffices;
+
+// Landing Page Mobile Hero Video Segment Controller (11s -> 20s)
+function initLandingMobileHeroVideo() {
+  const heroSection = document.querySelector('.hero-section.has-bg-video#home, .hero-section.has-bg-video');
+  if (!heroSection) return;
+
+  const video = heroSection.querySelector('.hero-bg-video');
+  if (!video) return;
+
+  const MOBILE_START = 11;
+  const MOBILE_END = 20;
+  const MOBILE_BREAKPOINT = 768;
+
+  function isMobile() {
+    return window.innerWidth <= MOBILE_BREAKPOINT;
+  }
+
+  let isMobileState = isMobile();
+
+  function handleTimeUpdate() {
+    if (isMobile()) {
+      if (video.currentTime >= MOBILE_END || video.currentTime < MOBILE_START - 0.5) {
+        video.currentTime = MOBILE_START;
+        video.play().catch(() => {});
+      }
+    }
+  }
+
+  function syncVideoState() {
+    const currentlyMobile = isMobile();
+    if (currentlyMobile) {
+      if (video.currentTime < MOBILE_START || video.currentTime >= MOBILE_END) {
+        video.currentTime = MOBILE_START;
+      }
+      video.play().catch(() => {});
+    } else {
+      if (isMobileState) {
+        video.currentTime = 0;
+        video.play().catch(() => {});
+      }
+    }
+    isMobileState = currentlyMobile;
+  }
+
+  video.addEventListener('timeupdate', handleTimeUpdate);
+
+  video.addEventListener('loadedmetadata', () => {
+    syncVideoState();
+  });
+
+  if (video.readyState >= 1) {
+    syncVideoState();
+  }
+
+  const handleFirstTouch = () => {
+    if (isMobile() && video.paused) {
+      if (video.currentTime < MOBILE_START || video.currentTime >= MOBILE_END) {
+        video.currentTime = MOBILE_START;
+      }
+      video.play().catch(() => {});
+    }
+    window.removeEventListener('touchstart', handleFirstTouch);
+  };
+  window.addEventListener('touchstart', handleFirstTouch, { passive: true, once: true });
+
+  let resizeTimer;
+  window.addEventListener('resize', () => {
+    clearTimeout(resizeTimer);
+    resizeTimer = setTimeout(syncVideoState, 200);
+  }, { passive: true });
+}
+
