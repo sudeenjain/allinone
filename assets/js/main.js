@@ -803,7 +803,7 @@ window.showProductSpecs = showProductSpecs;
 window.showClientDetails = showClientDetails;
 window.initOffices = initOffices;
 
-// Landing Page Mobile Hero Video Segment Controller (11s -> 20s)
+// Landing Page Mobile Hero Video Controller
 function initLandingMobileHeroVideo() {
   const heroSection = document.querySelector('.hero-section.has-bg-video#home, .hero-section.has-bg-video');
   if (!heroSection) return;
@@ -811,56 +811,39 @@ function initLandingMobileHeroVideo() {
   const video = heroSection.querySelector('.hero-bg-video');
   if (!video) return;
 
-  const MOBILE_START = 11;
-  const MOBILE_END = 20;
   const MOBILE_BREAKPOINT = 768;
+  const MOBILE_SRC = 'assets/videos/hero-landing-mobile.mp4';
+  const DESKTOP_SRC = 'assets/videos/hero-landing.mp4';
 
   function isMobile() {
     return window.innerWidth <= MOBILE_BREAKPOINT;
   }
 
-  let isMobileState = isMobile();
+  let currentLoadedMode = null; // 'mobile' or 'desktop'
 
-  function handleTimeUpdate() {
-    if (isMobile()) {
-      if (video.currentTime >= MOBILE_END || video.currentTime < MOBILE_START - 0.5) {
-        video.currentTime = MOBILE_START;
-        video.play().catch(() => {});
-      }
-    }
-  }
+  function syncVideoSource() {
+    const mobileNow = isMobile();
+    const targetMode = mobileNow ? 'mobile' : 'desktop';
+    const targetSrc = mobileNow ? MOBILE_SRC : DESKTOP_SRC;
 
-  function syncVideoState() {
-    const currentlyMobile = isMobile();
-    if (currentlyMobile) {
-      if (video.currentTime < MOBILE_START || video.currentTime >= MOBILE_END) {
-        video.currentTime = MOBILE_START;
+    if (currentLoadedMode !== targetMode) {
+      currentLoadedMode = targetMode;
+      if (!video.src || !video.src.includes(targetSrc)) {
+        video.src = targetSrc;
+        video.load();
       }
       video.play().catch(() => {});
-    } else {
-      if (isMobileState) {
-        video.currentTime = 0;
-        video.play().catch(() => {});
-      }
     }
-    isMobileState = currentlyMobile;
   }
 
-  video.addEventListener('timeupdate', handleTimeUpdate);
+  syncVideoSource();
 
   video.addEventListener('loadedmetadata', () => {
-    syncVideoState();
+    video.play().catch(() => {});
   });
 
-  if (video.readyState >= 1) {
-    syncVideoState();
-  }
-
   const handleFirstTouch = () => {
-    if (isMobile() && video.paused) {
-      if (video.currentTime < MOBILE_START || video.currentTime >= MOBILE_END) {
-        video.currentTime = MOBILE_START;
-      }
+    if (video.paused) {
       video.play().catch(() => {});
     }
     window.removeEventListener('touchstart', handleFirstTouch);
@@ -870,7 +853,7 @@ function initLandingMobileHeroVideo() {
   let resizeTimer;
   window.addEventListener('resize', () => {
     clearTimeout(resizeTimer);
-    resizeTimer = setTimeout(syncVideoState, 200);
+    resizeTimer = setTimeout(syncVideoSource, 200);
   }, { passive: true });
 }
 
