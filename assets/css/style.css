@@ -2722,6 +2722,45 @@ h1, h2, h3, h4, h5, h6 {
   box-shadow: 0 30px 70px -20px rgba(0, 0, 0, 0.55), inset 0 1px 0 rgba(255, 255, 255, 0.08);
 }
 
+/* High-contrast ultra-visible hero text rules for video background */
+.hero-bg-video ~ .container .hero-title,
+.hero-section.has-bg-video .hero-title,
+.hero-section.has-bg-video h1.hero-title {
+  color: #FFFFFF !important;
+  text-shadow: 0 2px 16px rgba(0, 0, 0, 0.85) !important;
+}
+
+.hero-bg-video ~ .container .hero-subtitle,
+.hero-section.has-bg-video .hero-subtitle,
+.hero-section.has-bg-video h3.hero-subtitle {
+  color: #38BDF8 !important;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.75) !important;
+}
+
+.hero-bg-video ~ .container .hero-text,
+.hero-section.has-bg-video .hero-text,
+.hero-section.has-bg-video p.hero-text {
+  color: #F1F5F9 !important;
+  text-shadow: 0 1px 8px rgba(0, 0, 0, 0.75) !important;
+}
+
+.hero-bg-video ~ .container .hero-badge,
+.hero-section.has-bg-video .hero-badge {
+  background: rgba(6, 42, 67, 0.85) !important;
+  border: 1px solid rgba(56, 189, 248, 0.5) !important;
+  color: #E0F2FE !important;
+  -webkit-backdrop-filter: blur(12px) !important;
+  backdrop-filter: blur(12px) !important;
+  box-shadow: 0 0 20px rgba(14, 165, 233, 0.3) !important;
+}
+
+.hero-section.has-bg-video .text-gradient {
+  background: linear-gradient(135deg, #38BDF8 0%, #60A5FA 50%, #93C5FD 100%) !important;
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+  display: inline-block !important;
+}
+
 /* Mobile-specific hero video & layout adjustments (<= 768px) */
 @media (max-width: 768px) {
   .hero-section.has-bg-video {
@@ -2741,7 +2780,7 @@ h1, h2, h3, h4, h5, h6 {
     width: 100%;
     height: 100%;
     object-fit: cover !important;
-    object-position: 58% center !important; /* Preserves laboratory equipment & microscope visibility during 11-20s segment */
+    object-position: center center !important;
     z-index: 0;
     pointer-events: none;
   }
@@ -2752,27 +2791,28 @@ h1, h2, h3, h4, h5, h6 {
     width: 100%;
     height: 100%;
     background: linear-gradient(180deg,
-        rgba(6, 30, 49, 0.72) 0%,
-        rgba(6, 30, 49, 0.45) 45%,
-        rgba(6, 30, 49, 0.78) 100%) !important;
+        rgba(6, 30, 49, 0.78) 0%,
+        rgba(6, 30, 49, 0.55) 45%,
+        rgba(6, 30, 49, 0.82) 100%) !important;
     z-index: 1;
     pointer-events: none;
   }
 
   .hero-bg-video ~ .container .hero-content-col {
-    background: rgba(8, 32, 50, 0.62) !important;
-    border: 1px solid rgba(56, 189, 248, 0.30) !important;
+    background: rgba(6, 26, 42, 0.75) !important;
+    border: 1px solid rgba(56, 189, 248, 0.35) !important;
     border-radius: 20px !important;
     padding: 1.5rem 1.25rem !important;
-    -webkit-backdrop-filter: blur(4px);
-    backdrop-filter: blur(4px);
-    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+    -webkit-backdrop-filter: blur(8px) !important;
+    backdrop-filter: blur(8px) !important;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6);
   }
 
-  /* Mobile Hero Typography Fix (Left-aligned, normal word spacing) */
+  /* Mobile Hero Typography Fix (Left-aligned, bright white, normal word spacing) */
   .hero-bg-video ~ .container .hero-text,
   .hero-section .hero-text,
   .hero-text {
+    color: #F1F5F9 !important;
     text-align: left !important;
     word-spacing: normal !important;
     letter-spacing: normal !important;
@@ -2786,11 +2826,13 @@ h1, h2, h3, h4, h5, h6 {
   .hero-text,
   .hero-section .hero-text,
   .hero-bg-video ~ .container .hero-text {
+    color: #F1F5F9 !important;
     text-align: left !important;
     word-spacing: normal !important;
     letter-spacing: normal !important;
   }
 }
+
 
 
 
