@@ -120,10 +120,13 @@
 /* =========================================================
    HERO BACKGROUND VIDEO, OVERLAY & DIVISION 01 TREATMENT
    ========================================================= */
+/* Division 01 Soft Overlay: Light top/bottom veil to keep video clearly visible around glass panel */
 .hero-video-section {
   position: relative;
   overflow: hidden;
   min-height: 460px;
+  padding-top: 4.5rem;
+  padding-bottom: 4.5rem;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -140,77 +143,46 @@
   pointer-events: none;
 }
 
-/* Division 01 Dark Blue Overlay: Strong behind text, lighter toward edges */
 .hero-video-overlay {
   position: absolute;
   inset: 0;
   width: 100%;
   height: 100%;
-  background: radial-gradient(ellipse at 50% 50%, rgba(6, 42, 67, 0.72) 0%, rgba(3, 27, 45, 0.84) 100%),
-              linear-gradient(180deg, rgba(6, 42, 67, 0.5) 0%, rgba(3, 27, 45, 0.8) 100%);
-  -webkit-backdrop-filter: blur(1.5px);
-  backdrop-filter: blur(1.5px);
+  background: linear-gradient(180deg,
+      rgba(3, 27, 45, 0.55) 0%,
+      rgba(3, 27, 45, 0.12) 22%,
+      rgba(3, 27, 45, 0.12) 78%,
+      rgba(3, 27, 45, 0.55) 100%);
   z-index: 2;
   pointer-events: none;
+}
+
+/* Crystal clear video content panel: 60% translucent dark tint without backdrop blur for crisp video visibility */
+.hero-content-panel {
+  background: rgba(6, 42, 67, 0.65);
+  border: 1px solid rgba(56, 189, 248, 0.28);
+  border-radius: 28px;
+  padding: 2.75rem 2.25rem;
+  -webkit-backdrop-filter: none;
+  backdrop-filter: none;
+  box-shadow: 0 30px 70px -20px rgba(0, 0, 0, 0.55), inset 0 1px 0 rgba(255, 255, 255, 0.08);
+}
+
+@media (max-width: 640px) {
+  .hero-video-section {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
+
+  .hero-content-panel {
+    padding: 1.75rem 1.25rem;
+    border-radius: 20px;
+  }
 }
 
 .hero-video-section .relative.z-10 {
   position: relative;
   z-index: 10;
-}
-
-/* Division 01 Typography: White Heading & Light Blue-White Paragraph */
-.hero-video-section h1 {
-  color: #FFFFFF !important;
-  font-weight: 800;
-  text-shadow: 0 2px 14px rgba(0, 0, 0, 0.45);
-}
-
-.hero-video-section .hero-text {
-  color: #DCEFFF !important;
-  font-weight: 400;
-  line-height: 1.8;
-  text-shadow: 0 1px 6px rgba(0, 0, 0, 0.4);
-}
-
-/* Division 01 Buttons: Primary Cyan/Blue & Secondary Crisp White */
-.hero-video-section .hero-btn {
-  background: #0EA5E9 !important;
-  color: #FFFFFF !important;
-  border: 1px solid rgba(255, 255, 255, 0.25);
-  box-shadow: 0 8px 25px rgba(14, 165, 233, 0.4);
-  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
-}
-
-.hero-video-section .hero-btn:hover {
-  background: #0284C7 !important;
-  transform: translateY(-2px);
-  box-shadow: 0 12px 30px rgba(14, 165, 233, 0.55);
-}
-
-.hero-video-section .hero-btn-outline {
-  background: #FFFFFF !important;
-  color: #0877C9 !important;
-  border: 1px solid rgba(255, 255, 255, 0.9);
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
-  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
-}
-
-.hero-video-section .hero-btn-outline:hover {
-  background: #F0F9FF !important;
-  color: #0284C7 !important;
-  transform: translateY(-2px);
-  box-shadow: 0 10px 25px rgba(255, 255, 255, 0.3);
-}
-
-/* Screens under 768px wide: hide video entirely and show static background image */
-@media (max-width: 767.98px) {
-  .hero-bg-video {
-    display: none !important;
-  }
-  .hero-video-section {
-    background-image: url('../assets/videos/hero-certification-poster.jpg');
-  }
 }
 
 /* =========================================================

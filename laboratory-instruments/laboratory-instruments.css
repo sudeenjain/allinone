@@ -307,16 +307,15 @@
   pointer-events: none;
 }
 
-/* Glass content panel: sits over the video so text stays readable while the
-   footage remains sharp and unobscured around its edges. */
+/* Crystal clear video content panel: 60% translucent dark tint without backdrop blur for crisp video visibility */
 .hero-content-panel {
-  background: rgba(5, 32, 40, 0.42);
-  border: 1px solid rgba(94, 234, 212, 0.22);
+  background: rgba(5, 32, 40, 0.65);
+  border: 1px solid rgba(94, 234, 212, 0.28);
   border-radius: 28px;
   padding: 2.75rem 2.25rem;
-  -webkit-backdrop-filter: blur(16px) saturate(150%);
-  backdrop-filter: blur(16px) saturate(150%);
-  box-shadow: 0 30px 70px -20px rgba(0, 0, 0, 0.55), inset 0 1px 0 rgba(255, 255, 255, 0.07);
+  -webkit-backdrop-filter: none;
+  backdrop-filter: none;
+  box-shadow: 0 30px 70px -20px rgba(0, 0, 0, 0.55), inset 0 1px 0 rgba(255, 255, 255, 0.08);
 }
 
 @media (max-width: 640px) {
@@ -393,12 +392,8 @@
   color: #A78BFA !important;
 }
 
-/* Screens under 768px wide: hide video entirely and show static background image */
+/* Mobile media query layout adjustment */
 @media (max-width: 767.98px) {
-  .hero-bg-video {
-    display: none !important;
-  }
-
   .hero-video-section {
     background-image: url('../assets/videos/hero-instruments-poster.jpg');
   }

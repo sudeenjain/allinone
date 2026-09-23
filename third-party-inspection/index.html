@@ -52,12 +52,24 @@
   <div class="top-bar">
     <div class="container top-bar-inner">
       <div class="top-bar-left">
-        <span class="badge-pulse">Turn-Key Project & Inspection Experts</span>
-        <span class="text-slate-500 font-medium">GSTIN: <strong class="text-blue-600 font-mono">24AHRPD0104C1Z6</strong></span>
+        <span class="top-bar-badge">
+          <i data-lucide="award" class="w-4 h-4 text-blue-600"></i>
+          <span>Established 2004</span>
+          <span class="top-bar-sep">|</span>
+          <span class="text-blue-600 font-bold">20+ Years of Excellence</span>
+        </span>
+        <span class="top-bar-divider hidden md:inline-block"></span>
+        <span class="hidden md:inline-block text-slate-500 font-medium">GSTIN: <strong class="text-blue-600 font-mono">24AHRPD0104C1Z6</strong></span>
       </div>
       <div class="top-bar-right">
-        <a href="tel:+919825538719" class="hover:text-blue-600 flex items-center gap-1.5 transition-colors font-medium">
-          <i data-lucide="phone" class="w-3.5 h-3.5 text-blue-600"></i> +91 98255 38719
+        <a href="tel:+919825538719" class="top-bar-link">
+          <i data-lucide="phone" class="w-3.5 h-3.5 text-blue-600"></i>
+          <span>+91 98255 38719 / 98255 83846</span>
+        </a>
+        <span class="top-bar-divider hidden sm:inline-block"></span>
+        <a href="mailto:morbi@allinonetech.co.in" class="top-bar-link hidden sm:inline-flex">
+          <i data-lucide="mail" class="w-3.5 h-3.5 text-blue-600"></i>
+          <span>morbi@allinonetech.co.in</span>
         </a>
       </div>
     </div>
@@ -72,20 +84,325 @@
         </div>
         <div class="logo-texts">
           <h1 class="group-hover:text-blue-600 transition-colors">ALL IN ONE TECHNOLOGY</h1>
-          <span>A House of Machinery, Laboratory & Testing</span>
+          <span>A HOUSE OF MACHINERY, LABORATORY & TESTING SOLUTIONS</span>
         </div>
       </a>
 
+      <!-- Desktop Navigation Menu -->
       <nav class="nav-menu">
-        <a href="../index.html" class="nav-link">Home</a>
-        <a href="../certification/" class="nav-link">Certification</a>
-        <a href="../laboratory-instruments/" class="nav-link">Laboratory Instruments</a>
-        <a href="../government-projects/" class="nav-link">Government Projects</a>
-        <a href="../valued-clients/" class="nav-link">Valued Clients</a>
-        <a href="../calibration/" class="nav-link">Calibration</a>
-        <a href="./" class="nav-link active">Third Party Inspection</a>
-        <a href="../contact/" class="nav-link">Contact</a>
-        <button data-modal-open="quotation-modal" class="btn hero-btn text-xs py-2 px-4">Request Audit</button>
+        <a href="../index.html" class="nav-item">
+          <i data-lucide="home" class="nav-icon"></i>
+          <span>Home</span>
+        </a>
+
+        <!-- Divisions Dropdown (Mega Menu matching Reference UI) -->
+        <div class="nav-dropdown mega-dropdown">
+          <a href="../index.html#divisions" class="nav-item">
+            <i data-lucide="layout-grid" class="nav-icon"></i>
+            <span>Divisions</span>
+            <i data-lucide="chevron-down" class="nav-arrow"></i>
+          </a>
+          <div class="nav-dropdown-menu mega-dropdown-menu">
+            <div class="mega-menu-inner">
+              
+              <!-- Left Blue Featured Panel -->
+              <div class="mega-left-panel">
+                <div>
+                  <span class="mega-eyebrow">OUR DIVISIONS</span>
+                  <h3 class="mega-title">Specialized Solutions for Every Industry</h3>
+                  <p class="mega-desc">Explore our specialized divisions delivering world-class machinery, laboratory and testing solutions across diverse industries.</p>
+                </div>
+                <a href="../index.html#divisions" class="mega-cta-btn">
+                  <span>View All Divisions</span>
+                  <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                </a>
+              </div>
+
+              <!-- Right 6 Division Cards Grid -->
+              <div class="mega-right-grid">
+                <a href="../certification/index.html" class="mega-card">
+                  <img src="../assets/images/mega_cert.jpg" alt="Certification" class="mega-card-img">
+                  <div class="mega-card-body">
+                    <span class="mega-card-title">Certification</span>
+                    <span class="mega-card-sub">Statutory & BIS Compliance</span>
+                  </div>
+                  <i data-lucide="arrow-right" class="w-4 h-4 mega-card-arrow"></i>
+                </a>
+
+                <a href="../laboratory-instruments/index.html" class="mega-card">
+                  <img src="../assets/images/mega_lab.jpg" alt="Laboratory Instruments" class="mega-card-img">
+                  <div class="mega-card-body">
+                    <span class="mega-card-title">Laboratory Instruments</span>
+                    <span class="mega-card-sub">Caltronics Testing Gear & Supplies</span>
+                  </div>
+                  <i data-lucide="arrow-right" class="w-4 h-4 mega-card-arrow"></i>
+                </a>
+
+                <a href="../government-projects/index.html" class="mega-card">
+                  <img src="../assets/images/mega_govt.jpg" alt="Government Projects" class="mega-card-img">
+                  <div class="mega-card-body">
+                    <span class="mega-card-title">Government Projects</span>
+                    <span class="mega-card-sub">Turn-Key State & Public Labs</span>
+                  </div>
+                  <i data-lucide="arrow-right" class="w-4 h-4 mega-card-arrow"></i>
+                </a>
+
+                <a href="../valued-clients/index.html" class="mega-card">
+                  <img src="../assets/images/mega_clients.jpg" alt="Valued Clients" class="mega-card-img">
+                  <div class="mega-card-body">
+                    <span class="mega-card-title">Valued Clients</span>
+                    <span class="mega-card-sub">Trusted Partner Network</span>
+                  </div>
+                  <i data-lucide="arrow-right" class="w-4 h-4 mega-card-arrow"></i>
+                </a>
+
+                <a href="../calibration/index.html" class="mega-card">
+                  <img src="../assets/images/mega_calib.jpg" alt="Calibration Services" class="mega-card-img">
+                  <div class="mega-card-body">
+                    <span class="mega-card-title">Calibration Services</span>
+                    <span class="mega-card-sub">Metrological Field & Lab Calibration</span>
+                  </div>
+                  <i data-lucide="arrow-right" class="w-4 h-4 mega-card-arrow"></i>
+                </a>
+
+                <a href="../third-party-inspection/index.html" class="mega-card">
+                  <img src="../assets/images/mega_inspect.jpg" alt="Third Party Inspection" class="mega-card-img">
+                  <div class="mega-card-body">
+                    <span class="mega-card-title">Third Party Inspection</span>
+                    <span class="mega-card-sub">Independent QA & Quality Audits</span>
+                  </div>
+                  <i data-lucide="arrow-right" class="w-4 h-4 mega-card-arrow"></i>
+                </a>
+              </div>
+
+            </div>
+
+            <!-- Mega Footer Bar -->
+            <div class="mega-footer">
+              <div class="mega-footer-stats">
+                <div class="mega-stat">
+                  <div class="mega-stat-icon">
+                    <i data-lucide="layout-grid" class="w-4 h-4"></i>
+                  </div>
+                  <div>
+                    <span class="mega-stat-val">5+</span>
+                    <span class="mega-stat-lbl">Specialized Divisions</span>
+                  </div>
+                </div>
+
+                <div class="mega-stat">
+                  <div class="mega-stat-icon">
+                    <i data-lucide="users" class="w-4 h-4"></i>
+                  </div>
+                  <div>
+                    <span class="mega-stat-val">246+</span>
+                    <span class="mega-stat-lbl">Happy Clients</span>
+                  </div>
+                </div>
+
+                <div class="mega-stat">
+                  <div class="mega-stat-icon">
+                    <i data-lucide="award" class="w-4 h-4"></i>
+                  </div>
+                  <div>
+                    <span class="mega-stat-val">20+</span>
+                    <span class="mega-stat-lbl">Years of Excellence</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="mega-footer-help">
+                <span>Need help finding the right division? <a href="../contact/index.html">Contact Our Team →</a></span>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Services Dropdown (8 Comprehensive Services) -->
+        <div class="nav-dropdown">
+          <a href="../index.html#services" class="nav-item">
+            <i data-lucide="settings" class="nav-icon"></i>
+            <span>Services</span>
+            <i data-lucide="chevron-down" class="nav-arrow"></i>
+          </a>
+          <div class="nav-dropdown-menu services-dropdown-menu">
+            <div class="services-dropdown-grid">
+              <a href="../index.html#services" class="dropdown-link-card">
+                <div class="dropdown-icon-wrap bg-blue-50 text-blue-600">
+                  <i data-lucide="layout-grid" class="w-4 h-4"></i>
+                </div>
+                <div>
+                  <span class="dropdown-title">Laboratory Set Up</span>
+                  <span class="dropdown-desc">Design, Layout & BIS Compliance</span>
+                </div>
+              </a>
+
+              <a href="../index.html#services" class="dropdown-link-card">
+                <div class="dropdown-icon-wrap bg-indigo-50 text-indigo-600">
+                  <i data-lucide="microscope" class="w-4 h-4"></i>
+                </div>
+                <div>
+                  <span class="dropdown-title">Laboratory Instruments Supply</span>
+                  <span class="dropdown-desc">Caltronics Testing Gear & Support</span>
+                </div>
+              </a>
+
+              <a href="../index.html#services" class="dropdown-link-card">
+                <div class="dropdown-icon-wrap bg-emerald-50 text-emerald-600">
+                  <i data-lucide="graduation-cap" class="w-4 h-4"></i>
+                </div>
+                <div>
+                  <span class="dropdown-title">Training for Testing</span>
+                  <span class="dropdown-desc">Operator Proficiency & Protocols</span>
+                </div>
+              </a>
+
+              <a href="../index.html#services" class="dropdown-link-card">
+                <div class="dropdown-icon-wrap bg-amber-50 text-amber-600">
+                  <i data-lucide="briefcase" class="w-4 h-4"></i>
+                </div>
+                <div>
+                  <span class="dropdown-title">Turn-Key Project Experts</span>
+                  <span class="dropdown-desc">Full Commissioning & Audits</span>
+                </div>
+              </a>
+
+              <a href="../index.html#services" class="dropdown-link-card">
+                <div class="dropdown-icon-wrap bg-cyan-50 text-cyan-600">
+                  <i data-lucide="coins" class="w-4 h-4"></i>
+                </div>
+                <div>
+                  <span class="dropdown-title">Subsidy Project Experts</span>
+                  <span class="dropdown-desc">Govt Subsidy & Advisory Support</span>
+                </div>
+              </a>
+
+              <a href="../index.html#services" class="dropdown-link-card bg-purple-50/70">
+                <div class="dropdown-icon-wrap bg-purple-100 text-purple-600">
+                  <i data-lucide="shield-check" class="w-4 h-4"></i>
+                </div>
+                <div>
+                  <span class="dropdown-title text-purple-700 font-bold">Testing of All Types of Products</span>
+                  <span class="dropdown-desc">Multi-Product QA / QC Testing</span>
+                </div>
+              </a>
+
+              <a href="../index.html#services" class="dropdown-link-card">
+                <div class="dropdown-icon-wrap bg-rose-50 text-rose-600">
+                  <i data-lucide="sliders" class="w-4 h-4"></i>
+                </div>
+                <div>
+                  <span class="dropdown-title">Instruments Calibration</span>
+                  <span class="dropdown-desc">Metrological Traceable Calibration</span>
+                </div>
+              </a>
+
+              <a href="../index.html#services" class="dropdown-link-card">
+                <div class="dropdown-icon-wrap bg-teal-50 text-teal-600">
+                  <i data-lucide="globe" class="w-4 h-4"></i>
+                </div>
+                <div>
+                  <span class="dropdown-title">Exporters of All Types of Products</span>
+                  <span class="dropdown-desc">International Trade & Supply</span>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Instruments Dropdown (6 Instrument Categories) -->
+        <div class="nav-dropdown">
+          <a href="../laboratory-instruments/index.html" class="nav-item">
+            <i data-lucide="flask-conical" class="nav-icon"></i>
+            <span>Instruments</span>
+            <i data-lucide="chevron-down" class="nav-arrow"></i>
+          </a>
+          <div class="nav-dropdown-menu instruments-dropdown-menu">
+            <a href="../laboratory-instruments/index.html#spectrophotometry" class="dropdown-link-card">
+              <div class="dropdown-icon-wrap bg-blue-50 text-blue-600">
+                <i data-lucide="activity" class="w-4 h-4"></i>
+              </div>
+              <div>
+                <span class="dropdown-title">Spectrophotometry</span>
+                <span class="dropdown-desc">UV-Vis, FT-IR & Optics</span>
+              </div>
+            </a>
+
+            <a href="../laboratory-instruments/index.html#flame" class="dropdown-link-card">
+              <div class="dropdown-icon-wrap bg-orange-50 text-orange-600">
+                <i data-lucide="flame" class="w-4 h-4"></i>
+              </div>
+              <div>
+                <span class="dropdown-title">Flame Photometry</span>
+                <span class="dropdown-desc">Microprocessor Photometers</span>
+              </div>
+            </a>
+
+            <a href="../laboratory-instruments/index.html#electrochemistry" class="dropdown-link-card">
+              <div class="dropdown-icon-wrap bg-cyan-50 text-cyan-600">
+                <i data-lucide="droplets" class="w-4 h-4"></i>
+              </div>
+              <div>
+                <span class="dropdown-title">Electrochemistry & Water</span>
+                <span class="dropdown-desc">pH, Conductivity, TDS, Turbidity</span>
+              </div>
+            </a>
+
+            <a href="../laboratory-instruments/index.html#clinical" class="dropdown-link-card">
+              <div class="dropdown-icon-wrap bg-rose-50 text-rose-600">
+                <i data-lucide="stethoscope" class="w-4 h-4"></i>
+              </div>
+              <div>
+                <span class="dropdown-title">Clinical & Diagnostic</span>
+                <span class="dropdown-desc">Biochemistry & Medical Gear</span>
+              </div>
+            </a>
+
+            <a href="../laboratory-instruments/index.html#analytical" class="dropdown-link-card">
+              <div class="dropdown-icon-wrap bg-indigo-50 text-indigo-600">
+                <i data-lucide="beaker" class="w-4 h-4"></i>
+              </div>
+              <div>
+                <span class="dropdown-title">Analytical Apparatus</span>
+                <span class="dropdown-desc">Furnaces, Ovens, Autoclaves</span>
+              </div>
+            </a>
+
+            <a href="../laboratory-instruments/index.html#chromatography" class="dropdown-link-card">
+              <div class="dropdown-icon-wrap bg-emerald-50 text-emerald-600">
+                <i data-lucide="layers" class="w-4 h-4"></i>
+              </div>
+              <div>
+                <span class="dropdown-title">Chromatography</span>
+                <span class="dropdown-desc">HPLC & Gas Chromatography</span>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <span class="nav-divider"></span>
+
+        <a href="../government-projects/index.html" class="nav-item">
+          <i data-lucide="clipboard-list" class="nav-icon"></i>
+          <span>Projects</span>
+        </a>
+
+        <a href="../valued-clients/index.html" class="nav-item">
+          <i data-lucide="users-2" class="nav-icon"></i>
+          <span>Clients</span>
+        </a>
+
+        <a href="../contact/index.html" class="nav-item">
+          <i data-lucide="map-pin" class="nav-icon"></i>
+          <span>Offices & Contact</span>
+        </a>
+
+        <button data-modal-open="quotation-modal" class="btn-header-cta">
+          <i data-lucide="file-spread-sheet" class="w-4 h-4"></i>
+          <span>Request a Quote</span>
+          <i data-lucide="arrow-right" class="w-4 h-4"></i>
+        </button>
       </nav>
       <button class="mobile-toggle" aria-label="Toggle navigation menu" aria-expanded="false">☰</button>
     </div>
@@ -97,7 +414,7 @@
       <source src="../assets/videos/hero-inspection.mp4" type="video/mp4">
     </video>
     <div class="hero-video-overlay"></div>
-    <div class="container mx-auto text-center max-w-4xl px-4 relative z-10">
+    <div class="container mx-auto text-center max-w-4xl px-4 relative z-10 hero-content-panel">
       <div class="badge-inspection mb-4">
         <i data-lucide="clipboard-check" class="w-4 h-4"></i> Division 06 • Turn-Key Quality Assurance & Audits
       </div>

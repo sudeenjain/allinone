@@ -1,5 +1,8 @@
 // Main Interactive Controller for All In One Technology Portal
 document.addEventListener('DOMContentLoaded', () => {
+  if (typeof lucide !== 'undefined' && typeof lucide.createIcons === 'function') {
+    lucide.createIcons();
+  }
   initScrollProgress();
   initStickyHeader();
   initScrollReveal();
@@ -322,21 +325,30 @@ function initMobileMenu() {
   // Handle dropdown accordions inside mobile menu
   const dropdowns = navMenu.querySelectorAll('.nav-dropdown');
   dropdowns.forEach(dd => {
-    const trigger = dd.querySelector('.nav-link, .nav-dropdown-toggle');
+    const trigger = dd.querySelector('.nav-link, .nav-dropdown-toggle, .nav-item');
     if (trigger) {
       trigger.addEventListener('click', (e) => {
         if (window.innerWidth <= 1150) {
           e.preventDefault();
-          dd.classList.toggle('dropdown-open');
+          // Toggle clicked dropdown and close other open accordions
+          const wasOpen = dd.classList.contains('dropdown-open');
+          dropdowns.forEach(otherDd => otherDd.classList.remove('dropdown-open'));
+          if (!wasOpen) {
+            dd.classList.add('dropdown-open');
+          }
         }
       });
     }
   });
 
-  // Auto-close menu when tapping a regular navigation link or modal button
-  const directLinks = navMenu.querySelectorAll('a:not(.nav-dropdown > a), .nav-dropdown-item, button');
-  directLinks.forEach(item => {
+  // Auto-close dropdown menus and mobile drawer on link click across desktop & mobile
+  const allSubLinks = document.querySelectorAll('.nav-dropdown-menu a, .dropdown-link-card, .mega-card, .mega-cta-btn');
+  allSubLinks.forEach(item => {
     item.addEventListener('click', () => {
+      dropdowns.forEach(dd => dd.classList.remove('dropdown-open', 'active'));
+      if (document.activeElement && typeof document.activeElement.blur === 'function') {
+        document.activeElement.blur();
+      }
       if (window.innerWidth <= 1150) {
         closeMenu();
       }

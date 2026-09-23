@@ -104,10 +104,13 @@
 /* =========================================================
    HERO BACKGROUND VIDEO, OVERLAY & DIVISION 04 TREATMENT
    ========================================================= */
+/* Division 04 Soft Overlay & Glass Content Panel Treatment */
 .hero-video-section {
   position: relative;
   overflow: hidden;
   min-height: 460px;
+  padding-top: 4.5rem;
+  padding-bottom: 4.5rem;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -124,62 +127,46 @@
   pointer-events: none;
 }
 
-/* Division 04 Dark Slate Overlay: Strong behind text, lighter toward edges */
 .hero-video-overlay {
   position: absolute;
   inset: 0;
   width: 100%;
   height: 100%;
-  background: radial-gradient(ellipse at 50% 50%, rgba(15, 23, 42, 0.74) 0%, rgba(10, 15, 30, 0.88) 100%),
-              linear-gradient(180deg, rgba(15, 23, 42, 0.55) 0%, rgba(10, 15, 30, 0.85) 100%);
-  -webkit-backdrop-filter: blur(1.5px);
-  backdrop-filter: blur(1.5px);
+  background: linear-gradient(180deg,
+      rgba(15, 23, 42, 0.55) 0%,
+      rgba(15, 23, 42, 0.12) 22%,
+      rgba(15, 23, 42, 0.12) 78%,
+      rgba(15, 23, 42, 0.55) 100%);
   z-index: 2;
   pointer-events: none;
+}
+
+/* Crystal clear video content panel: 60% translucent dark tint without backdrop blur for crisp video visibility */
+.hero-content-panel {
+  background: rgba(15, 23, 42, 0.65);
+  border: 1px solid rgba(96, 165, 250, 0.28);
+  border-radius: 28px;
+  padding: 2.75rem 2.25rem;
+  -webkit-backdrop-filter: none;
+  backdrop-filter: none;
+  box-shadow: 0 30px 70px -20px rgba(0, 0, 0, 0.55), inset 0 1px 0 rgba(255, 255, 255, 0.08);
+}
+
+@media (max-width: 640px) {
+  .hero-video-section {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+  }
+
+  .hero-content-panel {
+    padding: 1.75rem 1.25rem;
+    border-radius: 20px;
+  }
 }
 
 .hero-video-section .relative.z-10 {
   position: relative;
   z-index: 10;
-}
-
-/* Division 04 Typography: Pure White Heading & Light Gray/Blue Paragraph */
-.hero-video-section h1 {
-  color: #FFFFFF !important;
-  font-weight: 800;
-  text-shadow: 0 2px 14px rgba(0, 0, 0, 0.45);
-}
-
-.hero-video-section .hero-text {
-  color: #E2E8F0 !important;
-  font-weight: 400;
-  line-height: 1.8;
-  text-shadow: 0 1px 6px rgba(0, 0, 0, 0.4);
-}
-
-/* Division 04 Trust Badge: Verified White/Light Card with Dark Green Accent */
-.hero-video-section .inline-flex.items-center.gap-2 {
-  background: rgba(255, 255, 255, 0.95) !important;
-  border: 1px solid rgba(16, 185, 129, 0.3) !important;
-  color: #047857 !important;
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
-  -webkit-backdrop-filter: blur(8px);
-  backdrop-filter: blur(8px);
-  font-weight: 600;
-}
-.hero-video-section .inline-flex.items-center.gap-2 i,
-.hero-video-section .inline-flex.items-center.gap-2 svg {
-  color: #059669 !important;
-}
-
-/* Screens under 768px wide: hide video entirely and show static background image */
-@media (max-width: 767.98px) {
-  .hero-bg-video {
-    display: none !important;
-  }
-  .hero-video-section {
-    background-image: url('../assets/videos/hero-clients-poster.jpg');
-  }
 }
 
 /* =========================================================
